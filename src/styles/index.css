@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+
+  /* --- buttons --- */
+
+  .button-primary {
+    @apply text-button;
+    @apply text-black;
+    @apply bg-gold;
+  }  
+  
+  .button-primary:hover {
+    @apply text-button;
+    @apply text-black;
+    @apply bg-black;
+  }
+
+  .button-secondary {
+    @apply text-button;
+    @apply text-white;
+    @apply bg-black;
+  }
+
+  .button-secondary:hover {
+    @apply text-button;
+    @apply text-white;
+    @apply bg-light-blue;
+  }
+
+  /* --- x --- */
+
+}
