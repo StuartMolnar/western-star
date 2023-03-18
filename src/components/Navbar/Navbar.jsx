@@ -1,15 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './navbar.css'
-
-// !!! don't use hidden div-bars for spacing, use margin or padding
 
 function Navbar() {
 
   return (
     
     <div className="Navbar">
-      <h2 className="font-poppins font-semibold text-section-header-lg text-gold bg-black">Section Header (40px)</h2>
+      <div className="grid grid-cols-12 mx-12">
+        <div className="nav-logo flex col-span-3">
+          <img src="" alt="" />
+          <img src="" alt="" />
+        </div>
+        <div className="nav-links flex col-span-7">
+          <Link to="/" className="">Home</Link>
+          <Link to="/about" className="">About</Link>
+          <Link to="/projects" className="">Projects</Link>
+          {/* Add more links for other pages */}
+        </div>
+        <div className="nav-contact col-span-2">
 
+        </div>
+      </div>
     </div>
 
   )
