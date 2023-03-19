@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="grid grid-cols-2 grid-rows-2 h-full col-span-1">
         <div className="flex-row items-center p-4 space-y-4">
           <span className="flex"><img src="src\assets\footer\mail-icon.svg" alt="email_icon" className="mr-4" /><p className="font-medium">Email</p></span>
-          <p><a href="mailto:ming@westernstarresource.com">ming@westernstarresource.com</a></p>
+          <p><a href="mailto:info@riominerals.com">info@riominerals.com</a></p>
         </div>
         <div className="flex-row items-center p-4 space-y-4">
           <span className="flex"><img src="src\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Business Address</p></span>
@@ -23,14 +23,14 @@ const Footer = () => {
         </div>
         <div className="flex-row items-center p-4 space-y-4">
           <span className="flex"><img src="src\assets\footer\phone-icon.svg" alt="phone_icon" className="mr-4" /><p className="font-medium">Phone Number</p></span>
-          <p><a href="tel:+18009702389">+1 (800)-970-2389</a></p>          
+          <p><a href="tel:+16046712245">+1 (604)-671-2245</a></p>          
         </div>
         <div className="flex-row items-center p-4 space-y-4">
           <span className="flex"><img src="src\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Registered Office Address</p></span>
-          <p><a href="https://goo.gl/maps/K6RFdXedrdhr9qJt8">
-            Unit 114B – 8988 Fraserton Court<br></br>
-            Burnaby, BC<br></br>
-            V5J 5H8
+          <p><a href="https://goo.gl/maps/6nH9b1mp92wckqCy9">
+            Unit 615 – 800 West Pender St.<br></br>
+            Vancouver, BC<br></br>
+            V6C 2V6
           </a></p>
         </div>
       </div>

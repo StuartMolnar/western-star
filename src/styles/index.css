@@ -39,12 +39,12 @@
   /* --- gradients --- */
 
   .gradient-gray {
-    background: rgba(173, 184, 194, 0.25);
+    background: rgba(173, 184, 194, 0.15);
     filter: blur(150px);
   }
 
   .gradient-gold {
-    background: rgba(213, 166, 96, 0.25);
+    background: rgba(213, 166, 96, 0.15);
     filter: blur(150px);
   }
 
