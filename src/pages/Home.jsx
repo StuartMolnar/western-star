@@ -1,12 +1,21 @@
 import React from 'react';
-import Navbar from '../components/Navbar/Navbar';
+import Layout from './Layout';
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
-      {/* Add more HTML content and components for your home page here */}
-    </div>
+    <Layout>
+      <div>
+        <h1>Home Page</h1>
+        <p>Content for the home page goes here
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          xd
+        </p>
+      </div>
+    </Layout>
   );
 };
 
