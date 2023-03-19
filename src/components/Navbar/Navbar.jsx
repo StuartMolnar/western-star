@@ -17,15 +17,34 @@ function Navbar() {
           <img src="src/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>
         <div className="nav-links flex flex-grow justify-center items-center xl:gap-20 lg:gap-14 text-base">
-          <NavLink to="/about" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
-            About
-          </NavLink>
-          <NavLink to="/projects" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
-            Projects ▾
-          </NavLink>
-          <NavLink to="/Investors" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
-            Investors ▾
-          </NavLink>
+
+          <div className="flex">
+            <NavLink to="/board" className={({ isActive }) => (isActive ? 'underline text-gold pr-2' : 'pr-2')}>
+              About
+            </NavLink>            
+            <NavLink to="/board" className={({ isActive }) => (isActive ? 'text-gold' : '')}>
+             ▾
+            </NavLink>
+          </div>
+
+          <div className="flex">
+            <NavLink to="/projects" className={({ isActive }) => (isActive ? 'underline text-gold pr-2' : 'pr-2')}>
+              Projects
+            </NavLink>            
+            <NavLink to="/projects" className={({ isActive }) => (isActive ? 'text-gold' : '')}>
+             ▾
+            </NavLink>
+          </div>
+
+          <div className="flex">
+            <NavLink to="/investors" className={({ isActive }) => (isActive ? 'underline text-gold pr-2' : 'pr-2')}>
+              Investors
+            </NavLink>            
+            <NavLink to="/investors" className={({ isActive }) => (isActive ? 'text-gold' : '')}>
+             ▾
+            </NavLink>
+          </div>
+
           <NavLink to="/news" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
             News
           </NavLink>
