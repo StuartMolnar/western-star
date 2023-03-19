@@ -1,12 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
+
 import './navbar.css'
 
 function Navbar() {
 
   return (
 
-    // NOTE: when designing mobile, make breakpoint md not sm
+    // NOTE: when designing mobile, make new tailwind breakpoint for 1200px not sm
+    //       do this for navbar and footer
 
     <div className="Navbar">
       <div className="flex p-12 px-20 bg-black text-white">
@@ -15,14 +17,22 @@ function Navbar() {
           <img src="src/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>
         <div className="nav-links flex flex-grow justify-center items-center xl:gap-20 lg:gap-14 text-base">
-          <Link to="/about" className="">About</Link>
-          <Link to="/projects" className="">Projects ▾</Link>
-          <Link to="/" className="">Investors ▾</Link>
-          <Link to="/" className="">News</Link>
-          {/* Add more links for other pages */}
+          <NavLink to="/about" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
+            About
+          </NavLink>
+          <NavLink to="/projects" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
+            Projects ▾
+          </NavLink>
+          <NavLink to="/Investors" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
+            Investors ▾
+          </NavLink>
+          <NavLink to="/news" className={({ isActive }) => (isActive ? 'underline text-gold' : '')}>
+            News
+          </NavLink>
         </div>
+
         <div className="nav-contact">
-          <Link to="/contact" className="btn button-primary">Contact Us</Link>
+          <Link to="/contact" className="button-primary">Contact Us</Link>
         </div>
       </div>
     </div>
