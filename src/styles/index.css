@@ -12,12 +12,14 @@
     @apply text-button;
     @apply text-black;
     @apply bg-gold;
+    padding: 0.5rem 2.5rem;
+    border-radius: 1rem;
   }  
   
   .button-primary:hover {
     @apply text-button;
-    @apply text-black;
-    @apply bg-black;
+    @apply text-white;
+    @apply bg-dark-blue;
   }
 
   .button-secondary {

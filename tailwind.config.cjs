@@ -23,6 +23,7 @@ module.exports = {
       backgroundColor: {
         'black': '#222222',
         'light-blue': '#ADBBC2',
+        'dark-blue': '#333A42',
         'white': '#FFFFFF',
         'gold': '#D5A660',
       },

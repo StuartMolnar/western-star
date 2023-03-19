@@ -1,11 +1,21 @@
 import React from 'react';
+import Layout from './Layout';
 
 const About = () => {
   return (
-    <div>
-      <h1>About Page</h1>
-      {/* Add more HTML content and components for your projects page here */}
-    </div>
+    <Layout>
+      <div>
+        <h1>About Page</h1>
+        <p>Content for the about page goes here
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
+          xd
+        </p>
+      </div>
+    </Layout>
   );
 };
 
