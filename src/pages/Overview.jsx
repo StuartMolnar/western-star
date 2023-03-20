@@ -31,21 +31,21 @@ const Overview = () => {
 
   const contentRef = useRef([]);
 
-useEffect(() => {
-  contentRef.current.forEach((content, index) => {
-    if (content) {
-      if (activeAccordion === index) {
-        content.style.height = `${content.scrollHeight}px`;
-        content.style.padding = ''; // Reset padding to default
-        content.style.opacity = '1';
-      } else {
-        content.style.height = '0';
-        content.style.padding = '0';
-        content.style.opacity = '0';
+  useEffect(() => {
+    contentRef.current.forEach((content, index) => {
+      if (content) {
+        if (activeAccordion === index) {
+          content.style.height = `${content.scrollHeight}px`;
+          content.style.padding = ''; // Reset padding to default
+          content.style.opacity = '1';
+        } else {
+          content.style.height = '0';
+          content.style.padding = '0';
+          content.style.opacity = '0';
+        }
       }
-    }
-  });
-}, [activeAccordion]);
+    });
+  }, [activeAccordion]);
 
   
 
@@ -56,28 +56,28 @@ useEffect(() => {
 
       <div className="flex flex-col justify-center items-center w-3/5 ml-32">h</div>
 
-      <div className="accordion-container space-y-4 w-full mx-32">
-      {accordionData.map((accordion, index) => (
-  <div className={`accordion p-6 rounded-2xl bg-light-blue text-black ${activeAccordion === index ? 'active' : ''}`} key={index}>
-    <div className="accordion-title select-none flex justify-between"
-      onClick={() => toggleAccordion(index)}>
-      <span className="font-semibold text-content-20">{accordion.title}</span>
-      <span className="font-semibold text-content-20 transform scale-150">{activeAccordion === index ? '▴' : '▾'}</span>              
-    </div>
-    <div
-      ref={(el) => (contentRef.current[index] = el)}
-      className="accordion-content text-base font-normal"
-    >
-      {activeAccordion === index && (
-        <ul>
-          {accordion.points.map((point, pointIndex) => (
-            <li key={pointIndex}>{point}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  </div>
-))}
+      <div className="accordion-container space-y-8 w-full mx-32">
+        {accordionData.map((accordion, index) => (
+          <div className={`accordion p-6 rounded-2xl bg-light-blue text-black cursor-pointer ${activeAccordion === index ? 'active' : ''}`} key={index}>
+            <div className="accordion-title select-none flex justify-between"
+              onClick={() => toggleAccordion(index)}>
+              <span className="font-semibold text-content-20">{accordion.title}</span>
+              <span className="font-semibold text-content-20 transform scale-150">{activeAccordion === index ? '▴' : '▾'}</span>              
+            </div>
+            <div
+              ref={(el) => (contentRef.current[index] = el)}
+              className="accordion-content text-base font-normal"
+            >
+              {activeAccordion === index && (
+                <ul>
+                  {accordion.points.map((point, pointIndex) => (
+                    <li key={pointIndex}>{point}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
 
 
