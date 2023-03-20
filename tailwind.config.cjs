@@ -17,6 +17,7 @@ module.exports = {
       textColor: {
         'black': '#222222',
         'dark-blue': '#333A42',
+        'light-blue': '#ADBBC2',
         'white': '#FFFFFF',
         'gold': '#D5A660',
       },
@@ -29,9 +30,9 @@ module.exports = {
       },
       fontSize: {
         'base': '18px',
-        'index-header': '65px',
-        'index-content': '20px',
-        'section-header-sm': '35px',
+        'page-header': '65px',
+        'content-20': '20px',
+        'section-header-md': '35px',
         'section-header-lg': '40px',
         'section-subheader': '20px',
         'container-header': '20px',
