@@ -45,6 +45,19 @@
     @apply bg-light-blue;
   }
 
+  .button-accent {
+    @apply text-button;
+    @apply text-white;
+    @apply bg-dark-blue;
+    padding: 8px 28px;
+    border-radius: 10px;
+  }
+
+  .button-accent:hover {
+    @apply text-button;
+    @apply text-white;
+    @apply bg-light-blue;
+  }
   /* --- gradients --- */
 
   .gradient-gray {

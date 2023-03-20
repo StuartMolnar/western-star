@@ -15,8 +15,8 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="gradient-gray absolute top-[30%] left-1/2 h-4/5 w-1/4"></div>
-        <div className="gradient-gold absolute top-[5%] left-3/4 h-4/5 w-1/4"></div>
+        <div className="gradient-gray absolute top-[30%] left-[45%] h-4/5 w-1/4"></div>
+        <div className="gradient-gold absolute top-[5%] left-[70%] h-4/5 w-1/4"></div>
         
         <div className="hero-images relative w-1/2 ">
 
@@ -29,17 +29,19 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
-      {/* todo fix positioning of this */}
-      <section className="flex px-32 bg-white text-black h-44">
-        <div className="flex shadow rounded-2xl top-[-50px]">
-          <div className="flex flex-row">
+
+      {/* todo fix positioning of this 
+          position absolutely ontop of background image section
+          give negative top value */}
+      <section className="flex px-32 text-black h-44">
+        <div className="flex flex-row bg-white shadow rounded-2xl top-[-50px]">
+          <div className="flex flex-col">
             <h3 className="text-container-header font-semibold">
               Latest News: Exploits Commences Drilling At Bullseye Gold Target
             </h3>
             <p className="text-dark-blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit libero, sagittis sed...</p>
           </div>
-          <div className="button-primary h-[40px]">Read Full Story</div>
+          <a className="button-accent h-[40px]">Read Full Story</a>
 
         </div>
       </section>
