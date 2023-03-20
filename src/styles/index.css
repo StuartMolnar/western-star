@@ -1,10 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer utilities {
+
+  body {
+    @apply bg-black;
+    @apply font-poppins;
+    @apply text-white;
+    @apply font-normal;
+    @apply text-base;
+    @apply tracking-wider;
+  }
 
   /* --- buttons --- */
 

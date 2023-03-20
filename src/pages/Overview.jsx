@@ -5,7 +5,7 @@ import '../styles/overview.css';
 const Overview = () => {
   return (
     <Layout>
-      <div className="bg-black text-white font-poppins">
+      <div className="">
         <section className="about-header-bg">
           h1.text-page-header.font-semibold
           Meet our board

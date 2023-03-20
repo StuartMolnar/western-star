@@ -9,6 +9,7 @@ module.exports = {
         'poppins': ['Poppins', 'sans-serif'],
       },
       fontWeight: {
+        'light': 300,
         'normal': 400,
         'medium': 500,
         'semibold': 600,
@@ -41,6 +42,11 @@ module.exports = {
         'button': '18px',
         'footer': '16px',
         'copyright': '14px',
+      },
+      boxShadow: {
+        'white': '0 4px 6px rgba(255, 255, 255, 0.05), 0 1px 3px rgba(255, 255, 255, 0.1)',
+        
+        'gold': '0 4px 6px rgba(213, 166, 96, 0.1), 0 1px 3px rgba(213, 166, 96, 0.2)',
       },
     },
   },

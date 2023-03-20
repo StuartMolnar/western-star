@@ -4,7 +4,7 @@ import Layout from './Layout';
 const Home = () => {
   return (
     <Layout>
-      <div className="bg-black text-white font-poppins">
+      <div className="">
         <h1>Home Page</h1>
         <p>Content for the home page goes here
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />  
