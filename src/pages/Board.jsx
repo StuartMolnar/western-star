@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Layout from './Layout';
 import Modal from '../components/Modal/Board-Modal'; // Import the Modal component
 import '../styles/board.css';
@@ -40,7 +40,14 @@ const Board = () => {
   const closeModal = () => {
     setSelectedMember(null);
   };
-  
+
+  const boardMembersRef = useRef();
+
+  const scrollToBoardMembers = (e) => {
+    e.preventDefault();
+    boardMembersRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+    
   return (
     <Layout>
 
@@ -51,12 +58,12 @@ const Board = () => {
           <h1 className="text-page-header font-semibold">
             Meet our board
           </h1>
-          <a className="read-more-btn font-normal text-gold" href="">Read More ▸</a>
+          <a className="read-more-btn font-normal text-gold" onClick={scrollToBoardMembers}>Read More ▸</a>
           
         </section>
 
         <section className="board-section-bg text-white">
-          <div className="board-members p-20 flex justify-center">
+          <div ref={boardMembersRef} className="board-members p-20 flex justify-center">
             <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 justify-center">
               {boardMembers.map((member, index) => (
                 <div key={index} className="bg-black p-4 rounded-2xl shadow max-w-[600px]">
@@ -68,7 +75,7 @@ const Board = () => {
                     </div>
                     <div>
                       <hr className="my-12" />
-                      <a className="read-more-btn font-normal text-base text-gold" href=""
+                      <a className="read-more-btn font-normal text-base text-gold"
                           onClick={(e) => {
                             e.preventDefault();
                             openModal(member);
