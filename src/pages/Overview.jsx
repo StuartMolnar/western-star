@@ -31,22 +31,22 @@ const Overview = () => {
 
   const contentRef = useRef([]);
 
-  useEffect(() => {
-    contentRef.current.forEach((content, index) => {
-      if (content) {
-        if (activeAccordion === index) {
-          content.style.height = `${content.scrollHeight}px`;
-          content.style.padding = ''; // Reset padding to default
-          content.style.opacity = '1';
-        } else {
-          content.style.height = '0';
-          content.style.padding = '0';
-          content.style.opacity = '0';
-        }
+useEffect(() => {
+  contentRef.current.forEach((content, index) => {
+    if (content) {
+      if (activeAccordion === index) {
+        content.style.height = `${content.scrollHeight}px`;
+        content.style.padding = ''; // Reset padding to default
+        content.style.opacity = '1';
+      } else {
+        content.style.height = '0';
+        content.style.padding = '0';
+        content.style.opacity = '0';
       }
-    });
-  }, [activeAccordion]);
-  
+    }
+  });
+}, [activeAccordion]);
+
   
 
   return (
