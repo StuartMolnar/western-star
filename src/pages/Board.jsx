@@ -87,6 +87,4 @@ const Board = () => {
   );
 };
 
-//todo: add popup modal for each board member
-
 export default Board;

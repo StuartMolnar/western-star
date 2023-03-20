@@ -47,11 +47,35 @@ module.exports = {
         'white': '0 4px 6px rgba(255, 255, 255, 0.05), 0 1px 3px rgba(255, 255, 255, 0.1)',
         
         'gold': '0 4px 6px rgba(213, 166, 96, 0.1), 0 1px 3px rgba(213, 166, 96, 0.2)',
+      }, 
+      transitionProperty: {
+        'max-height': 'max-height',
+      },
+      maxHeight: {
+        '0': '0',
+        'screen': '100vh',
+      },
+      keyframes: {
+        'slide-down': {
+          'from': {
+            opacity: '0',
+            transform: 'translateY(-10px)',
+          },
+          'to': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
+      animation: {
+        'slide-down': 'slide-down 0.3s ease-in-out forwards',
       },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      maxHeight: ['responsive', 'hover', 'focus', 'active'],
+    },
   },
   plugins: [],
 }
