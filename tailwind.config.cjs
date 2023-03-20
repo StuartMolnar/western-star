@@ -48,33 +48,29 @@ module.exports = {
         
         'gold': '0 4px 6px rgba(213, 166, 96, 0.1), 0 1px 3px rgba(213, 166, 96, 0.2)',
       }, 
-      transitionProperty: {
-        'max-height': 'max-height',
-      },
-      maxHeight: {
-        '0': '0',
-        'screen': '100vh',
+      animation: {
+        bounce: 'bounce 5s ease-in-out infinite',
       },
       keyframes: {
-        'slide-down': {
-          'from': {
-            opacity: '0',
-            transform: 'translateY(-10px)',
-          },
-          'to': {
-            opacity: '1',
-            transform: 'translateY(0)',
-          },
+        bounce: {
+          '0%, 100%': { transform: 'translateY(45)' },
+          '50%': { transform: 'translateY(-45px)' },
+          // '0%, 20%, 50%, 80%, 100%': {
+          //   transform: 'translateY(0)',
+          // },
+          // '40%': {
+          //   transform: 'translateY(-30px)',
+          // },
+          // '60%': {
+          //   transform: 'translateY(-15px)',
+          // },
         },
       },
-      animation: {
-        'slide-down': 'slide-down 0.3s ease-in-out forwards',
-      },
+      
     },
   },
   variants: {
     extend: {
-      maxHeight: ['responsive', 'hover', 'focus', 'active'],
     },
   },
   plugins: [],
