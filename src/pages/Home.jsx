@@ -55,7 +55,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="about-section-bg flex-row text-black relative pt-48 pb-60">
+      <section className="about-section-bg flex-row text-black relative pt-48 pb-96 xl:pb-[500px]">
         <div className="flex mx-32 gap-x-24">
           <div className="flex-row w-1/2">
             <h2 className="text-section-header-lg font-semibold">

@@ -79,8 +79,9 @@ const Board = () => {
                           onClick={(e) => {
                             e.preventDefault();
                             openModal(member);
-                          }}
-                      >Read More ▸</a>
+                          }}>
+                          Read More ▸
+                        </a>
                     </div>
                   </div>
                 </div>
