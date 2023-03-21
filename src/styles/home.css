@@ -1,0 +1,8 @@
+/* --- custom backgrounds --- */
+
+.about-section-bg {
+    background: url('src/assets/index/about-section-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

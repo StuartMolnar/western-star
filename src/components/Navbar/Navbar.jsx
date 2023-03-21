@@ -11,7 +11,7 @@ function Navbar() {
     //       do this for navbar and footer
 
     <div className="Navbar">
-      <div className="flex p-12 px-32">
+      <div className="flex p-12 px-32 bg-transparent">
         <Link to="/" className="nav-logo flex h-7 items-center">
           <img src="src/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
           <img src="src/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />

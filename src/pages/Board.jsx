@@ -75,7 +75,7 @@ const Board = () => {
                     </div>
                     <div>
                       <hr className="my-12" />
-                      <a className="read-more-btn font-normal text-base text-gold"
+                      <a className="read-more-btn font-normal text-base text-gold cursor-pointer"
                           onClick={(e) => {
                             e.preventDefault();
                             openModal(member);

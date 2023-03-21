@@ -23,6 +23,7 @@
     @apply bg-gold;
     padding: 8px 28px;
     border-radius: 10px;
+    @apply inline-block;
   }  
   
   .button-primary:hover {
@@ -37,6 +38,7 @@
     @apply bg-black;
     padding: 8px 28px;
     border-radius: 10px;
+    @apply inline-block;
   }
 
   .button-secondary:hover {
@@ -48,15 +50,16 @@
   .button-accent {
     @apply text-button;
     @apply text-white;
-    @apply bg-dark-blue;
+    @apply bg-black;
     padding: 8px 28px;
     border-radius: 10px;
+    @apply inline-block;
   }
 
   .button-accent:hover {
     @apply text-button;
-    @apply text-white;
-    @apply bg-light-blue;
+    @apply text-black;
+    @apply bg-gold;
   }
   /* --- gradients --- */
 
