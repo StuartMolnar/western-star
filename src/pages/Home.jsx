@@ -16,7 +16,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <section className="flex p-32 pt-24 relative overflow-hidden h-[70vh] z-10">
+      <section className="flex p-32 pt-24 relative overflow-hidden pb-56 z-10">
         <div className="flex flex-col w-2/3 mr-24">
           <h1 className="text-page-header font-semibold leading-[85px]">
             Driving innovation and progress in the mining industry
@@ -50,7 +50,7 @@ const Home = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit libero, sagittis sed...
           </p>
         </div>          
-        <div className="button-container">
+        <div className="button-container ml-12">
           <div to="/contact" className="button-primary align-self-end">Contact Us</div>
         </div>
       </section>

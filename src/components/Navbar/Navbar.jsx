@@ -1,9 +1,77 @@
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 
 import './navbar.css'
 
 function Navbar() {
+
+  const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
+
+  const toggleDropdown = (name) => {
+    setDropdown({ ...dropdown, [name]: !dropdown[name] });
+  };
+
+  const DropdownMenu = ({ name, items, className }) => {
+    return (
+      <div
+        className={`dropdown-menu bg-white text-black rounded-lg p-2 mt-10 w-auto absolute ${
+          dropdown[name] ? 'block' : 'hidden'
+        } ${className}`}
+      >
+        {items.map((item, index) => (
+          <NavLink
+            key={index}
+            to={item.to}
+            className={`block px-4 py-2 ${
+              location.pathname === item.to ? 'font-semibold' : ''
+            } hover:text-gold hover:underline`}
+            onClick={() => toggleDropdown(name)}
+          >
+            {item.label}
+          </NavLink>
+        ))}
+      </div>
+    );
+  };
+
+  // Add your dropdown items for each menu
+  const aboutItems = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
+  const projectsItems = [{ to: '/gold-project', label: 'Gold Project' },];
+
+  const location = useLocation();
+
+  const isAboutLink = () => {
+    return aboutItems.some(item => location.pathname === item.to);
+  };
+
+  const isProjectsLink = () => {
+    return projectsItems.some(item => location.pathname === item.to);
+  };
+
+  const handleClickOutside = (event) => {
+    if (dropdown.about || dropdown.projects || dropdown.investors) {
+      const dropdownElements = document.querySelectorAll(".dropdown-menu");
+      let clickedOutside = true;
+  
+      dropdownElements.forEach((element) => {
+        if (element.contains(event.target)) {
+          clickedOutside = false;
+        }
+      });
+  
+      if (clickedOutside) {
+        setDropdown({ about: false, projects: false, investors: false });
+      }
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdown]);
+  
 
   return (
 
@@ -18,34 +86,33 @@ function Navbar() {
         </Link>
         <div className="nav-links flex flex-grow justify-center items-center xl:gap-20 lg:gap-14 text-base font-normal">
 
-          <div className="flex hover:text-gold">
-            <NavLink to="/board" className={({ isActive }) => (isActive ? 'underline text-gold pr-2 font-semibold' : 'pr-2')}>
+
+          <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('about')}>    
+
+            <div className={`flex pr-2 hover:text-gold ${isAboutLink() ? 'underline text-gold font-semibold' : ''}`}>
               About
-            </NavLink>            
-            <NavLink to="/board" className={({ isActive }) => (isActive ? 'text-gold' : '')}>
-             ▾
-            </NavLink>
+            </div>
+            <div className={`flex hover:text-gold ${isAboutLink() ? 'text-gold font-semibold' : ''}`}>
+              ▾
+            </div>
+            <DropdownMenu name="about" items={aboutItems} />
           </div>
 
-          <div className="flex hover:text-gold">
-            <NavLink to="/projects" className={({ isActive }) => (isActive ? 'underline text-gold pr-2 font-semibold' : 'pr-2')}>
+          <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('projects')}>
+            <div className={`flex pr-2 hover:text-gold ${isProjectsLink() ? 'underline text-gold font-semibold' : ''}`}>
               Projects
-            </NavLink>            
-            <NavLink to="/projects" className={({ isActive }) => (isActive ? 'text-gold' : '')}>
-             ▾
-            </NavLink>
+            </div>
+            <div className={`flex hover:text-gold ${isProjectsLink() ? 'text-gold font-semibold' : ''}`}>
+              ▾
+            </div>
+            <DropdownMenu name="projects" items={projectsItems} />
           </div>
 
-          <div className="flex hover:text-gold">
-            <NavLink to="/investors" className={({ isActive }) => (isActive ? 'underline text-gold pr-2 font-semibold' : 'pr-2')}>
-              Investors
-            </NavLink>            
-            <NavLink to="/investors" className={({ isActive }) => (isActive ? 'text-gold' : '')}>
-             ▾
-            </NavLink>
-          </div>
+          <NavLink to="/investors" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none hover:text-gold')}>
+            Investors
+          </NavLink>
 
-          <NavLink to="/news" className={({ isActive }) => (isActive ? 'underline text-gold font-semibold' : ' hover:text-gold')}>
+          <NavLink to="/news" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none  hover:text-gold')}>
             News
           </NavLink>
         </div>
