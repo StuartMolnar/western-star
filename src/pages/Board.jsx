@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Layout from './Layout';
-import Modal from '../components/Modal/Board-Modal'; // Import the Modal component
+import Modal from '../components/Modal/Board-Modal'; 
 import '../styles/board.css';
 
 const boardMembers = [

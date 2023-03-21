@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import Layout from './Layout';
+import Tooltip from '../components/Tooltip/Tooltip'; 
 import '../styles/home.css';
 
 const Home = () => {
@@ -81,17 +82,44 @@ const Home = () => {
         <p>Discover our latest mining ventures and unearth our potentials</p>
         <div className="flex flex-row gap-x-8 my-16">
           <div className="explore-section-bg w-1/2 rounded-2xl"></div>
-          <div className="flex flex-col items-center justify-center w-1/2 max-w-[1250px] bg-light-blue text-black py-16 px-12 rounded-2xl">
+          <div className="flex flex-col w-1/2 max-w-[1150px] bg-light-blue text-black py-16 px-12 rounded-2xl">
             <h3 className="text-section-header-md font-semibold">
               The Western Star Project
             </h3>
             <p className="pt-12">
             The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
             </p>
-            <div to="" className="button-accent mt-6 cursor-pointer">Read Full Project</div>
+            <div className="flex ">
+              <div to="" className="button-accent mt-6 cursor-pointer">Read Full Project</div>
+            </div>
+            
           </div>
         </div>
       </section>
+
+      {/* revelstoke map section */}
+      <section className="map-section flex items-center mx-32 overflow-clip h-auto">
+        <h2 className="text-section-header-lg font-semibold w-2/5 pr-24">
+          Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">9</span> documented mineral showings.
+        </h2>
+        <div className="revelstoke-map flex-1 h-full relative">
+          <img src="src/assets/index/map.png" alt="" className="w-full h-full object-cover" />
+          <Tooltip content="Tooltip text for Point 1" style={{ top: '10%', left: '20%' }}>
+            <div className="point w-4 h-4 bg-red-500 rounded-full" title="Point 1"></div>
+          </Tooltip>
+          <Tooltip content="Tooltip text for Point 2" style={{ top: '30%', left: '40%' }}>
+            <div className="point w-4 h-4 bg-red-500 rounded-full" title="Point 2"></div>
+          </Tooltip>
+          <Tooltip content="Tooltip text for Point 3" style={{ top: '50%', left: '60%' }}>
+            <div className="point w-4 h-4 bg-red-500 rounded-full" title="Point 3"></div>
+          </Tooltip>
+
+        </div>
+
+      </section>
+
+
+
 
     </Layout>
   );
