@@ -28,8 +28,8 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="gradient-gray absolute rounded-[200px] top-[30%] left-[50%] h-1/2 w-1/4 scale-150"></div>
-        <div className="gradient-gold absolute rounded-[200px] top-[10%] left-[65%] h-1/2 w-1/4 scale-150"></div>
+        <div className="gradient-gray absolute top-[30%] left-[50%] h-1/2 w-1/4 scale-150"></div>
+        <div className="gradient-gold absolute top-[10%] left-[65%] h-1/2 w-1/4 scale-150"></div>
         
         <div className="hero-images relative w-1/2">
 
@@ -98,28 +98,57 @@ const Home = () => {
       </section>
 
       {/* revelstoke map section */}
-      <section className="map-section flex items-center mx-32 overflow-clip h-auto">
+      <section className="map-section flex items-center mx-32 mt-24 overflow-clip h-auto">
         <h2 className="text-section-header-lg font-semibold w-2/5 pr-24">
           Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">9</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
           <img src="src/assets/index/map.png" alt="" className="w-full h-full object-cover" />
-          <Tooltip content="Tooltip text for Point 1" style={{ top: '10%', left: '20%' }}>
-            <div className="point w-4 h-4 bg-red-500 rounded-full" title="Point 1"></div>
+          <Tooltip content="Black Bear" style={{ top: '82.7%', left: '66.7%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
           </Tooltip>
-          <Tooltip content="Tooltip text for Point 2" style={{ top: '30%', left: '40%' }}>
-            <div className="point w-4 h-4 bg-red-500 rounded-full" title="Point 2"></div>
+          <Tooltip content="Lardeau-Goldsmith" style={{ top: '64.8%', left: '65%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
           </Tooltip>
-          <Tooltip content="Tooltip text for Point 3" style={{ top: '50%', left: '60%' }}>
-            <div className="point w-4 h-4 bg-red-500 rounded-full" title="Point 3"></div>
+          <Tooltip content="Wide West" style={{ top: '47.7%', left: '72.35%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Goodenough" style={{ top: '74.3%', left: '88.1%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Hunter" style={{ top: '62.3%', left: '73%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Kitsap" style={{ top: '43.6%', left: '37.4%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Banner" style={{ top: '23.8%', left: '28.8%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Daffodil" style={{ top: '14.2%', left: '24.7%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Royal" style={{ top: '39.4%', left: '33.8%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Morning Star" style={{ top: '17.2%', left: '38.07%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Lexington" style={{ top: '34.6%', left: '34.1%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          </Tooltip>
+          <Tooltip content="Alma" style={{ top: '58.5%', left: '47.9%' }}>
+            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
           </Tooltip>
 
         </div>
 
       </section>
 
+      {/* news section */}
+      <section className="news px-32">
 
-
+      </section>
 
     </Layout>
   );
