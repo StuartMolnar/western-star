@@ -14,7 +14,7 @@ function Navbar() {
   const DropdownMenu = ({ name, items, className }) => {
     return (
       <div
-        className={`dropdown-menu bg-white text-black rounded-lg p-2 mt-10 w-auto absolute ${
+        className={`dropdown-menu bg-white text-black rounded-lg p-2 mt-10 w-auto absolute z-50 ${
           dropdown[name] ? 'block' : 'hidden'
         } ${className}`}
       >

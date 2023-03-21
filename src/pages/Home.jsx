@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import Tooltip from '../components/Tooltip/Tooltip'; 
 import '../styles/home.css';
@@ -47,14 +48,14 @@ const Home = () => {
       <section className="latest-news bg-white flex flex-grow justify-between items-center text-base font-normal rounded-2xl mx-32 p-8 -mt-4 relative z-20" ref={latestNewsRef}>
         <div>
           <h3 className="text-container-header text-black font-semibold">
-            Latest News: Exploits Commences Drilling At Bullseye Gold Target
+            Latest News
           </h3>
           <p className="text-dark-blue">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit libero, sagittis sed...
+            Western Star plans large program on its 100% Western Star CRD/Sedex Project
           </p>
         </div>          
         <div className="button-container ml-12">
-          <div to="/contact" className="button-accent align-self-end cursor-pointer">Contact Us</div>
+          <Link to="/contact" className="button-accent align-self-end cursor-pointer">Contact Us</Link>
         </div>
       </section>
 
@@ -65,32 +66,32 @@ const Home = () => {
               About Western Star
             </h2>
             
-            <div to="/contact" className="button-primary mt-6 cursor-pointer">Learn More</div>
+            <Link to="/overview" className="button-primary mt-6 cursor-pointer">Learn More</Link>
           </div>
 
-          <p className="w-1/2 mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum tellus sed metus efficitur iaculis. Duis imperdiet lectus eu nibh pretium feugiat. Aenean scelerisque feugiat nulla, a venenatis quam gravida vel. Sed semper non nisl vel finibus. Donec auctor euismod rutrum. Donec ornare a sem ut pulvinar. Fusce eget mauris mattis, laoreet nibh eget, scelerisque nulla.</p>
+          <p className="w-1/2 mt-6">Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
 
         </div>
       </section>
 
       {/* explore projects section */}
 
-      <section className="explore-projects flex flex-col items-center justify-center mx-32">
+      <section className="explore-projects flex flex-col items-center justify-center mx-32 mb-24">
         <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-24">
           Explore Our Projects
         </h2>
         <p>Discover our latest mining ventures and unearth our potentials</p>
         <div className="flex flex-row gap-x-8 my-16">
           <div className="explore-section-bg w-1/2 rounded-2xl"></div>
-          <div className="flex flex-col w-1/2 max-w-[1150px] bg-light-blue text-black py-16 px-12 rounded-2xl">
+          <div className="flex flex-col w-1/2 max-w-[1150px] bg-light-blue text-black py-20 px-16 rounded-2xl">
             <h3 className="text-section-header-md font-semibold">
               The Western Star Project
             </h3>
-            <p className="pt-12">
+            <p className="pt-8">
             The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
             </p>
             <div className="flex ">
-              <div className="button-accent mt-6 cursor-pointer">Read Full Project</div>
+              <Link to="/gold-project" className="button-accent mt-12 cursor-pointer">Read Full Project</Link>
             </div>
             
           </div>
@@ -98,8 +99,8 @@ const Home = () => {
       </section>
 
       {/* revelstoke map section */}
-      <section className="map-section flex items-center mx-32 mt-24 overflow-clip h-auto">
-        <h2 className="text-section-header-lg font-semibold w-2/5 pr-24">
+      <section className="map-section flex items-center mx-32 overflow-clip h-auto mb-32">
+        <h2 className="text-section-header-lg font-semibold py-24 w-2/5 pr-24">
           Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">9</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
@@ -149,7 +150,7 @@ const Home = () => {
       <section className="news-section-bg px-32 py-40">
         <div className="flex items-center text-black pb-16 gap-x-24">
           <h2 className="text-section-header-lg font-semibold">Our Latest News</h2>
-          <div className="button-primary cursor-pointer">View All News</div>
+          <Link to="/news" className="button-primary cursor-pointer">View All News</Link>
         </div>
         <div className="flex flex-col bg-black max-w-[400px] rounded-3xl p-12">
           <h3 className="text-section-subheader font-semibold">
@@ -159,7 +160,7 @@ const Home = () => {
             April 1, 2023
           </p>
           <hr className="my-8" />
-          <a className="read-more-btn font-normal text-base text-gold cursor-pointer">Read More ▸</a>
+          <Link to="/news" className="read-more-btn font-normal text-base text-gold cursor-pointer">Read More ▸</Link>
         </div>
       </section>
 
