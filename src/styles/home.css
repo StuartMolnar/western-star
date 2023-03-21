@@ -6,3 +6,10 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.explore-section-bg {
+    background: url('src/assets/index/explore-section-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

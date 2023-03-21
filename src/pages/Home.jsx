@@ -16,7 +16,8 @@ const Home = () => {
 
   return (
     <Layout>
-      <section className="flex p-32 pt-24 relative overflow-hidden pb-56 z-10">
+      {/* Hero section */}
+      <section className="hero flex p-32 pt-24 relative overflow-hidden pb-56 z-10">
         <div className="flex flex-col w-2/3 mr-24">
           <h1 className="text-page-header font-semibold leading-[85px]">
             Driving innovation and progress in the mining industry
@@ -41,6 +42,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* about company section */}
       <section className="latest-news bg-white flex flex-grow justify-between items-center text-base font-normal rounded-2xl mx-32 p-8 -mt-4 relative z-20" ref={latestNewsRef}>
         <div>
           <h3 className="text-container-header text-black font-semibold">
@@ -51,7 +53,7 @@ const Home = () => {
           </p>
         </div>          
         <div className="button-container ml-12">
-          <div to="/contact" className="button-primary align-self-end">Contact Us</div>
+          <div to="/contact" className="button-accent align-self-end cursor-pointer">Contact Us</div>
         </div>
       </section>
 
@@ -62,13 +64,35 @@ const Home = () => {
               About Western Star
             </h2>
             
-            <div to="/contact" className="button-primary mt-6">Contact Us</div>
+            <div to="/contact" className="button-primary mt-6 cursor-pointer">Learn More</div>
           </div>
 
           <p className="w-1/2 mt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer condimentum tellus sed metus efficitur iaculis. Duis imperdiet lectus eu nibh pretium feugiat. Aenean scelerisque feugiat nulla, a venenatis quam gravida vel. Sed semper non nisl vel finibus. Donec auctor euismod rutrum. Donec ornare a sem ut pulvinar. Fusce eget mauris mattis, laoreet nibh eget, scelerisque nulla.</p>
 
         </div>
       </section>
+
+      {/* explore projects section */}
+
+      <section className="explore-projects flex flex-col items-center justify-center mx-32">
+        <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-24">
+          Explore Our Projects
+        </h2>
+        <p>Discover our latest mining ventures and unearth our potentials</p>
+        <div className="flex flex-row gap-x-8 my-16">
+          <div className="explore-section-bg w-1/2 rounded-2xl"></div>
+          <div className="flex flex-col items-center justify-center w-1/2 max-w-[1250px] bg-light-blue text-black py-16 px-12 rounded-2xl">
+            <h3 className="text-section-header-md font-semibold">
+              The Western Star Project
+            </h3>
+            <p className="pt-12">
+            The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
+            </p>
+            <div to="" className="button-accent mt-6 cursor-pointer">Read Full Project</div>
+          </div>
+        </div>
+      </section>
+
     </Layout>
   );
 };
