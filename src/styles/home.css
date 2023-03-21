@@ -13,3 +13,10 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
+.news-section-bg {
+    background: url('src/assets/index/news-section-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

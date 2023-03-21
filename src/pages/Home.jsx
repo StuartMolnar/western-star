@@ -90,7 +90,7 @@ const Home = () => {
             The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
             </p>
             <div className="flex ">
-              <div to="" className="button-accent mt-6 cursor-pointer">Read Full Project</div>
+              <div className="button-accent mt-6 cursor-pointer">Read Full Project</div>
             </div>
             
           </div>
@@ -146,8 +146,21 @@ const Home = () => {
       </section>
 
       {/* news section */}
-      <section className="news px-32">
-
+      <section className="news-section-bg px-32 py-40">
+        <div className="flex items-center text-black pb-16 gap-x-24">
+          <h2 className="text-section-header-lg font-semibold">Our Latest News</h2>
+          <div className="button-primary cursor-pointer">View All News</div>
+        </div>
+        <div className="flex flex-col bg-black max-w-[400px] rounded-3xl p-12">
+          <h3 className="text-section-subheader font-semibold">
+            Western Star plans large program on its 100% Western Star CRD/Sedex Project
+          </h3>
+          <p className="text-card-subheader mt-6">
+            April 1, 2023
+          </p>
+          <hr className="my-8" />
+          <a className="read-more-btn font-normal text-base text-gold cursor-pointer">Read More ▸</a>
+        </div>
       </section>
 
     </Layout>
