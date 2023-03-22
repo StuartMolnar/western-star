@@ -2,7 +2,7 @@ import React from 'react';
 import Home from './pages/Home';
 import Overview from './pages/Overview';
 import Board from './pages/Board';
-import Projects from './pages/Projects';
+import GoldProject from './pages/Gold-Project';
 import { Routes, Route, BrowserRouter } from "react-router-dom"
 
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="/board" element={<Board />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/gold-project" element={<GoldProject />} />
       </Routes>
     
     </BrowserRouter>

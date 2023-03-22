@@ -160,7 +160,7 @@ const Home = () => {
             April 1, 2023
           </p>
           <hr className="my-8" />
-          <Link to="/news" className="read-more-btn font-normal text-base text-gold cursor-pointer">Read More ▸</Link>
+          <Link to="/news" className="read-more-btn">Read More ▸</Link>
         </div>
       </section>
 

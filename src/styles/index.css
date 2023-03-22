@@ -61,6 +61,19 @@
     @apply text-black;
     @apply bg-gold;
   }
+
+  .read-more-btn {
+    @apply font-normal;
+    @apply text-gold;
+    @apply inline-block;
+    @apply cursor-pointer;
+  }
+
+  .read-more-btn:hover {
+    @apply font-medium;
+    @apply text-light-blue;
+  }
+  
   /* --- gradients --- */
 
   .gradient-gray {

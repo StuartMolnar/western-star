@@ -54,14 +54,16 @@ const Board = () => {
       <Modal isOpen={!!selectedMember} onClose={closeModal} member={selectedMember || {}} />
 
       <div>
+        {/* header section */}
         <section className="board-header-bg px-32 py-44">
           <h1 className="text-page-header font-semibold">
             Meet our board
           </h1>
-          <a className="read-more-btn font-normal text-gold" onClick={scrollToBoardMembers}>Read More ▸</a>
+          <a className="read-more-btn" onClick={scrollToBoardMembers}>Read More ▸</a>
           
         </section>
 
+        {/* member cards section */}
         <section className="board-section-bg text-white">
           <div ref={boardMembersRef} className="board-members p-20 flex justify-center">
             <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 justify-center">
@@ -75,7 +77,7 @@ const Board = () => {
                     </div>
                     <div>
                       <hr className="my-12" />
-                      <a className="read-more-btn font-normal text-base text-gold cursor-pointer"
+                      <a className="read-more-btn"
                           onClick={(e) => {
                             e.preventDefault();
                             openModal(member);
