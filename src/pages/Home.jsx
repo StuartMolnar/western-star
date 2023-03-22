@@ -55,7 +55,7 @@ const Home = () => {
           </p>
         </div>          
         <div className="button-container ml-12">
-          <Link to="/contact" className="button-accent align-self-end cursor-pointer">Contact Us</Link>
+          <Link to="/news" className="button-accent align-self-end cursor-pointer">Read Full Article</Link>
         </div>
       </section>
 
@@ -91,7 +91,7 @@ const Home = () => {
             The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
             </p>
             <div className="flex ">
-              <Link to="/gold-project" className="button-accent mt-12 cursor-pointer">Read Full Project</Link>
+              <Link to="/ws-project" className="button-accent mt-12 cursor-pointer">Read Full Project</Link>
             </div>
             
           </div>

@@ -2,5 +2,8 @@
 03-18: 2 hours
 03-19: 7 hours
 03-20: 6.5 hours
-03-21: 3.5
+03-21: 4.5
 
+todo:
+remove the Layout and put Navbar and Footer into each page
+figure out how to get the Footer gradients to overflow the into the bottom of the page

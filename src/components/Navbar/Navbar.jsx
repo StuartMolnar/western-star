@@ -36,7 +36,7 @@ function Navbar() {
 
   // Add your dropdown items for each menu
   const aboutItems = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
-  const projectsItems = [{ to: '/gold-project', label: 'Gold Project' },];
+  const projectsItems = [{ to: '/ws-project', label: 'Western Star Project' },];
 
   const location = useLocation();
 

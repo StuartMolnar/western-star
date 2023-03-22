@@ -53,14 +53,14 @@ const Overview = () => {
     <Layout>
   
     {/* header section */}
-    <section className="header-section-bg flex-row p-32 pt-40">
-      <h1 className="text-page-header font-semibold w-1/2">
+    <section className="overview-header-bg flex-row px-32 2xl:py-32">
+      <h1 className="text-page-header font-semibold w-1/2 pt-40 ">
         About Western Star
       </h1>
       <p className="pt-20 xl:w-[35%] w-1/2">
         Western Star is a newly listed, tightly held junior mining company that has 100% ownership in the high-grade Western Star Project located in the Revelstoke Mining District of British Columbia.
       </p>
-      <div className="read-more-btn pt-16">Read More ▸</div>
+      <div className="read-more-btn pt-16 pb-40">Read More ▸</div>
     </section>
 
     {/* our goal section */}

@@ -8,14 +8,14 @@ const GoldProject = () => {
   return (
     <Layout>
     {/* header section */}
-    <section className="header-section-bg flex-row p-32 pt-40">
-      <h1 className="text-page-header font-semibold w-1/2">
+    <section className="projects-header-bg flex-row px-32 2xl:py-32">
+      <h1 className="text-page-header font-semibold w-1/2 pt-40">
         The Western Star Project
       </h1>
       <p className="pt-20 xl:w-[35%] w-1/2">
         The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
       </p>
-      <div className="read-more-btn pt-16">Read More ▸</div>
+      <div className="read-more-btn pt-16 pb-32">Read More ▸</div>
     </section>
 
     {/* overview section */}
