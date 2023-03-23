@@ -60,8 +60,19 @@ const GoldProject = () => {
 
     </section>
 
+    {/* info section */}
+    <section className="info-section flex py-32 text-black">
+    <div className="w-full bg-light-blue flex items-center justify-center">
+        <p className="p-32">
+            Widely spaced sampling of these zones across widths of 1 and 3 metres returned grades of up to <span className="font-semibold">0.078 oz./ton gold, 0.5 to 12 oz./ton silver</span>, and combined base metal contents to 50.1% . Select samples of irregular, fracture-controlled mineralization associated with these zones returned grades of between 0.2 and 2.5 oz./ton gold; 200 to 500 oz./ton silver, with combined base metal contents of between 10 and 50.1% (Consolidated Trout Lake Mines).
+        </p>
+    </div>
+    <img src="src\assets\gold-project\info-section-right.JPG" alt="" className="w-full max-w-[800px] object-cover object-center" />
+</section>
+
+
     {/* exploration section */}
-    <section className="exploration-section flex-row mx-32 py-32">
+    <section className="exploration-section flex-row mx-32">
         <h2 className="text-section-header-lg font-semibold">
             Exploration
         </h2>
@@ -123,6 +134,40 @@ const GoldProject = () => {
         </div>
         
 
+    </section>
+
+    {/* map section */}
+    <section className="map-section p-32 flex justify-center">
+        <img src="src\assets\gold-project\map.png" className="w-full max-w-[1750px] object-cover" alt="" />
+    </section>
+
+    {/* mineralization section */}
+    <section className="mineralization-section p-32 bg-dark-blue flex gap-24">
+        <div className="floating-rock-image">
+            <img src="src\assets\gold-project\rock.png" alt="" className="" />
+        </div>
+        <div className="flex-row">
+            <h2 className="text-section-header-md font-semibold pb-12">
+                Mineralization
+            </h2>
+            <p className="py-4">
+                More recent examinations indicate that the mineralization is a control of syngenetic distal volcanic Carbonate Replacement Deposit (CDR) mineralization on the Western Star Property, likely to be a combination of <span className="text-gold font-semibold">structure, lithology</span> and <span className="text-gold font-semibold">stratigraphy</span>. There are three main CRD deposit types: Leadville-type mineralization (LTM), sedimentary exhalative (SEDEX) and Mississippi Valley-type (MVT).
+            </p>
+            <p className="py-4">
+                The sporadic nature of the known mineralization along the favourable contact zones indicates that a complex set of parameters governing mineralization.
+            </p>
+            <ul className="py-4 pl-12 list-disc list-inside space-y-2">
+                <li>Sulphide mineralization is stratiform and occurs at the contact between a grey-green phyllite and a limestone</li>
+                <li>The massive chlorite and chloritic quartz that occurs along fractures and at the base of mineralization may be hydrothermal in origin</li>
+                <li>The pods of disseminated hematite and magnetite that occur at the mineralized horizon are commonly associated with volcanogenic mineralization</li>
+            </ul>
+            <p className="py-4">
+                Pinch outs of the carbonate bank and dolomitized limestone units at the apparent unconformity can be expected to occur at intervals all along the contact to other units. In this area, the unconformity appears in at least three parallel zones or "leads" on the flanks of large northwest trending folds.
+            </p>
+            <p className="py-4">
+                Preliminary exploration of the Western Star Property indicates good potential for the discovery of additional mineralization along the strike extent of the 6.2km mineralized structures.
+            </p>
+        </div>
     </section>
 
     </Layout>

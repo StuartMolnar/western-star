@@ -79,7 +79,7 @@ const Overview = () => {
     </section>
 
     {/* why revelstoke section */}
-    <section className="flex-row mx-32 mt-32">
+    <section className="flex-row m-32">
 
       <h2 className="text-section-header-lg font-semibold">
         Why Revelstoke, British Columbia?

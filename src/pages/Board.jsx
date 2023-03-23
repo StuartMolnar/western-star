@@ -55,7 +55,7 @@ const Board = () => {
 
       <div>
         {/* header section */}
-        <section className="board-header-bg px-32 py-44">
+        <section className="board-header-bg px-32 py-44 2xl:py-64">
           <h1 className="text-page-header font-semibold">
             Meet our board
           </h1>

@@ -19,7 +19,7 @@ const Home = () => {
   return (
     <Layout>
       {/* Hero section */}
-      <section className="hero flex p-32 pt-24 relative overflow-hidden pb-56 z-10">
+      <section className="hero flex p-32 pt-24 relative overflow-hidden pb-56 z-10 xl:pb-80">
         <div className="flex flex-col w-2/3 mr-24">
           <h1 className="text-page-header font-semibold leading-[85px]">
             Driving innovation and progress in the mining industry
