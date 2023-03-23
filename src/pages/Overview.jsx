@@ -73,14 +73,14 @@ const Overview = () => {
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet quam nunc. Vivamus libero felis, ornare quis ipsum in, aliquet placerat lectus. Nullam maximus lectus non risus tempor pharetra. Sed eu ultricies ligula, tincidunt laoreet dolor. Sed rutrum ut est sed gravida. Morbi efficitur augue a porttitor iaculis. Mauris lobortis ut arcu a suscipit. Etiam sodales in lectus vitae lobortis. Nullam et eros sapien. Duis at eleifend nunc. Suspendisse potenti. Suspendisse hendrerit quam pharetra magna sollicitudin vulputate. Proin sed enim augue. 
       </p>
       <div className="flex gap-8 justify-center items-center w-full xl:h-900[px] h-[600px] mt-32">
-        <img src="src\assets\overview\goal-section-left.png" className="rounded-2xl w-[55%] h-full object-cover object-top" />
-        <img src="src\assets\overview\goal-section-right.jpg" className="rounded-2xl w-[45%] h-full  object-cover object-center" />
+        <img src="src\assets\overview\goal-section-left.png" className="rounded-2xl max-w-[1100px] w-[55%] h-full object-cover object-top" />
+        <img src="src\assets\overview\goal-section-right.jpg" className="rounded-2xl max-w-[900px] w-[45%] h-full  object-cover object-center" />
       </div>
 
     </section>
 
     {/* why revelstoke section */}
-    <section className="flex-row mx-32 mt-32 -mb-48">
+    <section className="flex-row mx-32 mt-40 -mb-48">
 
       <h2 className="text-section-header-lg font-semibold">
         Why Revelstoke, British Columbia?
@@ -94,9 +94,9 @@ const Overview = () => {
         </div>
         <div className="accordion-container space-y-8 w-full ml-16">
           {accordionData.map((accordion, index) => (
-            <div className={`accordion p-6 rounded-2xl bg-light-blue text-black cursor-pointer ${activeAccordion === index ? 'active' : ''}`} key={index}>
-              <div className="accordion-title select-none flex justify-between"
-                onClick={() => toggleAccordion(index)}>
+            <div className={`accordion p-6 rounded-2xl bg-light-blue text-black cursor-pointer select-none ${activeAccordion === index ? 'active' : ''}`} key={index}
+            onClick={() => toggleAccordion(index)}>
+              <div className="accordion-title flex justify-between">
                 <span className="font-semibold text-content-20">{accordion.title}</span>
                 <span className="font-semibold text-content-20 transform scale-150">{activeAccordion === index ? '▴' : '▾'}</span>              
               </div>

@@ -22,14 +22,14 @@ const Home = () => {
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
       {/* Hero section */}
-      <section className="hero flex p-32 relative overflow-hidden pb-56 z-10 xl:pb-80"
+      <section className="hero flex p-32 relative overflow-hidden pb-56 z-10 xl:pb-82 3xl:pb-96"
                style={{ paddingTop: `${navbarHeight + 108}px` }}>
         <div className="flex flex-col w-2/3 mr-24">
           <h1 className="text-page-header font-semibold leading-[85px]">
             Driving innovation and progress in the mining industry
           </h1>
           <p className="text-section-subheader pt-8 mr-8">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc velit libero, sagittis sed quam at
+            Committed to providing sustainable solutions for the future by harnessing the power of green energy metals
           </p>
         </div>
 
@@ -42,8 +42,8 @@ const Home = () => {
           <img className="absolute top-[250px] left-16" src="src\assets\hero\hero-circle-md.svg" alt="" />
           <img className="absolute top-8 left-48" src="src\assets\hero\hero-circle-lg.svg" alt="" />
           <div className="hero-rocks animate-bounce">
-            <img className="absolute top-8 left-16" src="src\assets\hero\hero-rock-lg.png" alt="" />
-            <img className="absolute top-36 left-44" src="src\assets\hero\hero-rock-sm.png" alt="" />
+            <img className="absolute top-0 left-16" src="src\assets\hero\hero-rock-lg.png" alt="" />
+            <img className="absolute top-28 left-44" src="src\assets\hero\hero-rock-sm.png" alt="" />
           </div>
         </div>
       </section>

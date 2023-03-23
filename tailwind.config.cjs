@@ -54,8 +54,8 @@ module.exports = {
       },
       keyframes: {
         bounce: {
-          '0%, 100%': { transform: 'translateY(45)' },
-          '50%': { transform: 'translateY(-45px)' },
+          '0%': { transform: 'translateY(10)' },
+          '50%': { transform: 'translateY(-50px)' },
           // '0%, 20%, 50%, 80%, 100%': {
           //   transform: 'translateY(0)',
           // },
@@ -67,7 +67,7 @@ module.exports = {
           // },
         },
         rotation: {
-          '0%': { transform: 'rotate(0)' },
+          '0, 100%': { transform: 'rotate(0)' },
           '100%': { transform: 'rotate(360deg)' },
         },
       },
