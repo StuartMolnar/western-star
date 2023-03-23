@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import Layout from './Layout';
 import '../styles/gold-project.css';
 
 
 const GoldProject = () => {
-    
+
   return (
     <Layout>
     {/* header section */}
@@ -61,13 +61,14 @@ const GoldProject = () => {
     </section>
 
     {/* info section */}
-    <section className="info-section flex py-32 text-black">
-    <div className="w-full bg-light-blue flex items-center justify-center">
+    <section className="info-section flex py-32 text-black min-h-[800px]">
+    <div className="w-[65%] bg-light-blue flex items-center justify-center">
         <p className="p-32">
             Widely spaced sampling of these zones across widths of 1 and 3 metres returned grades of up to <span className="font-semibold">0.078 oz./ton gold, 0.5 to 12 oz./ton silver</span>, and combined base metal contents to 50.1% . Select samples of irregular, fracture-controlled mineralization associated with these zones returned grades of between 0.2 and 2.5 oz./ton gold; 200 to 500 oz./ton silver, with combined base metal contents of between 10 and 50.1% (Consolidated Trout Lake Mines).
         </p>
     </div>
-    <img src="src\assets\gold-project\info-section-right.JPG" alt="" className="w-full max-w-[800px] object-cover object-center" />
+    <div className="info-section-img w-[35%]"></div>
+    {/* <img src="src\assets\gold-project\info-section-right.JPG" alt="" className="w-full max-w-[800px] object-cover object-center" /> */}
 </section>
 
 
@@ -143,8 +144,8 @@ const GoldProject = () => {
 
     {/* mineralization section */}
     <section className="mineralization-section p-32 bg-dark-blue flex gap-24">
-        <div className="floating-rock-image">
-            <img src="src\assets\gold-project\rock.png" alt="" className="" />
+        <div className="floating-rock-image min-w-[250px] flex items-center justify-center">
+            <img src="src\assets\gold-project\rock.png" className="animate-rotation" alt=""/>
         </div>
         <div className="flex-row">
             <h2 className="text-section-header-md font-semibold pb-12">
@@ -167,6 +168,15 @@ const GoldProject = () => {
             <p className="py-4">
                 Preliminary exploration of the Western Star Property indicates good potential for the discovery of additional mineralization along the strike extent of the 6.2km mineralized structures.
             </p>
+        </div>
+    </section>
+
+
+    {/* sample images section */}
+    <section className="m-32 flex">
+        <div className="flex gap-8 justify-center items-center w-full xl:h-1100[px] h-[800px]">
+            <img src="src\assets\gold-project\images-section-left.png" className="rounded-2xl w-[45%] h-full object-cover object-top" />
+            <img src="src\assets\gold-project\images-section-right.png" className="rounded-2xl w-[55%] h-full object-cover object-center" />
         </div>
     </section>
 

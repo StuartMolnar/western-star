@@ -50,6 +50,7 @@ module.exports = {
       }, 
       animation: {
         bounce: 'bounce 5s ease-in-out infinite',
+        rotation: 'rotation 60s linear infinite',
       },
       keyframes: {
         bounce: {
@@ -64,6 +65,10 @@ module.exports = {
           // '60%': {
           //   transform: 'translateY(-15px)',
           // },
+        },
+        rotation: {
+          '0%': { transform: 'rotate(0)' },
+          '100%': { transform: 'rotate(360deg)' },
         },
       },
       
