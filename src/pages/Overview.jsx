@@ -49,6 +49,13 @@ const Overview = () => {
 
   const [navbarHeight, setNavbarHeight] = useState(0);
 
+  const goalsRef = useRef();
+
+  const scrollToGoals = (e) => {
+    e.preventDefault();
+    goalsRef.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
   
@@ -61,11 +68,11 @@ const Overview = () => {
       <p className="pt-20 xl:w-[35%] w-1/2">
         Western Star is a newly listed, tightly held junior mining company that has 100% ownership in the high-grade Western Star Project located in the Revelstoke Mining District of British Columbia.
       </p>
-      <div className="read-more-btn pt-16 pb-40">Read More ▸</div>
+      <a className="read-more-btn pt-16 pb-40" onClick={scrollToGoals}>Read More ▸</a>
     </section>
 
     {/* our goal section */}
-    <section className="flex-row mx-32 mt-24">
+    <section ref={goalsRef} className="flex-row mx-32 mt-24">
       <h2 className="text-section-header-lg font-semibold">
         Our Goal
       </h2>
@@ -92,7 +99,7 @@ const Overview = () => {
         <div className="flex flex-col justify-center items-start w-full lg:w-auto">
           <img src="src\assets\overview\revelstoke-map.png" className="rounded-3xl min-w-[500px] max-w-[1000px] w-full" alt=""/>
         </div>
-        <div className="accordion-container space-y-8 w-full ml-16">
+        <div className="accordion-container z-10 space-y-8 w-full ml-16">
           {accordionData.map((accordion, index) => (
             <div className={`accordion p-6 rounded-2xl bg-light-blue text-black cursor-pointer select-none ${activeAccordion === index ? 'active' : ''}`} key={index}
             onClick={() => toggleAccordion(index)}>

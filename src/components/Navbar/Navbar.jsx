@@ -8,6 +8,9 @@ function Navbar({ setNavbarHeight }) {
 
 
   const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+  
 
   const toggleDropdown = (name) => {
     setDropdown({ ...dropdown, [name]: !dropdown[name] });
@@ -83,14 +86,28 @@ function Navbar({ setNavbarHeight }) {
   }, [setNavbarHeight, dropdown]);
 
   
-
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, visible]);
+  
+  
+  
   return (
 
     // NOTE: when designing mobile, make new tailwind breakpoint for 1200px not sm
     //       do this for navbar and footer
 
-    <div ref={navbarRef} className="Navbar absolute w-full z-50">
-      <div className="flex p-12 px-32 bg-transparent">
+    <div ref={navbarRef} className={`Navbar fixed w-full z-50 ${prevScrollPos > 10 ? 'bg-black opacity-95' : ''} ${visible ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-500 ease-in-out`}>
+
+      <div className="flex p-12 px-32 bg-transparent opacity-100">
         <Link to="/" className="nav-logo flex h-7 items-center">
           <img src="src/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
           <img src="src/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />

@@ -9,7 +9,7 @@ const Footer = () => {
   const isSpecialPage = location.pathname === '/overview' || location.pathname === '/ws-project';
 
   return (
-    <footer className={`footer-container px-32 text-copyright relative overflow-hidden -z-10 ${isSpecialPage ? 'pt-72' : ''}`}>
+    <footer className={`footer-container px-32 text-copyright relative overflow-hidden ${isSpecialPage ? 'pt-72' : ''}`}>
 
     <div className="footer-content w-full mb-8 mt-32">
       <div className="grid grid-cols-2 h-full">
