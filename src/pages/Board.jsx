@@ -25,8 +25,8 @@ const boardMembers = [
   {
     name: 'Dallas Miller',
     role: 'Director',
-    description: 'Mr. Millar has been working with BHP and Santos Ltd. since 2010, both in Australia and in Papua New Guinea. He has extensive knowledge of the roles and responsibilities needed to take on and run a successful mining operation.',
-    full_description:'Mr. Millar has been working with BHP and Santos Ltd. since 2010, both in Australia and in Papua New Guinea. Mr. Miller has extensive knowledge of the roles and responsibilities needed to take on and run a successful mining operation. Mr. Miller has experience on the ground from an operational standpoint and has also been an integral part in raising millions of dollars in capital funding in recent years for both private and public companies. Mr. Miller is a prominent member of numerous public companies.',
+    description: 'Mr. Miller has been working with BHP and Santos Ltd. since 2010, both in Australia and in Papua New Guinea. He has extensive knowledge of the roles and responsibilities needed to take on and run a successful mining operation.',
+    full_description:'Mr. Miller has been working with BHP and Santos Ltd. since 2010, both in Australia and in Papua New Guinea. Mr. Miller has extensive knowledge of the roles and responsibilities needed to take on and run a successful mining operation. Mr. Miller has experience on the ground from an operational standpoint and has also been an integral part in raising millions of dollars in capital funding in recent years for both private and public companies. Mr. Miller is a prominent member of numerous public companies.',
   },
 ];
 
@@ -48,14 +48,17 @@ const Board = () => {
     boardMembersRef.current.scrollIntoView({ behavior: 'smooth' });
   };
     
+  const [navbarHeight, setNavbarHeight] = useState(0);
+
   return (
-    <Layout>
+      <Layout setNavbarHeight={setNavbarHeight}>
 
       <Modal isOpen={!!selectedMember} onClose={closeModal} member={selectedMember || {}} />
 
       <div>
         {/* header section */}
-        <section className="board-header-bg px-32 py-44 2xl:py-64">
+        <section className="board-header-bg px-32 py-44 2xl:py-64"
+                style={{ marginTop: `${navbarHeight}px` }}>
           <h1 className="text-page-header font-semibold">
             Meet our board
           </h1>

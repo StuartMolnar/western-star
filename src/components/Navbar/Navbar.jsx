@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 
 import './navbar.css'
 
-function Navbar() {
+function Navbar({ setNavbarHeight }) {
+  console.log('setNavbarHeight:', setNavbarHeight); // Add this line to log the prop value
+
 
   const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
 
@@ -65,12 +67,21 @@ function Navbar() {
     }
   };
 
+  const navbarRef = useRef(null);
+
+
   useEffect(() => {
+    if (navbarRef.current) {
+      setNavbarHeight(navbarRef.current.offsetHeight);
+    }
+
     document.addEventListener("mousedown", handleClickOutside);
+
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [dropdown]);
+  }, [setNavbarHeight, dropdown]);
+
   
 
   return (
@@ -78,7 +89,7 @@ function Navbar() {
     // NOTE: when designing mobile, make new tailwind breakpoint for 1200px not sm
     //       do this for navbar and footer
 
-    <div className="Navbar">
+    <div ref={navbarRef} className="Navbar absolute w-full z-50">
       <div className="flex p-12 px-32 bg-transparent">
         <Link to="/" className="nav-logo flex h-7 items-center">
           <img src="src/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />

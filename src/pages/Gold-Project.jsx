@@ -5,10 +5,13 @@ import '../styles/gold-project.css';
 
 const GoldProject = () => {
 
+  const [navbarHeight, setNavbarHeight] = useState(0);
+
   return (
-    <Layout>
+    <Layout setNavbarHeight={setNavbarHeight}>
     {/* header section */}
-    <section className="projects-header-bg flex-row px-32 2xl:py-32">
+    <section className="projects-header-bg flex-row px-32 2xl:py-32"
+            style={{ marginTop: `${navbarHeight}px` }}>
       <h1 className="text-page-header font-semibold w-1/2 pt-40">
         The Western Star Project
       </h1>
@@ -173,7 +176,7 @@ const GoldProject = () => {
 
 
     {/* sample images section */}
-    <section className="m-32 flex">
+    <section className="m-32 flex -mb-32">
         <div className="flex gap-8 justify-center items-center w-full xl:h-1100[px] h-[800px]">
             <img src="src\assets\gold-project\images-section-left.png" className="rounded-2xl w-[45%] h-full object-cover object-top" />
             <img src="src\assets\gold-project\images-section-right.png" className="rounded-2xl w-[55%] h-full object-cover object-center" />

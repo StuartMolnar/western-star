@@ -14,6 +14,7 @@ const App = () => {
         <Route path="/board" element={<Board />} />
         <Route path="/ws-project" element={<GoldProject />} />
       </Routes>
+      
     
     </BrowserRouter>
   );

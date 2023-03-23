@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import Tooltip from '../components/Tooltip/Tooltip'; 
@@ -13,13 +13,17 @@ const Home = () => {
     const aboutSection = document.querySelector(".about-section-bg");
     aboutSection.style.marginTop = `-${latestNewsHeight}px`;
   }, [latestNewsRef]);
+
+  const [navbarHeight, setNavbarHeight] = useState(0);
+
   
 
 
   return (
-    <Layout>
+    <Layout setNavbarHeight={setNavbarHeight}>
       {/* Hero section */}
-      <section className="hero flex p-32 pt-24 relative overflow-hidden pb-56 z-10 xl:pb-80">
+      <section className="hero flex p-32 relative overflow-hidden pb-56 z-10 xl:pb-80"
+               style={{ paddingTop: `${navbarHeight + 108}px` }}>
         <div className="flex flex-col w-2/3 mr-24">
           <h1 className="text-page-header font-semibold leading-[85px]">
             Driving innovation and progress in the mining industry

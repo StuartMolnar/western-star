@@ -47,13 +47,14 @@ const Overview = () => {
     });
   }, [activeAccordion]);
 
-  
+  const [navbarHeight, setNavbarHeight] = useState(0);
 
   return (
-    <Layout>
+    <Layout setNavbarHeight={setNavbarHeight}>
   
     {/* header section */}
-    <section className="overview-header-bg flex-row px-32 2xl:py-32">
+    <section className="overview-header-bg flex-row px-32 2xl:py-32"
+             style={{ marginTop: `${navbarHeight}px` }}>
       <h1 className="text-page-header font-semibold w-1/2 pt-40 ">
         About Western Star
       </h1>
@@ -79,7 +80,7 @@ const Overview = () => {
     </section>
 
     {/* why revelstoke section */}
-    <section className="flex-row m-32">
+    <section className="flex-row mx-32 mt-32 -mb-48">
 
       <h2 className="text-section-header-lg font-semibold">
         Why Revelstoke, British Columbia?
