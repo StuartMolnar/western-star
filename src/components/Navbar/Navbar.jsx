@@ -83,30 +83,17 @@ function Navbar({ setNavbarHeight }) {
   }, [setNavbarHeight, dropdown]);
 
   
-// ...
-
-useEffect(() => {
-  let timeoutId;
-
-  const handleScroll = () => {
-    const currentScrollPos = window.pageYOffset;
-    setVisible(prevScrollPos > currentScrollPos);
-    setPrevScrollPos(currentScrollPos);
-
-    if (timeoutId) {
-      clearTimeout(timeoutId);
-    }
-
-    timeoutId = setTimeout(() => {
-      timeoutId = null;
-    }, 100);
-  };
-
-  window.addEventListener('scroll', handleScroll);
-
-  return () => window.removeEventListener('scroll', handleScroll);
-}, [prevScrollPos, visible]);
-
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [prevScrollPos, visible]);
   
   
   
