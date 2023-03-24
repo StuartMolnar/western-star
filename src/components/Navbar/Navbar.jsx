@@ -4,9 +4,6 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import './navbar.css'
 
 function Navbar({ setNavbarHeight }) {
-  console.log('setNavbarHeight:', setNavbarHeight); // Add this line to log the prop value
-
-
   const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -86,17 +83,30 @@ function Navbar({ setNavbarHeight }) {
   }, [setNavbarHeight, dropdown]);
 
   
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-      setPrevScrollPos(currentScrollPos);
-    };
-  
-    window.addEventListener('scroll', handleScroll);
-  
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos, visible]);
+// ...
+
+useEffect(() => {
+  let timeoutId;
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(prevScrollPos > currentScrollPos);
+    setPrevScrollPos(currentScrollPos);
+
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+
+    timeoutId = setTimeout(() => {
+      timeoutId = null;
+    }, 100);
+  };
+
+  window.addEventListener('scroll', handleScroll);
+
+  return () => window.removeEventListener('scroll', handleScroll);
+}, [prevScrollPos, visible]);
+
   
   
   
