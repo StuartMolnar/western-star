@@ -3,10 +3,13 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 
 import './navbar.css'
 
+let totalDifference = 0;
+
 function Navbar({ setNavbarHeight }) {
   const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   
 
   const toggleDropdown = (name) => {
@@ -84,10 +87,39 @@ function Navbar({ setNavbarHeight }) {
 
   
   useEffect(() => {
+    const handleResize = () => {
+      setViewportHeight(window.innerHeight);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos);
+
+      totalDifference += prevScrollPos - currentScrollPos ;
+
+      if (currentScrollPos - prevScrollPos > 0){
+        totalDifference = 0;
+        setVisible(false);
+      } else {
+        if (totalDifference > (150)){
+          setVisible(true);
+        }
+      }
+      
       setPrevScrollPos(currentScrollPos);
+
+      if (currentScrollPos === 0) {
+        setVisible(true);
+      }      
+
     };
   
     window.addEventListener('scroll', handleScroll);
@@ -95,7 +127,7 @@ function Navbar({ setNavbarHeight }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos, visible]);
   
-  
+
   
   return (
 

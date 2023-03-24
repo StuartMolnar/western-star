@@ -112,7 +112,7 @@ const Overview = () => {
                 className="accordion-content text-base font-normal"
               >
                 {activeAccordion === index && (
-                  <ul>
+                  <ul className="pl-6 pt-2">
                     {accordion.points.map((point, pointIndex) => (
                       <li key={pointIndex}>{point}</li>
                     ))}
