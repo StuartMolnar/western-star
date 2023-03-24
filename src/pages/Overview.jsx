@@ -90,7 +90,7 @@ const Overview = () => {
     <section className="flex-row mx-32 mt-40 -mb-48">
 
       <h2 className="text-section-header-lg font-semibold">
-        Why Revelstoke, British Columbia?
+        Why British Columbia?
       </h2>
       <p className="pt-16">
         The Revelstoke Mining District, located within British Columbia, is renowned for its abundant reserves of precious and base metals, including gold, silver, copper, and lead. Western Star's project is situated in a prime location within this district, surrounded by other successful mining operations and well-connected to key infrastructure such as roads, power, and water supply. 

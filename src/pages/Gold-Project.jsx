@@ -75,7 +75,7 @@ const GoldProject = () => {
     <section className="info-section flex py-32 text-black min-h-[800px]">
     <div className="w-[65%] bg-light-blue flex items-center justify-center">
         <p className="p-32">
-            Widely spaced sampling of these zones across widths of 1 and 3 metres returned grades of up to <span className="font-semibold">0.078 oz./ton gold, 0.5 to 12 oz./ton silver</span>, and combined base metal contents to 50.1% . Select samples of irregular, fracture-controlled mineralization associated with these zones returned grades of between 0.2 and 2.5 oz./ton gold; 200 to 500 oz./ton silver, with combined base metal contents of between 10 and 50.1% (Consolidated Trout Lake Mines).
+            Mineralization consists of <span className="font-semibold">galena-sphalerite-chalcopyrite</span> in concordant to irregular quartz-chlorite veins in shears at the limestone phyllite contact and in fractured and/or brecciated ankeritic limestone. Rock samples returned up to <span className="font-semibold">8.22 g/t gold, 246.76 g/t silver, 3.68% copper, and 50.1% lead</span>.
         </p>
     </div>
     <div className="info-section-img w-[35%]"></div>
