@@ -2,22 +2,26 @@
     {
       "title": "Article 1",
       "date": "2023-03-24",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum."
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.",
+      "url": "/western-star-plans-large-program"
     },
     {
       "title": "Article 2",
       "date": "2023-03-24",
-      "content": "Sed tristique consectetur risus nec congue. Duis auctor ipsum vel tincidunt fermentum."
+      "content": "Sed tristique consectetur risus nec congue. Duis auctor ipsum vel tincidunt fermentum.",
+      "url": "/western-star-plans-large-program"
     },
     {
-        "title": "Article test",
-        "date": "2021-03-24",
-        "content": "Sed tristique consectetur risus nec congue. Duis auctor ipsum vel tincidunt fermentum."
-      },
+      "title": "Article test",
+      "date": "2021-03-24",
+      "content": "Sed tristique consectetur risus nec congue. Duis auctor ipsum vel tincidunt fermentum.",
+      "url": "/western-star-plans-large-program"
+    },
     {
       "title": "Western Star plans large program on its 100% Western Star CRD/Sedex Project",
       "date": "2023-03-24",
-      "content": "Praesent ornare tortor ac nulla vehicula, eget consequat urna bibendum. Nulla at placerat nisl."
+      "content": "Praesent ornare tortor ac nulla vehicula, eget consequat urna bibendum. Nulla at placerat nisl.",
+      "url": "/western-star-plans-large-program"
     }
   ]
   

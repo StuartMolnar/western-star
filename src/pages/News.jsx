@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import '../styles/news.css';
 import articles from '../data/articles.json';
@@ -75,13 +76,9 @@ const News = () => {
                     </div>
                     <div>
                       <hr className="my-12" />
-                      <a className="read-more-btn"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            openModal(member);
-                          }}>
+                        <Link to={`${article.url}`} className="read-more-btn">
                           Read More ▸
-                        </a>
+                        </Link>
                     </div>
                   </div>
                 </div>
@@ -95,7 +92,8 @@ const News = () => {
   );
 };
 
-export default News;
+export { News as default };
+
 
 
 

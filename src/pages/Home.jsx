@@ -170,7 +170,7 @@ const Home = () => {
             April 1, 2023
           </p>
           <hr className="my-8" />
-          <Link to="/news" className="read-more-btn">Read More ▸</Link>
+          <Link to="/western-star-plans-large-program" className="read-more-btn">Read More ▸</Link>
         </div>
       </section>
 
