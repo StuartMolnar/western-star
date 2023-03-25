@@ -4,7 +4,56 @@
 03-20: 6.5 hours
 03-21: 4.5 hours
 03-22: 4 hours
-03-23: 1 hours
+03-23: 4 hours
+03-24 (backend): 2 hours
 
-started 11pm
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+not useful
+
+todo
+frontend:
+create the /news page which lists news articles from the news-articles api
+create the /article component page which will display the article based on a query param
+ > gets all news article info from the back-end API
+ > picks article to display based on the query parameter provided
+
+backend:
+dockerize this service
+> database microservice
+  > automatic backups
+  > use YAML for configuration
+  > posts news articles from the database microservice to the API endpoint
+  > gets news article json from the API endpoint and posts to the database microservice 
+  > data validation and input sanitization
+  > authenticates using API key
+> use a reverse proxy to route requests
+  > use SSL for the API endpoint
+
+create the static file server that will serve the header-images for each news article
+> use cloudflare or amazon s3 API for this instead
+
+
+
+general ideas:
+Implement lazy-loading for images and other media to improve the initial load time of your webpages.
+
+Minify and compress JavaScript and CSS files to reduce their sizes and improve page load times.
+
+Rate limiting: Implement rate limiting on your API to prevent abuse and protect your resources from being overwhelmed by too many requests in a short period.
+
+Monitoring and logging: Set up proper monitoring and logging for both the frontend and backend. Tools like Prometheus, Grafana, and Elasticsearch can help you visualize and analyze performance metrics and logs.
+
+Automated testing: Implement automated testing for your frontend and backend to catch bugs early and ensure that your code is functioning as expected. Unit tests, integration tests, and end-to-end tests can help maintain the quality and reliability of your codebase.

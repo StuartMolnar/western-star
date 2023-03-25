@@ -20,7 +20,7 @@ const GoldProject = () => {
     {/* header section */}
     <section className="projects-header-bg flex-row px-32 2xl:py-32"
             style={{ marginTop: `${navbarHeight}px` }}>
-      <h1 className="text-page-header font-semibold w-1/2 pt-40">
+      <h1 className="text-page-header font-semibold w-1/2 pt-12">
         The Western Star Project
       </h1>
       <p className="pt-20 xl:w-[35%] w-1/2">

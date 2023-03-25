@@ -9,7 +9,13 @@ const Investors = () => {
 
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
-
+    <iframe
+      src={'src/assets/ws-deck.pdf'}
+      width="100%"
+      height="600px"
+      style={{ border: "none" }}
+      title="PDF Viewer">
+    </iframe>
     </Layout>
   );
 };

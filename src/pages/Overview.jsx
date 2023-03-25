@@ -72,7 +72,7 @@ const Overview = () => {
     </section>
 
     {/* our goal section */}
-    <section ref={goalsRef} className="flex-row mx-32 mt-24">
+    <section ref={goalsRef} className="flex-row mx-32 pt-24">
       <h2 className="text-section-header-lg font-semibold">
         Our Goal
       </h2>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import Tooltip from '../components/Tooltip/Tooltip'; 
 import '../styles/home.css';
+import articlesData from '../data/articles.json';
 
 const Home = () => {
 
@@ -16,6 +17,11 @@ const Home = () => {
 
   const [navbarHeight, setNavbarHeight] = useState(0);
 
+
+  const getLastArticleTitle = () => {
+    const lastArticle = articlesData[articlesData.length - 1];
+    return lastArticle.title;
+  };
   
 
 
@@ -55,7 +61,7 @@ const Home = () => {
             Latest News
           </h3>
           <p className="text-dark-blue">
-            Western Star plans large program on its 100% Western Star CRD/Sedex Project
+            {getLastArticleTitle()}
           </p>
         </div>          
         <div className="button-container ml-12">
