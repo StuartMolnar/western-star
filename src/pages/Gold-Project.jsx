@@ -61,10 +61,9 @@ const GoldProject = () => {
                     Geology & Mineralization
                 </h3>
                 <ul className="list-disc list-inside text-black pt-8 space-y-2">
-                    <li>Mining records from 1895-1915 showed exploration of Western Star Property prospects.</li>
-                    <li>These prospects are described as veins ranging from 1 to 10m wide.</li>
-                    <li>They were traced intermittently over strike lengths up to 6.2km.</li>
-                    <li>The records were obtained from the Ministry of Mines Annual Review (MMAR).</li>
+                    <li>Mining records from 1895-1915 show sigificant mining history.</li>
+                    <li>Historic mineralization is described as veins ranging from 1 to 10m wide.</li>
+                    <li>Mineralization has been traced intermittently over strike lengths up to 6.2km.</li>
                 </ul>
             </div>
         </div>
@@ -133,7 +132,7 @@ const GoldProject = () => {
             </div>
             <div className="grid grid-cols-11">
                 <div className="col-span-1 border border-black p-2 flex items-center px-4">16953</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample of quartz-siderite fracture filling with galena, sphalerite,tetrabedrite.</div>
+                <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample of quartz-siderite fracture filling with galena, sphalerite, tetrahedrite.</div>
                 <div className="col-span-1 border border-black p-2 flex items-center px-4">5.95</div>
                 <div className="col-span-1 border border-black p-2 flex items-center px-4">170.3</div>
             </div>
@@ -163,10 +162,10 @@ const GoldProject = () => {
                 Mineralization
             </h2>
             <p className="py-4">
-                More recent examinations indicate that the mineralization is a control of syngenetic distal volcanic Carbonate Replacement Deposit (CDR) mineralization on the Western Star Property, likely to be a combination of <span className="text-gold font-semibold">structure, lithology</span> and <span className="text-gold font-semibold">stratigraphy</span>. There are three main CRD deposit types: Leadville-type mineralization (LTM), sedimentary exhalative (SEDEX) and Mississippi Valley-type (MVT).
+                Recent exploration indicates that the mineralization is a control of syngenetic distal volcanic Carbonate Replacement Deposit (CDR) mineralization likely to be a combination of <span className="text-gold font-semibold">structure, lithology</span> and <span className="text-gold font-semibold">stratigraphy</span>. There are three main CRD deposit types: Leadville-type mineralization (LTM), sedimentary exhalative (SEDEX) and Mississippi Valley-type (MVT).
             </p>
             <p className="py-4">
-                The sporadic nature of the known mineralization along the favourable contact zones indicates that a complex set of parameters governing mineralization.
+                The sporadic nature of the known mineralization along the favourable contact zones indicates a complex set of parameters governing mineralization.
             </p>
             <ul className="py-4 pl-12 list-disc list-inside space-y-2">
                 <li>Sulphide mineralization is stratiform and occurs at the contact between a grey-green phyllite and a limestone</li>

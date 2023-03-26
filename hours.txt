@@ -7,15 +7,20 @@
 03-23: 4 hours
 03-24 (backend): 2 hours
 03-24: 2.5 hours
-03-25: 
+03-25: 3.5 hours
+03-26: 
 
 
+general ideas:
+Implement lazy-loading for images and other media to improve the initial load time of your webpages.
 
+Minify and compress JavaScript and CSS files to reduce their sizes and improve page load times.
 
+Rate limiting: Implement rate limiting on your API to prevent abuse and protect your resources from being overwhelmed by too many requests in a short period.
 
+Monitoring and logging: Set up proper monitoring and logging for both the frontend and backend. Tools like Prometheus, Grafana, and Elasticsearch can help you visualize and analyze performance metrics and logs.
 
-
-
+Automated testing: Implement automated testing for your frontend and backend to catch bugs early and ensure that your code is functioning as expected. Unit tests, integration tests, and end-to-end tests can help maintain the quality and reliability of your codebase.
 
 
 
@@ -46,16 +51,3 @@ dockerize this service
 
 create the static file server that will serve the header-images for each news article
 > use cloudflare or amazon s3 API for this instead
-
-
-
-general ideas:
-Implement lazy-loading for images and other media to improve the initial load time of your webpages.
-
-Minify and compress JavaScript and CSS files to reduce their sizes and improve page load times.
-
-Rate limiting: Implement rate limiting on your API to prevent abuse and protect your resources from being overwhelmed by too many requests in a short period.
-
-Monitoring and logging: Set up proper monitoring and logging for both the frontend and backend. Tools like Prometheus, Grafana, and Elasticsearch can help you visualize and analyze performance metrics and logs.
-
-Automated testing: Implement automated testing for your frontend and backend to catch bugs early and ensure that your code is functioning as expected. Unit tests, integration tests, and end-to-end tests can help maintain the quality and reliability of your codebase.
