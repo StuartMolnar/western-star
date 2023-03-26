@@ -1,19 +1,21 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Layout from '../Layout';
 import '../../styles/articles/article-1.css';
+import ArticleHeader from '../../components/Article/Article-Header';
+
+
 import articles from '../../data/articles.json';
 
+// for subsequent articles, change the articleId to the corresponding article id
 const articleId = 1;
 const article = articles.find((article) => article.id === articleId);
-
-
 
 
 const Article_1 = () => {
 
   const articleRef = useRef();
 
-  const [navbarHeight, setNavbarHeight] = useState(0);
+  const [navbarHeight, setNavbarHeight] = useState(0); 
 
   const scrollToArticle = (e) => {
     e.preventDefault();
@@ -23,16 +25,7 @@ const Article_1 = () => {
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
 
-      {/* header section */}
-      <section className="projects-header-bg flex-row px-32 2xl:py-32"
-              style={{ marginTop: `${navbarHeight}px` }}>
-                
-        <div className="text-gold font-semibold text-content-20">{article.date}</div>
-        <h1 className="text-page-header font-semibold w-1/2 pt-6">
-          {article.title}
-        </h1>
-        <div className="read-more-btn pt-16" onClick={scrollToArticle}>Read More ▸</div>
-      </section>
+      <ArticleHeader navbarHeight={navbarHeight} scrollToArticle={scrollToArticle} article={article} />
 
       {/* content section */}
       <section ref={articleRef} className="article-content px-32 bg-white text-black min-h-[600px]">
