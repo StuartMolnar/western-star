@@ -23,7 +23,11 @@ const Home = () => {
     return lastArticle.title;
   };
   
-
+  const getLastArticleUrl = () => {
+    const lastArticle = articlesData[articlesData.length - 1];
+    return lastArticle.url;
+  };
+  
 
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
@@ -65,7 +69,7 @@ const Home = () => {
           </p>
         </div>          
         <div className="button-container ml-12">
-          <Link to="/news" className="button-accent align-self-end cursor-pointer">Read Full Article</Link>
+          <Link to={`${getLastArticleUrl()}`} className="button-accent align-self-end cursor-pointer">Read Full Article</Link>
         </div>
       </section>
 

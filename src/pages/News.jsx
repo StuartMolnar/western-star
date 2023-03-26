@@ -10,15 +10,20 @@ const News = () => {
   const newsArticlesRef = useRef();
 
   const [navbarHeight, setNavbarHeight] = useState(0);
-  const [selectedYear, setSelectedYear] = useState('2023');
+
+  const date = new Date();
+  const years = [date.getFullYear(), date.getFullYear() - 1];
+
+  const [selectedYear, setSelectedYear] = useState('all');
 
   const handleYearClick = (year) => {
     setSelectedYear(year);
   };
 
-  const filteredArticles = reversedArticles.filter(
-    (article) => !selectedYear || article.date.includes(selectedYear),
-  );
+  console.log('reversedArticles', reversedArticles);
+
+  const filteredArticles = (selectedYear == 'all') ? reversedArticles : reversedArticles.filter((article) => article.date?.includes(selectedYear.year));
+
 
   const scrollToNews = (e) => {
     e.preventDefault();
@@ -49,12 +54,13 @@ const News = () => {
                   Filter news articles by year
               </p>
               <div className="flex gap-x-4 mt-4">
-                <button onClick={() => handleYearClick('2023')} 
-                className={`${selectedYear === '2023' ? 'year-active custom-underline' : 'text-light-blue'}`}>2023</button>
-                <button onClick={() => handleYearClick('2022')} 
-                className={`${selectedYear === '2022' ? 'year-active custom-underline' : 'text-light-blue'}`}>2022</button>
-                <button onClick={() => handleYearClick('2021')} 
-                className={`${selectedYear === '2021' ? 'year-active custom-underline' : 'text-light-blue'}`}>2021</button>
+                <button onClick={() => handleYearClick('all')} 
+                className={`${selectedYear === 'all' ? 'year-active' : 'text-light-blue'}`}>All</button>
+                {years.map((year) => (
+                  <button key={year} onClick={() => handleYearClick({year})} 
+                  className={`${selectedYear.year === year ? 'year-active' : 'text-light-blue'}`}>{year}</button>
+                ))}
+
             </div>
           </div>
       </section>

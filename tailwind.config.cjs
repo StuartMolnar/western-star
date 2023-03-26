@@ -38,7 +38,7 @@ module.exports = {
         'section-subheader': '20px',
         'container-header': '20px',
         'card-header': '30px',
-        'card-subheader': '16px',
+        'card-subheader': '18px',
         'button': '18px',
         'footer': '16px',
         'copyright': '14px',

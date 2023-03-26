@@ -15,11 +15,11 @@
 }
 
 /* --- year selection buttons --- */
-.custom-underline {
+.year-active  {
     position: relative;
 }
 
-.custom-underline::after {
+.year-active::after {
     content: '';
     position: absolute;
     bottom: 0;
