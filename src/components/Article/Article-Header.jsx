@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 
 const Article_1 = ({ navbarHeight, scrollToArticle, article}) => {
 
-    const imgUrl = `src/assets/articles/article-${article.id}/article-header-bg.jpg`;
+    const imgUrl = `/assets/articles/article-${article.id}/article-header-bg.jpg`;
     
     const headerStyle = {
         backgroundImage: `linear-gradient(99.98deg, rgba(0, 0, 0, 0.8) 8.86%, rgba(0, 0, 0, 0.4) 74.38%, rgba(0, 0, 0, 0) 100%), url('${imgUrl}')`,

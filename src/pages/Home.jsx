@@ -48,12 +48,12 @@ const Home = () => {
         
         <div className="hero-images relative w-1/2">
 
-          <img className="absolute top-0 left-[400px]" src="src\assets\hero\hero-circle-sm.svg" alt="" />
-          <img className="absolute top-[250px] left-16" src="src\assets\hero\hero-circle-md.svg" alt="" />
-          <img className="absolute top-8 left-48" src="src\assets\hero\hero-circle-lg.svg" alt="" />
+          <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
+          <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
+          <img className="absolute top-8 left-48" src="\assets\hero\hero-circle-lg.svg" alt="" />
           <div className="hero-rocks animate-bounce">
-            <img className="absolute top-0 left-16" src="src\assets\hero\hero-rock-lg.png" alt="" />
-            <img className="absolute top-28 left-44" src="src\assets\hero\hero-rock-sm.png" alt="" />
+            <img className="absolute top-0 left-16" src="\assets\hero\hero-rock-lg.png" alt="" />
+            <img className="absolute top-28 left-44" src="\assets\hero\hero-rock-sm.png" alt="" />
           </div>
         </div>
       </section>
@@ -118,7 +118,7 @@ const Home = () => {
           Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">9</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
-          <img src="src/assets/index/map.png" alt="" className="w-full h-full object-cover" />
+          <img src="/assets/index/map.png" alt="" className="w-full h-full object-cover" />
           <Tooltip content="Black Bear" style={{ top: '82.7%', left: '66.7%' }}>
             <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
           </Tooltip>

@@ -138,8 +138,8 @@ function Navbar({ setNavbarHeight }) {
 
       <div className="flex p-12 px-32 bg-transparent opacity-100">
         <Link to="/" className="nav-logo flex h-7 items-center">
-          <img src="src/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
-          <img src="src/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
+          <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
+          <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>
         <div className="nav-links flex flex-grow justify-center items-center xl:gap-20 lg:gap-14 text-base font-normal">
 

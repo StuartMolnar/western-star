@@ -47,17 +47,17 @@ const Footer = () => {
       <div className={`gradient-gray absolute ${isSpecialPage ? 'top-[20%]' : 'top-0'} left-1/2 h-4/5 w-1/4 scale-150`}></div>
       <div className={`gradient-gold absolute ${isSpecialPage ? 'top-[45%]' : 'top-[25%]'} left-3/4 h-4/5 w-1/4 scale-150`}></div>
 
-      <img className={`absolute ${isSpecialPage ? 'top-[52%]' : 'top-[25%]'} left-2-3-minus-100px`} src="src\assets\footer\footer-circle.svg" alt="" />
-      <img className={`absolute ${isSpecialPage ? 'top-[45%]' : 'top-[15%]'} left-2-3-minus-125px`} src="src\assets\footer\footer-rock-sm.png" alt="" />
-      <img className={`absolute ${isSpecialPage ? 'top-[55%]' : 'top-[30%]'} left-2-3-plus-40px`} src="src\assets\footer\footer-rock-lg.png" alt="" />
+      <img className={`absolute ${isSpecialPage ? 'top-[52%]' : 'top-[25%]'} left-2-3-minus-100px`} src="\assets\footer\footer-circle.svg" alt="" />
+      <img className={`absolute ${isSpecialPage ? 'top-[45%]' : 'top-[15%]'} left-2-3-minus-125px`} src="\assets\footer\footer-rock-sm.png" alt="" />
+      <img className={`absolute ${isSpecialPage ? 'top-[55%]' : 'top-[30%]'} left-2-3-plus-40px`} src="\assets\footer\footer-rock-lg.png" alt="" />
     </div>
 
 
     <div className="footer-copyright w-full my-16">
       <div className="flex justify-between items-center">
         <Link to="/" className="nav-logo flex h-7 items-center w-[265px]">
-          <img src="src/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
-          <img src="src/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
+          <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
+          <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>
         <p className="opacity-50">&copy; Copyright {new Date().getFullYear()} Western Star Resources Inc.</p>      
       </div>

@@ -59,7 +59,7 @@ const Investors = () => {
         </div>
       </section>
       <div className="flex justify-center pt-28 pb-20">
-        <img src="src\assets\investors\investors-stock-info.png" className="" alt="" />
+        <img src="\assets\investors\investors-stock-info.png" className="" alt="" />
       </div>
 
 
@@ -70,12 +70,12 @@ const Investors = () => {
           <h2 className="text-section-header-lg font-semibold">
             Corporate Presentation
           </h2>
-          <a href="./src/assets/ws-deck.pdf" className="flex items-center" download>
+          <a href="/assets/ws-deck.pdf" className="flex items-center" download>
             <button className="button-primary">Download Presentation</button>
           </a>
 
         </div>
-        <iframe src={'src/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none 2xl:h-[700px] h-[500px] max-w-[1200px] w-full mt-16 mb-24"></iframe>
+        <iframe src={'/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none 2xl:h-[700px] h-[500px] max-w-[1200px] w-full mt-16 mb-24"></iframe>
       </section>
 
 

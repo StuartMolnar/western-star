@@ -80,8 +80,8 @@ const Overview = () => {
         Western Star is a junior Canadian exploration company which holds a 100% interest in the Western Star Property located near Revelstoke, British Columbia. Our management has a strong track record in the discovery and development of successful exploration projects. The objective is to increase shareholder value through the development of exploration properties, using cost-effective exploration practices, the acquisition of high value exploration properties, and seeking partnerships by either joint venture or sale with industry leaders.
       </p>
       <div className="flex gap-8 justify-center items-center w-full xl:h-900[px] h-[600px] mt-32">
-        <img src="src\assets\overview\goal-section-left.png" className="rounded-2xl max-w-[1100px] w-[55%] h-full object-cover object-top" />
-        <img src="src\assets\overview\goal-section-right.jpg" className="rounded-2xl max-w-[900px] w-[45%] h-full  object-cover object-center" />
+        <img src="\assets\overview\goal-section-left.png" className="rounded-2xl max-w-[1100px] w-[55%] h-full object-cover object-top" />
+        <img src="\assets\overview\goal-section-right.jpg" className="rounded-2xl max-w-[900px] w-[45%] h-full  object-cover object-center" />
       </div>
 
     </section>
@@ -97,7 +97,7 @@ const Overview = () => {
       </p>
       <div className="flex pt-16" style={{alignItems: 'flex-start'}}>
         <div className="flex flex-col justify-center items-start w-full lg:w-auto">
-          <img src="src\assets\overview\revelstoke-map.png" className="rounded-3xl min-w-[500px] max-w-[1000px] w-full" alt=""/>
+          <img src="\assets\overview\revelstoke-map.png" className="rounded-3xl min-w-[500px] max-w-[1000px] w-full" alt=""/>
         </div>
         <div className="accordion-container z-10 space-y-8 w-full ml-16">
           {accordionData.map((accordion, index) => (

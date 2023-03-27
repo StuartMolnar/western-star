@@ -67,7 +67,7 @@ module.exports = {
           // },
         },
         rotation: {
-          '0, 100%': { transform: 'rotate(0)' },
+          '0%, 100%': { transform: 'rotate(0)' },
           '100%': { transform: 'rotate(360deg)' },
         },
       },
