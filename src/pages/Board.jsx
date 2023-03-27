@@ -14,13 +14,6 @@ const Board = () => {
   const closeModal = () => {
     setSelectedMember(null);
   };
-
-  const boardMembersRef = useRef();
-
-  const scrollToBoardMembers = (e) => {
-    e.preventDefault();
-    boardMembersRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
     
   const [navbarHeight, setNavbarHeight] = useState(0);
 
@@ -36,12 +29,12 @@ const Board = () => {
           <h1 className="text-page-header font-semibold">
             Meet our board
           </h1>
-          <a className="read-more-btn" onClick={scrollToBoardMembers}>Read More ▸</a>
+          <a href="#boardMembers" className="read-more-btn">Read More ▸</a>
           
         </section>
 
         {/* member cards section */}
-        <section className="board-section-bg text-white">
+        <section id="boardMembers" className="board-section-bg text-white">
           <div ref={boardMembersRef} className="board-members p-20 flex justify-center">
             <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 justify-center">
               {boardMembers.map((member, index) => (

@@ -26,11 +26,11 @@ const GoldProject = () => {
       <p className="pt-20 xl:w-[35%] w-1/2">
         The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
       </p>
-      <div className="read-more-btn pt-16 pb-32" onClick={scrollToOverview}>Read More ▸</div>
+      <a href="#overview" className="read-more-btn pt-16 pb-32">Read More ▸</a>
     </section>
 
     {/* overview section */}
-    <section ref={overviewRef} className="flex-row mx-32">
+    <section id="overview" className="flex-row mx-32">
         <h2 className="text-section-header-lg font-semibold pt-24">
             Overview
         </h2>

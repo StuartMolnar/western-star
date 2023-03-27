@@ -9,17 +9,17 @@ const Footer = () => {
   const isSpecialPage = location.pathname === '/overview' || location.pathname === '/ws-project';
 
   return (
-    <footer className={`footer-container px-32 text-copyright relative overflow-hidden ${isSpecialPage ? 'pt-72' : ''}`}>
+    <footer id="footer-container" className={`footer-container px-32 text-copyright relative overflow-hidden ${isSpecialPage ? 'pt-72' : ''}`}>
 
     <div className="footer-content w-full mb-8 mt-32">
       <div className="grid grid-cols-2 h-full">
         <div className="grid grid-cols-2 grid-rows-2 h-full col-span-1">
           <div className="flex-row items-center p-4 space-y-4">
-            <span className="flex"><img src="src\assets\footer\mail-icon.svg" alt="email_icon" className="mr-4" /><p className="font-medium">Email</p></span>
+            <span className="flex"><img src="\assets\footer\mail-icon.svg" alt="email_icon" className="mr-4" /><p className="font-medium">Email</p></span>
             <p><a href="mailto:info@riominerals.com">info@riominerals.com</a></p>
           </div>
           <div className="flex-row items-center p-4 space-y-4">
-            <span className="flex"><img src="src\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Business Address</p></span>
+            <span className="flex"><img src="\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Business Address</p></span>
             <p><a href="https://goo.gl/maps/6nH9b1mp92wckqCy9">
               Unit 615 – 800 West Pender St.<br></br>
               Vancouver, BC<br></br>
@@ -27,11 +27,11 @@ const Footer = () => {
             </a></p>
           </div>
           <div className="flex-row items-center p-4 space-y-4">
-            <span className="flex"><img src="src\assets\footer\phone-icon.svg" alt="phone_icon" className="mr-4" /><p className="font-medium">Phone Number</p></span>
+            <span className="flex"><img src="\assets\footer\phone-icon.svg" alt="phone_icon" className="mr-4" /><p className="font-medium">Phone Number</p></span>
             <p><a href="tel:+16046712245">+1 (604)-671-2245</a></p>          
           </div>
           <div className="flex-row items-center p-4 space-y-4">
-            <span className="flex"><img src="src\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Registered Office Address</p></span>
+            <span className="flex"><img src="\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Registered Office Address</p></span>
             <p><a href="https://goo.gl/maps/6nH9b1mp92wckqCy9">
               Unit 615 – 800 West Pender St.<br></br>
               Vancouver, BC<br></br>

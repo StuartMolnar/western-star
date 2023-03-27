@@ -4,6 +4,7 @@ import Footer from '../components/Footer/Footer';
 import '../styles/Layout.css';
 
 const Layout = ({ children, setNavbarHeight }) => {
+  
   return (
     <div className="layout-container">
       <Navbar setNavbarHeight={setNavbarHeight} />

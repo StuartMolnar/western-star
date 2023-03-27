@@ -7,13 +7,6 @@ const Investors = () => {
 
   const [navbarHeight, setNavbarHeight] = useState(0);
 
-  const sharesStructureRef = useRef();
-
-  const scrollToShares = (e) => {
-    e.preventDefault();
-    sharesStructureRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
 
@@ -23,11 +16,11 @@ const Investors = () => {
         <h1 className="text-page-header font-semibold">
           Investors
         </h1>
-        <a className="read-more-btn pt-16" onClick={scrollToShares}>Read More ▸</a>
+        <a href="#shares" className="read-more-btn pt-16">Read More ▸</a>
       </section>
 
       {/* share structure section */}
-      <section ref={sharesStructureRef} className="share-structure mx-auto max-w-[1200px] pt-24">
+      <section id="shares" className="share-structure mx-auto max-w-[1200px] pt-24">
         <h2 className="text-section-header-lg font-semibold">
           Share Structure
         </h2>

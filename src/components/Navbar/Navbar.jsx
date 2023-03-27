@@ -175,7 +175,7 @@ function Navbar({ setNavbarHeight }) {
         </div>
 
         <div className="nav-contact">
-          <Link to="/contact" className="button-primary">Contact Us</Link>
+          <a href="#footer-container" className="button-primary">Contact Us</a>
         </div>
       </div>
     </div>
