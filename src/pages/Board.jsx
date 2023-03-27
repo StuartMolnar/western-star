@@ -35,7 +35,7 @@ const Board = () => {
 
         {/* member cards section */}
         <section id="boardMembers" className="board-section-bg text-white">
-          <div ref={boardMembersRef} className="board-members p-20 flex justify-center">
+          <div className="board-members p-20 flex justify-center">
             <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4 justify-center">
               {boardMembers.map((member, index) => (
                 <div key={index} className="bg-black p-4 rounded-2xl opacity-90 shadow max-w-[600px]">

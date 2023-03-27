@@ -7,7 +7,6 @@ import articles from '../data/articles.json';
 const News = () => {
   const reversedArticles = [...articles].reverse();
   const articlesRef = useRef();
-  const newsArticlesRef = useRef();
 
   const [navbarHeight, setNavbarHeight] = useState(0);
 
@@ -25,11 +24,6 @@ const News = () => {
   const filteredArticles = (selectedYear == 'all') ? reversedArticles : reversedArticles.filter((article) => article.date?.includes(selectedYear.year));
 
 
-  const scrollToNews = (e) => {
-    e.preventDefault();
-    newsArticlesRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
         
@@ -39,12 +33,12 @@ const News = () => {
           <h1 className="text-page-header font-semibold">
             News
           </h1>
-          <a className="read-more-btn pt-16" onClick={scrollToNews}>Read More ▸</a>
+          <a href="#news-articles" className="read-more-btn pt-16">Read More ▸</a>
           
         </section>
         
 
-      <div ref={newsArticlesRef} className="news-articles-bg min-h-[800px]">
+      <div id="news-articles" className="news-articles-bg min-h-[800px]">
 
       
       {/* years section */}
