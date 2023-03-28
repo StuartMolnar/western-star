@@ -1,15 +1,18 @@
 import React, { useRef } from 'react';
+import { useScrollContext } from '../../App'; 
 
-const Article_1 = ({ navbarHeight, scrollToArticle, article}) => {
-
-    const imgUrl = `/assets/articles/article-${article.id}/article-header-bg.jpg`;
+const Article_1 = ({ navbarHeight, article}) => {
     
-    const headerStyle = {
-        backgroundImage: `linear-gradient(99.98deg, rgba(0, 0, 0, 0.8) 8.86%, rgba(0, 0, 0, 0.4) 74.38%, rgba(0, 0, 0, 0) 100%), url('${imgUrl}')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-    };
+  const scrollToElement = useScrollContext();
+  const imgUrl = `/assets/articles/article-${article.id}/article-header-bg.jpg`;
+  
+  
+  const headerStyle = {
+      backgroundImage: `linear-gradient(99.98deg, rgba(0, 0, 0, 0.8) 8.86%, rgba(0, 0, 0, 0.4) 74.38%, rgba(0, 0, 0, 0) 100%), url('${imgUrl}')`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+  };
 
   return (
     <>
@@ -21,7 +24,7 @@ const Article_1 = ({ navbarHeight, scrollToArticle, article}) => {
         <h1 className="text-page-header font-semibold 2xl:w-1/2 pt-6">
           {article.title}
         </h1>
-        <div className="read-more-btn pt-16" onClick={scrollToArticle}>Read More ▸</div>
+        <div className="read-more-btn pt-16" onClick={() => scrollToElement('article-content')}>Read More ▸</div>
       </section>
     </>
   );

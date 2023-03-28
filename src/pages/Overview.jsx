@@ -1,10 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Layout from './Layout';
 import '../styles/overview.css';
+import { useScrollContext } from '../App'; 
+
 
 const Overview = () => {
+  const scrollToElement = useScrollContext();
   const [activeAccordion, setActiveAccordion] = useState(null);
-
+  
   const toggleAccordion = (index) => {
     setActiveAccordion(activeAccordion === index ? null : index);
   };
@@ -49,13 +52,6 @@ const Overview = () => {
 
   const [navbarHeight, setNavbarHeight] = useState(0);
 
-  const goalsRef = useRef();
-
-  const scrollToGoals = (e) => {
-    e.preventDefault();
-    goalsRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
   
@@ -68,11 +64,11 @@ const Overview = () => {
       <p className="pt-20 xl:w-[35%] w-1/2">
         Western Star is a newly listed, tightly held junior mining company that has 100% ownership in the high-grade Western Star Project located in the Revelstoke Mining District of British Columbia.
       </p>
-      <a className="read-more-btn pt-16 pb-40" onClick={scrollToGoals}>Read More ▸</a>
+      <a className="read-more-btn pt-16 pb-40" onClick={() => scrollToElement('goals')}>Read More ▸</a>
     </section>
 
     {/* our goal section */}
-    <section ref={goalsRef} className="flex-row mx-32 pt-24">
+    <section id="goals" className="flex-row mx-32 pt-24">
       <h2 className="text-section-header-lg font-semibold">
         Our Goal
       </h2>

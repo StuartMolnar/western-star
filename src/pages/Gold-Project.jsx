@@ -1,19 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Layout from './Layout';
 import '../styles/gold-project.css';
-import Overview from './Overview';
+import { useScrollContext } from '../App'; 
+
 
 
 const GoldProject = () => {
 
   const [navbarHeight, setNavbarHeight] = useState(0);
-
-  const overviewRef = useRef();
-
-  const scrollToOverview = (e) => {
-    e.preventDefault();
-    overviewRef.current.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToElement = useScrollContext();
 
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
@@ -26,7 +21,7 @@ const GoldProject = () => {
       <p className="pt-20 xl:w-[35%] w-1/2">
         The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
       </p>
-      <a href="#overview" className="read-more-btn pt-16 pb-32">Read More ▸</a>
+      <a onClick={() => scrollToElement('overview')} className="read-more-btn pt-16 pb-32">Read More ▸</a>
     </section>
 
     {/* overview section */}

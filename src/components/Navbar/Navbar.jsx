@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
+import { useScrollContext } from '../../App'; 
 
 import './navbar.css'
 
@@ -10,6 +11,8 @@ function Navbar({ setNavbarHeight }) {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
+  
+  const scrollToElement = useScrollContext();
   
 
   const toggleDropdown = (name) => {
@@ -102,24 +105,33 @@ function Navbar({ setNavbarHeight }) {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-
-      totalDifference += prevScrollPos - currentScrollPos ;
-
-      if (currentScrollPos - prevScrollPos > 0){
+  
+      totalDifference += prevScrollPos - currentScrollPos;
+  
+      if (currentScrollPos - prevScrollPos > 0) {
         totalDifference = 0;
-        setVisible(false);
+        if (visible){
+          scrollButton.classList.remove('hidden');
+          scrollButton.classList.remove('animate-slide-down');
+          scrollButton.classList.add('animate-slide-up');
+          setVisible(false);
+        }
       } else {
-        if (totalDifference > (150)){
+        if (totalDifference > 150 && !visible) {
+          scrollButton.classList.remove('animate-slide-up');
+          scrollButton.classList.add('animate-slide-down');
+          setTimeout(() => {
+            scrollButton.classList.add('hidden');
+          }, 450);
           setVisible(true);
         }
       }
-      
+  
       setPrevScrollPos(currentScrollPos);
-
+  
       if (currentScrollPos === 0) {
         setVisible(true);
-      }      
-
+      }
     };
   
     window.addEventListener('scroll', handleScroll);
@@ -127,16 +139,16 @@ function Navbar({ setNavbarHeight }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [prevScrollPos, visible]);
   
-
   
   return (
 
     // NOTE: when designing mobile, make new tailwind breakpoint for 1200px not sm
     //       do this for navbar and footer
+    // ${(prevScrollPos > 10 || totalDifference > 150) ? 'bg-black opacity-90' : ''}
 
-    <div ref={navbarRef} className={`Navbar fixed w-full z-50 ${prevScrollPos > 10 ? 'bg-black opacity-90' : ''} ${visible ? 'translate-y-0' : '-translate-y-full'} transition-transform duration-500 ease-in-out`}>
+    <div id="navbar" className={`Navbar w-full z-50`}>
 
-      <div className="flex p-12 px-32 bg-transparent opacity-100">
+      <div ref={navbarRef} className= {`fixed w-full flex p-12 px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
         <Link to="/" className="nav-logo flex h-7 items-center">
           <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
           <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
@@ -175,10 +187,21 @@ function Navbar({ setNavbarHeight }) {
         </div>
 
         <div className="nav-contact">
-          <a href="#footer-container" className="button-primary">Contact Us</a>
+          <a onClick={() => scrollToElement('footer-container')} className="button-primary">Contact Us</a>
         </div>
       </div>
+      
+      <a onClick={() => scrollToElement('navbar')} id="scrollButton" className={`hidden fixed bottom-6 right-6 rounded-lg bg-gold p-4`}>
+        <img src="/assets/logo/arrow-upward.svg" className="h-5 w-5" alt="" />
+      </a>
+
+
+
+
+
+
     </div>
+    
 
 
   )

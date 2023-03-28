@@ -13,22 +13,16 @@ const article = articles.find((article) => article.id === articleId);
 
 const Article_1 = () => {
 
-  const articleRef = useRef();
-
   const [navbarHeight, setNavbarHeight] = useState(0); 
 
-  const scrollToArticle = (e) => {
-    e.preventDefault();
-    articleRef.current.scrollIntoView({ behavior: 'smooth' });
-  }
 
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
 
-      <ArticleHeader navbarHeight={navbarHeight} scrollToArticle={scrollToArticle} article={article} />
+      <ArticleHeader navbarHeight={navbarHeight} article={article} />
 
       {/* content section */}
-      <section ref={articleRef} className="article-content px-32 bg-white text-black min-h-[600px]">
+      <section id="article-content" className="article-content px-32 bg-white text-black min-h-[600px]">
         <h2 className="text-section-header-lg font-semibold">
           Coming Soon
         </h2>

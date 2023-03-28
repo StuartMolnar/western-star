@@ -1,11 +1,14 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Layout from './Layout';
 import '../styles/investors.css';
+import { useScrollContext } from '../App'; 
+
 
 
 const Investors = () => {
 
   const [navbarHeight, setNavbarHeight] = useState(0);
+  const scrollToElement = useScrollContext();
 
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
@@ -16,7 +19,7 @@ const Investors = () => {
         <h1 className="text-page-header font-semibold">
           Investors
         </h1>
-        <a href="#shares" className="read-more-btn pt-16">Read More ▸</a>
+        <a onClick={() => scrollToElement('shares')} className="read-more-btn pt-16">Read More ▸</a>
       </section>
 
       {/* share structure section */}

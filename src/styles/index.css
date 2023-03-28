@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-html {
-  scroll-behavior: smooth;
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +13,10 @@ html {
     @apply font-normal;
     @apply text-base;
     @apply tracking-wider;
+  }
+
+  a {
+    @apply cursor-pointer;
   }
 
   /* --- buttons --- */

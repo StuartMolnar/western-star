@@ -49,11 +49,13 @@ module.exports = {
         'gold': '0 4px 6px rgba(213, 166, 96, 0.1), 0 1px 3px rgba(213, 166, 96, 0.2)',
       }, 
       animation: {
-        bounce: 'bounce 5s ease-in-out infinite',
-        rotation: 'rotation 60s linear infinite',
+        'bounce': 'bounce 5s ease-in-out infinite',
+        'rotation': 'rotation 60s linear infinite',
+        'slide-up': 'slide-up 500ms ease-out',
+        'slide-down': 'slide-down 500ms ease-out',
       },
       keyframes: {
-        bounce: {
+        'bounce': {
           '0%': { transform: 'translateY(10)' },
           '50%': { transform: 'translateY(-50px)' },
           // '0%, 20%, 50%, 80%, 100%': {
@@ -66,9 +68,17 @@ module.exports = {
           //   transform: 'translateY(-15px)',
           // },
         },
-        rotation: {
+        'rotation': {
           '0%, 100%': { transform: 'rotate(0)' },
           '100%': { transform: 'rotate(360deg)' },
+        },
+        'slide-up': {
+          '0%': { transform: 'translateY(100%)', opacity: '0' },
+          '100%': { transform: 'translateY(0)', opacity: '1' },
+        },
+        'slide-down': {
+          '0%': { transform: 'translateY(0)', opacity: '1' },
+          '100%': { transform: 'translateY(100%)', opacity: '0' },
         },
       },
       

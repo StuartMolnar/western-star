@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import Layout from './Layout';
 import '../styles/news.css';
 import articles from '../data/articles.json';
+import { useScrollContext } from '../App'; 
+
 
 const News = () => {
   const reversedArticles = [...articles].reverse();
-  const articlesRef = useRef();
-
+  const scrollToElement = useScrollContext();
   const [navbarHeight, setNavbarHeight] = useState(0);
 
   const date = new Date();
@@ -33,7 +34,7 @@ const News = () => {
           <h1 className="text-page-header font-semibold">
             News
           </h1>
-          <a href="#news-articles" className="read-more-btn pt-16">Read More ▸</a>
+          <a onClick={() => scrollToElement('news-articles')} className="read-more-btn pt-16">Read More ▸</a>
           
         </section>
         
@@ -64,7 +65,7 @@ const News = () => {
 
         <section className="text-white flex flex-col items-center">
 
-          <div ref={articlesRef} className="news-articles px-20 pb-20 pt-12 flex ">
+          <div className="news-articles px-20 pb-20 pt-12 flex ">
             <div className="grid grid-cols-2 grid-rows-2 gap-4 p-4">
               {filteredArticles.map((article, index) => (
                 <div key={index} className="article-card bg-black p-4 rounded-2xl opacity-90 shadow max-w-[600px]">

@@ -3,9 +3,11 @@ import Layout from './Layout';
 import Modal from '../components/Modal/Board-Modal'; 
 import '../styles/board.css';
 import boardMembers from '../data/board-members.json';
+import { useScrollContext } from '../App'; 
 
 const Board = () => {
   const [selectedMember, setSelectedMember] = useState(null);
+  const scrollToElement = useScrollContext();
 
   const openModal = (member) => {
     setSelectedMember(member);
@@ -29,7 +31,7 @@ const Board = () => {
           <h1 className="text-page-header font-semibold">
             Meet our board
           </h1>
-          <a href="#boardMembers" className="read-more-btn">Read More ▸</a>
+          <a onClick={() => scrollToElement('boardMembers')} className="read-more-btn">Read More ▸</a>
           
         </section>
 
