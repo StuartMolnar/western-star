@@ -55,7 +55,7 @@ const Footer = () => {
 
     <div className="footer-copyright w-full my-16">
       <div className="flex justify-between items-center">
-        <Link to="/" className="nav-logo flex h-7 items-center w-[265px]">
+        <Link to="/" className="nav-logo flex h-7 items-center w-[265px] space-x-4">
           <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
           <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>

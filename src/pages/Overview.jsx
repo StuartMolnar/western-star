@@ -39,7 +39,7 @@ const Overview = () => {
       if (content) {
         if (activeAccordion === index) {
           content.style.height = `${content.scrollHeight}px`;
-          content.style.padding = ''; // Reset padding to default
+          content.style.padding = '';
           content.style.opacity = '1';
         } else {
           content.style.height = '0';
@@ -62,7 +62,7 @@ const Overview = () => {
         About Western Star
       </h1>
       <p className="pt-20 xl:w-[45%] w-2/3">
-        Western Star is a newly listed, tightly held junior mining company that has 100% ownership in the high-grade Western Star Project located in the Revelstoke Mining District of British Columbia.
+      Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.
       </p>
       <a className="read-more-btn pt-16 pb-40" onClick={() => scrollToElement('goals')}>Read More ▸</a>
     </section>

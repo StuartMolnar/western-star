@@ -178,10 +178,19 @@ const GoldProject = () => {
 
 
     {/* sample images section */}
-    <section className="m-32 flex -mb-32">
+    <section className="m-32 flex-col -mb-32">
         <div className="flex gap-8 justify-center items-center w-full xl:h-1100[px] h-[800px]">
-            <img src="\assets\gold-project\images-section-left.png" className="rounded-2xl w-[45%] max-w-[900px] h-full object-cover object-top" />
-            <img src="\assets\gold-project\images-section-right.png" className="rounded-2xl w-[55%] max-w-[1100px] h-full object-cover object-center" />
+            <img src="\assets\gold-project\images-section-left.jpg" className="rounded-2xl w-[45%] max-w-[900px] h-full object-cover object-top" />
+            <img src="\assets\gold-project\images-section-right.jpg" className="rounded-2xl w-[55%] max-w-[1100px] h-full object-cover object-center" />
+        </div>
+        
+        <div className="flex gap-8 justify-center items-center w-full pt-8">
+            <p className="w-[45%] max-w-[900px] pl-3">
+                137g/t Ag, 36.6% Pb
+            </p>
+            <p className="w-[55%] max-w-[1100px] pl-4">
+                219g/t Ag, 50.1% Pb
+            </p>
         </div>
     </section>
 

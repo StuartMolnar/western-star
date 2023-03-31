@@ -83,7 +83,7 @@ const Home = () => {
             <Link to="/overview" className="button-primary mt-6 cursor-pointer">Learn More</Link>
           </div>
 
-          <p className="w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
+          <p className="w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
 
         </div>
       </section>
@@ -118,7 +118,7 @@ const Home = () => {
           Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">11</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
-          <img src="/assets/index/map.jpg" alt="" className="w-full h-full object-cover" />
+          <img src="/assets/index/map.jpg" alt="" className="w-full h-full object-cover rounded-tl-2xl rounded-bl-2xl" />
           <Tooltip content="Black Bear" style={{ top: '76.9%', left: '51.2%' }}>
             <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
