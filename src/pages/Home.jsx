@@ -50,11 +50,8 @@ const Home = () => {
 
           <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
           <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
-          <img className="absolute top-8 left-48" src="\assets\hero\hero-circle-lg.svg" alt="" />
-          <div className="hero-rocks animate-bounce">
-            <img className="absolute -top-[24px] left-[56px] scale-[.85]" src="\assets\hero\hero-rock-lg.png" alt="" />
-            <img className="absolute -top-[24px] left-[56px] scale-[.85]" src="\assets\hero\hero-rock-sm.png" alt="" />
-          </div>
+          <img className="absolute top-8 left-48 scale-[1.15]" src="\assets\hero\hero-circle-lg.svg" alt="" />
+          <img className="absolute -top-[30px] left-[50px] w-[451px] h-[380px]" src="\assets\hero\hero-rocks.png" alt="" />
         </div>
       </section>
 
