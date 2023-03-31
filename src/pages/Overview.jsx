@@ -58,10 +58,10 @@ const Overview = () => {
     {/* header section */}
     <section className="overview-header-bg flex-row px-32 2xl:py-32"
              style={{ marginTop: `${navbarHeight}px` }}>
-      <h1 className="text-page-header font-semibold w-1/2 pt-40 ">
+      <h1 className="text-page-header font-semibold w-full pt-40 ">
         About Western Star
       </h1>
-      <p className="pt-20 xl:w-[35%] w-1/2">
+      <p className="pt-20 xl:w-[45%] w-2/3">
         Western Star is a newly listed, tightly held junior mining company that has 100% ownership in the high-grade Western Star Project located in the Revelstoke Mining District of British Columbia.
       </p>
       <a className="read-more-btn pt-16 pb-40" onClick={() => scrollToElement('goals')}>Read More ▸</a>

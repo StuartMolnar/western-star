@@ -52,8 +52,8 @@ const Home = () => {
           <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
           <img className="absolute top-8 left-48" src="\assets\hero\hero-circle-lg.svg" alt="" />
           <div className="hero-rocks animate-bounce">
-            <img className="absolute top-0 left-16" src="\assets\hero\hero-rock-lg.png" alt="" />
-            <img className="absolute top-28 left-44" src="\assets\hero\hero-rock-sm.png" alt="" />
+            <img className="absolute -top-[24px] left-[56px] scale-[.85]" src="\assets\hero\hero-rock-lg.png" alt="" />
+            <img className="absolute -top-[24px] left-[56px] scale-[.85]" src="\assets\hero\hero-rock-sm.png" alt="" />
           </div>
         </div>
       </section>
@@ -83,14 +83,14 @@ const Home = () => {
             <Link to="/overview" className="button-primary mt-6 cursor-pointer">Learn More</Link>
           </div>
 
-          <p className="w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
+          <p className="w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
 
         </div>
       </section>
 
       {/* explore projects section */}
 
-      <section className="explore-projects flex flex-col items-center justify-center mx-32 mb-24">
+      <section className="explore-projects flex flex-col items-center justify-center mx-32 xl:mb-24">
         <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-24">
           Explore Our Projects
         </h2>
@@ -113,47 +113,44 @@ const Home = () => {
       </section>
 
       {/* revelstoke map section */}
-      <section className="map-section flex items-center mx-32 overflow-clip h-auto mb-32">
+      <section className="map-section flex items-center ml-32 overflow-clip h-auto mb-24 xl:mb-32">
         <h2 className="text-section-header-lg font-semibold py-24 w-2/5 pr-24">
-          Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">9</span> documented mineral showings.
+          Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">11</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
-          <img src="/assets/index/map.png" alt="" className="w-full h-full object-cover" />
-          <Tooltip content="Black Bear" style={{ top: '82.7%', left: '66.7%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <img src="/assets/index/map.jpg" alt="" className="w-full h-full object-cover" />
+          <Tooltip content="Black Bear" style={{ top: '76.9%', left: '51.2%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Lardeau-Goldsmith" style={{ top: '64.8%', left: '65%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Lardeau-Goldsmith" style={{ top: '59.8%', left: '49.9%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Wide West" style={{ top: '47.7%', left: '72.35%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Wide West" style={{ top: '44%', left: '57%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Goodenough" style={{ top: '74.3%', left: '88.1%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Goodenough" style={{ top: '69.1%', left: '71.7%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Hunter" style={{ top: '62.3%', left: '73%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Kitsap" style={{ top: '40%', left: '22.9%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Kitsap" style={{ top: '43.6%', left: '37.4%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Banner" style={{ top: '21.5%', left: '14.3%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Banner" style={{ top: '23.8%', left: '28.8%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Daffodil" style={{ top: '12.2%', left: '10.2%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Daffodil" style={{ top: '14.2%', left: '24.7%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Royal" style={{ top: '36%', left: '19.25%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Royal" style={{ top: '39.4%', left: '33.8%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Morning Star" style={{ top: '15%', left: '23.35%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Morning Star" style={{ top: '17.2%', left: '38.07%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Lexington" style={{ top: '31.6%', left: '19.6%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
-          <Tooltip content="Lexington" style={{ top: '34.6%', left: '34.1%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
-          </Tooltip>
-          <Tooltip content="Alma" style={{ top: '58.5%', left: '47.9%' }}>
-            <div className="point w-4 h-4 bg-red-400 rounded-full hover:scale-125"></div>
+          <Tooltip content="Alma" style={{ top: '54%', left: '33.2%' }}>
+            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
 
         </div>
@@ -162,7 +159,7 @@ const Home = () => {
 
       {/* news section */}
       <section className="news-section-bg px-32 py-40">
-        <div className="flex items-center text-black pb-16 gap-x-24">
+        <div className="flex items-center pb-16 gap-x-24">
           <h2 className="text-section-header-lg font-semibold">Our Latest News</h2>
           <Link to="/news" className="button-primary cursor-pointer">View All News</Link>
         </div>

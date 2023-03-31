@@ -71,7 +71,7 @@ const Investors = () => {
           </a>
 
         </div>
-        <iframe src={'/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none 2xl:h-[700px] h-[500px] max-w-[1200px] w-full mt-16 mb-24"></iframe>
+        <iframe src={'/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none 2xl:h-[700px] h-[500px] max-w-[1000px] w-full mt-16 mb-24"></iframe>
       </section>
 
 

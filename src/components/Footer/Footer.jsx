@@ -47,9 +47,9 @@ const Footer = () => {
       <div className={`gradient-gray absolute ${isSpecialPage ? 'top-[20%]' : 'top-0'} left-1/2 h-4/5 w-1/4 scale-150`}></div>
       <div className={`gradient-gold absolute ${isSpecialPage ? 'top-[45%]' : 'top-[25%]'} left-3/4 h-4/5 w-1/4 scale-150`}></div>
 
-      <img className={`absolute ${isSpecialPage ? 'top-[52%]' : 'top-[25%]'} left-2-3-minus-100px`} src="\assets\footer\footer-circle.svg" alt="" />
-      <img className={`absolute ${isSpecialPage ? 'top-[45%]' : 'top-[15%]'} left-2-3-minus-125px`} src="\assets\footer\footer-rock-sm.png" alt="" />
-      <img className={`absolute ${isSpecialPage ? 'top-[55%]' : 'top-[30%]'} left-2-3-plus-40px`} src="\assets\footer\footer-rock-lg.png" alt="" />
+      <img className={`absolute ${isSpecialPage ? 'top-[52%] left-[61.5%]' : 'top-[25%] left-[60.5%]'}`} src="\assets\footer\footer-circle.svg" alt="" />
+      <img className={`absolute ${isSpecialPage ? 'top-[46%]' : 'top-[20%]'} left-[62%]`} src="\assets\footer\footer-rock-lg.png" alt="" />
+      <img className={`absolute ${isSpecialPage ? 'top-[48%]' : 'top-[21.5%]'} left-[62%]`} src="\assets\footer\footer-rock-sm.png" alt="" />
     </div>
 
 

@@ -143,13 +143,11 @@ function Navbar({ setNavbarHeight }) {
   return (
 
     // NOTE: when designing mobile, make new tailwind breakpoint for 1200px not sm
-    //       do this for navbar and footer
-    // ${(prevScrollPos > 10 || totalDifference > 150) ? 'bg-black opacity-90' : ''}
 
     <div id="navbar" className={`Navbar w-full z-50`}>
 
       <div ref={navbarRef} className= {`fixed w-full flex p-12 px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
-        <Link to="/" className="nav-logo flex h-7 items-center">
+        <Link to="/" className="nav-logo flex h-7 items-center space-x-4">
           <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
           <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>

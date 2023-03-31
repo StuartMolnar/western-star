@@ -4,7 +4,7 @@
   
 .tooltip-content {
     visibility: hidden;
-    width: 120px;
+    width: auto;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -16,7 +16,7 @@
     z-index: 1;
     bottom: 135%; /* Position the tooltip above the point */
     left: 50%;
-    margin-left: -60px; /* Center the tooltip */
+    margin-left: -20px; /* Center the tooltip */
 
     /* Fade in tooltip */
     opacity: 0;

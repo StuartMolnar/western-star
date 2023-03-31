@@ -15,10 +15,10 @@ const GoldProject = () => {
     {/* header section */}
     <section className="projects-header-bg flex-row px-32 2xl:py-32"
             style={{ marginTop: `${navbarHeight}px` }}>
-      <h1 className="text-page-header font-semibold w-1/2 pt-12">
+      <h1 className="text-page-header font-semibold w-full pt-40">
         The Western Star Project
       </h1>
-      <p className="pt-20 xl:w-[35%] w-1/2">
+      <p className="pt-20 xl:w-[45%] w-2/3">
         The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
       </p>
       <a onClick={() => scrollToElement('overview')} className="read-more-btn pt-16 pb-32">Read More ▸</a>
@@ -34,16 +34,16 @@ const GoldProject = () => {
                 <h3 className="text-section-subheader font-semibold text-gold">
                     Location
                 </h3>
-                <ul className="list-disc list-inside text-black pt-8 space-y-2">
-                    <li>The Western Star Property is in the peri-cratonic southern Kootenay terrane of the Canadian Cordillera.</li>
-                    <li>This terrane is an arc-shaped region in southeastern Canada.</li>
+                <ul className="list-disc list-outside text-black pt-8 space-y-4">
+                    <li>The Western Star Property consists of 9 non-surveyed contiguous mineral claims totalling 2,797.69. hectares located approximately 50km southeast of Revelstoke, BC</li>
+                    <li>Access to the Property area is via helicopter from Revelstoke or Nakusp</li>
                 </ul>
             </div>
-            <div className="flex-row w-1/3 bg-white rounded-2xl p-8">
+            <div className="flex-row w-1/3 bg-white rounded-2xl p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
-                    Surface Area
+                    Regional Geology
                 </h3>
-                <ul className="list-disc list-inside text-black pt-8 space-y-2">
+                <ul className="list-disc list-outside text-black pt-8 space-y-4">
                     <li>The Kootenay Terrane is an arc-shaped belt of stratigraphy spanning 400 km.</li>
                     <li>It has correlating stratigraphy and is 10-50 km wide.</li>
                     <li>The trend is observed from Washington State to British Columbia.</li>
@@ -51,11 +51,11 @@ const GoldProject = () => {
                 </ul>
 
             </div>
-            <div className="flex-row w-1/3 bg-white rounded-2xl p-8">
+            <div className="flex-row w-1/3 bg-white rounded-2xl p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
-                    Geology & Mineralization
+                    History & Mineralization
                 </h3>
-                <ul className="list-disc list-inside text-black pt-8 space-y-2">
+                <ul className="list-disc list-outside text-black pt-8 space-y-4">
                     <li>Mining records from 1895-1915 show sigificant mining history.</li>
                     <li>Historic mineralization is described as veins ranging from 1 to 10m wide.</li>
                     <li>Mineralization has been traced intermittently over strike lengths up to 6.2km.</li>
@@ -69,7 +69,7 @@ const GoldProject = () => {
     <section className="info-section flex py-32 text-black min-h-[800px]">
     <div className="w-[65%] bg-light-blue flex items-center justify-center">
         <p className="p-32">
-            Mineralization consists of <span className="font-semibold">galena-sphalerite-chalcopyrite</span> in concordant to irregular quartz-chlorite veins in shears at the limestone phyllite contact and in fractured and/or brecciated ankeritic limestone. Rock samples returned up to <span className="font-semibold">8.22 g/t gold, 246.76 g/t silver, 3.68% copper, and 50.1% lead</span>.
+            Recently discovered mineralization consists of <span className="font-semibold">galena-sphalerite-chalcopyrite</span> in concordant to irregular quartz-chlorite veins in shears at the limestone phyllite contact and in fractured and/or brecciated ankeritic limestone.  Select rock samples returned up to <span className="font-semibold">8.22 g/t gold, 246.76 g/t silver, 3.68% copper</span>, and <span className="font-semibold">50.1% lead</span>.
         </p>
     </div>
     <div className="info-section-img w-[35%]"></div>
@@ -109,7 +109,7 @@ const GoldProject = () => {
             </div>
             <div className="grid grid-cols-11">
                 <div className="col-span-1 border border-black p-2 flex items-center px-4">DN-011</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">ConGrab sample 1-2 m wide quartz vein. Note: 0.07% copper.tent</div>
+                <div className="col-span-8 border border-black p-2 flex items-center px-4">ConGrab sample 1-2 m wide quartz vein. Note: 0.07% copper.</div>
                 <div className="col-span-1 border border-black p-2 flex items-center px-4">1.81</div>
                 <div className="col-span-1 border border-black p-2 flex items-center px-4">0.17</div>
             </div>

@@ -6,7 +6,7 @@ const Modal = ({ isOpen, onClose, member }) => {
   }
 
   return (
-    <div className="fixed z-10 inset-0 flex items-center justify-center">
+    <div className="fixed z-[55] inset-0 flex items-center justify-center">
       <div className="fixed inset-0 bg-black bg-opacity-75 transition-opacity" onClick={onClose}></div>
 
       <div className="bg-black transform transition-all max-w-[600px] rounded-2xl py-8 px-12">
