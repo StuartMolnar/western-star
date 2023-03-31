@@ -149,15 +149,19 @@ const GoldProject = () => {
 
     {/* mineralization section */}
     <section className="mineralization-section p-32 bg-dark-blue flex gap-24">
-        <div className="floating-rock-image min-w-[250px] flex items-center justify-center">
+        <div className="floating-rock-image min-w-[250px] flex-row items-center justify-center">
+            <div>
+
             <img src="\assets\gold-project\rock.png" className="animate-rotation" alt=""/>
+            <p className="text-center pt-6">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
+            </div>
         </div>
         <div className="flex-row">
             <h2 className="text-section-header-md font-semibold pb-12">
                 Mineralization
             </h2>
             <p className="py-4">
-                Recent exploration indicates that the mineralization is a control of syngenetic distal volcanic Carbonate Replacement Deposit (CDR) mineralization likely to be a combination of <span className="text-gold font-semibold">structure, lithology</span> and <span className="text-gold font-semibold">stratigraphy</span>. There are three main CRD deposit types: Leadville-type mineralization (LTM), sedimentary exhalative (SEDEX) and Mississippi Valley-type (MVT).
+                Recent exploration indicates that the mineralization is a control of syngenetic distal volcanic Carbonate Replacement Deposit (CDR) mineralization likely to be a combination of structure, lithology, and stratigraphy. There are three main CRD deposit types: Leadville-type mineralization (LTM), sedimentary exhalative (SEDEX) and Mississippi Valley-type (MVT).
             </p>
             <p className="py-4">
                 The sporadic nature of the known mineralization along the favourable contact zones indicates a complex set of parameters governing mineralization.
@@ -186,10 +190,10 @@ const GoldProject = () => {
         
         <div className="flex gap-8 justify-center items-center w-full pt-8">
             <p className="w-[45%] max-w-[900px] pl-3">
-                219g/t Ag, 50.1% Pb                
+                219 g/t Ag, 50.1% Pb                
             </p>
             <p className="w-[55%] max-w-[1100px] pl-4">
-                317 ppb Au, 586 g/t Ag, 6.29% Ag, 2.79 % Cu
+                317 ppb Au, 586 g/t Ag, 6.29% Ag, 2.79% Cu
             </p>
         </div>
     </section>

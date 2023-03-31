@@ -80,7 +80,7 @@ const Home = () => {
             <Link to="/overview" className="button-primary mt-6 cursor-pointer">Learn More</Link>
           </div>
 
-          <p className="w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
+          <p className="w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
 
         </div>
       </section>

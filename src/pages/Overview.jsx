@@ -62,7 +62,7 @@ const Overview = () => {
         About Western Star
       </h1>
       <p className="pt-20 xl:w-[45%] w-2/3">
-      Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the renowned Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.
+      Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.
       </p>
       <a className="read-more-btn pt-16 pb-40" onClick={() => scrollToElement('goals')}>Read More ▸</a>
     </section>
@@ -73,7 +73,7 @@ const Overview = () => {
         Our Goal
       </h2>
       <p className="mt-16">
-        Western Star is a junior Canadian exploration company which holds a 100% interest in the Western Star Property located near Revelstoke, British Columbia. Our management has a strong track record in the discovery and development of successful exploration projects. The objective is to increase shareholder value through the development of exploration properties, using cost-effective exploration practices, the acquisition of high value exploration properties, and seeking partnerships by either joint venture or sale with industry leaders.
+        Western Star is a junior Canadian exploration company which holds a 100% interest in the Western Star Property located near Revelstoke, British Columbia. Our management has a strong track record in the discovery and development of successful exploration projects. The objective is to increase shareholder value through the development of exploration properties, using cost-effective exploration practices, the acquisition of high value exploration properties and seeking partnerships by either joint venture or sale with industry leaders.
       </p>
       <div className="flex gap-8 justify-center items-center w-full xl:h-900[px] h-[600px] mt-32">
         <img src="\assets\overview\goal-section-left.png" className="rounded-2xl max-w-[1100px] w-[55%] h-full object-cover object-top" />
