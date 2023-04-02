@@ -10,16 +10,16 @@ function Navbar({ setNavbarHeight }) {
   const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   
   const scrollToElement = useScrollContext();
-  
+
+  const [scrollButtonVisible, setScrollButtonVisible] = useState(false);  
 
   const toggleDropdown = (name) => {
     setDropdown({ ...dropdown, [name]: !dropdown[name] });
   };
 
-  const DropdownMenu = ({ name, items, className }) => {
+  const DropdownMenu = React.memo(({ name, items, className }) => {
     return (
       <div
         className={`dropdown-menu bg-white text-black rounded-lg p-2 mt-10 w-auto absolute z-50 ${
@@ -40,13 +40,17 @@ function Navbar({ setNavbarHeight }) {
         ))}
       </div>
     );
-  };
+  });
 
   // Add your dropdown items for each menu
   const aboutItems = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
   const projectsItems = [{ to: '/ws-project', label: 'Western Star Project' },];
 
   const location = useLocation();
+
+  const aboutToggler = useRef(null);
+  const projectsToggler = useRef(null);
+
 
   const isAboutLink = () => {
     return aboutItems.some(item => location.pathname === item.to);
@@ -57,21 +61,28 @@ function Navbar({ setNavbarHeight }) {
   };
 
   const handleClickOutside = (event) => {
-    if (dropdown.about || dropdown.projects || dropdown.investors) {
-      const dropdownElements = document.querySelectorAll(".dropdown-menu");
-      let clickedOutside = true;
-  
-      dropdownElements.forEach((element) => {
+    const dropdownElements = document.querySelectorAll(".dropdown-menu");
+    let clickedOutside = true;
+
+    if (
+        aboutToggler.current.contains(event.target) ||
+        projectsToggler.current.contains(event.target)
+    ) {
+        return;
+    }
+
+    dropdownElements.forEach((element) => {
         if (element.contains(event.target)) {
-          clickedOutside = false;
+            clickedOutside = false;
         }
-      });
-  
-      if (clickedOutside) {
+    });
+
+    if (clickedOutside) {
         setDropdown({ about: false, projects: false, investors: false });
-      }
     }
   };
+
+
 
   const navbarRef = useRef(null);
 
@@ -105,39 +116,37 @@ function Navbar({ setNavbarHeight }) {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
-  
+    
       totalDifference += prevScrollPos - currentScrollPos;
-  
+    
       if (currentScrollPos - prevScrollPos > 0) {
         totalDifference = 0;
-        if (visible){
-          scrollButton.classList.remove('hidden');
-          scrollButton.classList.remove('animate-slide-down');
-          scrollButton.classList.add('animate-slide-up');
+        if (visible) {
+          setScrollButtonVisible(true);
           setVisible(false);
         }
       } else {
         if (totalDifference > 150 && !visible) {
-          scrollButton.classList.remove('animate-slide-up');
-          scrollButton.classList.add('animate-slide-down');
-          setTimeout(() => {
-            scrollButton.classList.add('hidden');
-          }, 450);
+          setScrollButtonVisible(false);
           setVisible(true);
         }
       }
-  
+    
+      setDropdown({ about: false, projects: false, investors: false });
+    
       setPrevScrollPos(currentScrollPos);
-  
+    
       if (currentScrollPos === 0) {
         setVisible(true);
       }
     };
-  
+    
+
     window.addEventListener('scroll', handleScroll);
-  
+
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [prevScrollPos, visible]);
+}, [prevScrollPos, visible]);
+
   
   
   return (
@@ -151,10 +160,10 @@ function Navbar({ setNavbarHeight }) {
           <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
           <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>
-        <div className="nav-links flex flex-grow justify-center items-center xl:gap-20 lg:gap-14 text-base font-normal">
+        <div className="nav-links flex flex-grow justify-center items-center 2xl:gap-20 xl:gap-12 lg:gap-3 text-base font-normal">
 
 
-          <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('about')}>    
+        <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('about')} ref={aboutToggler}>    
 
             <div className={`flex pr-2 hover:text-gold ${isAboutLink() ? 'underline text-gold font-semibold' : ''}`}>
               About
@@ -165,7 +174,7 @@ function Navbar({ setNavbarHeight }) {
             <DropdownMenu name="about" items={aboutItems} />
           </div>
 
-          <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('projects')}>
+          <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('projects')} ref={projectsToggler}>
             <div className={`flex pr-2 hover:text-gold ${isProjectsLink() ? 'underline text-gold font-semibold' : ''}`}>
               Projects
             </div>
@@ -182,6 +191,10 @@ function Navbar({ setNavbarHeight }) {
           <NavLink to="/news" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none  hover:text-gold')}>
             News
           </NavLink>
+
+          <NavLink to="/legal" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none  hover:text-gold')}>
+            Legal
+          </NavLink>
         </div>
 
         <div className="nav-contact">
@@ -189,9 +202,10 @@ function Navbar({ setNavbarHeight }) {
         </div>
       </div>
       
-      <a onClick={() => scrollToElement('navbar')} id="scrollButton" className={`hidden fixed bottom-6 right-6 rounded-lg bg-gold p-4`}>
+      <a onClick={() => scrollToElement('navbar')} id="scrollButton" className={`fixed bottom-6 right-6 rounded-lg bg-gold p-4 ${scrollButtonVisible ? 'animate-slide-up' : 'animate-slide-down'}`}>
         <img src="/assets/logo/arrow-upward.svg" className="h-5 w-5" alt="" />
       </a>
+
 
 
 

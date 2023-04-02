@@ -6,6 +6,7 @@ import Investors from './pages/Investors';
 import News from './pages/News';
 import Article_1 from './pages/articles/Article-1';
 import GoldProject from './pages/Gold-Project';
+import Legal from './pages/Legal';
 import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom"
 import Preloader from './components/Preloader/Preloader';
 
@@ -77,7 +78,7 @@ const App = () => {
       {/* {isPreloading && <Preloader />}
         <div className={contentClass}> */}
           <ScrollContext.Provider value={scrollToElement}>
-            {/* <ScrollToTop /> */}
+            <ScrollToTop />
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/overview" element={<Overview />} />
@@ -85,6 +86,7 @@ const App = () => {
               <Route path="/ws-project" element={<GoldProject />} />
               <Route path="/investors" element={<Investors />} />
               <Route path="/news" element={<News />} />
+              <Route path="/legal" element={<Legal />} />
               <Route path="/western-star-plans-large-program" element={<Article_1 />} />
             </Routes>
           </ScrollContext.Provider>
