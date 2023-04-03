@@ -8,6 +8,26 @@ import articlesData from '../data/articles.json';
 const Home = () => {
 
   const latestNewsRef = useRef(null);
+  const [paddingValue, setPaddingValue] = useState(108);
+
+  const updatePaddingValue = () => {
+    if (window.innerWidth >= 1200) {
+      setPaddingValue(108);
+    } else {
+      setPaddingValue(0);
+    }
+  };
+
+  useEffect(() => {
+    updatePaddingValue();
+    window.addEventListener("resize", updatePaddingValue);
+  
+    return () => {
+      window.removeEventListener("resize", updatePaddingValue);
+    };
+  }, []);
+  
+  
 
   useEffect(() => {
     const latestNewsHeight = latestNewsRef.current.offsetHeight / 2;
@@ -32,13 +52,21 @@ const Home = () => {
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
       {/* Hero section */}
-      <section className="hero dsk:flex dsk:p-32 p-12 relative overflow-hidden pb-56 z-10 xl:pb-82 3xl:pb-96"
-               style={{ paddingTop: `${navbarHeight + 108}px` }}>
+      
+      
+      <img className="dsk:hidden opacity-50 absolute scale-75 top-[58%] left-[0%]" src="\assets\hero\hero-circle-lg.svg" alt="" />
+      <img className="dsk:hidden opacity-50 absolute top-[15%] left-[15%] scale-[0.25]" src="\assets\hero\hero-circle-lg.svg" alt="" />
+      <img className="dsk:hidden opacity-[0.35] absolute top-[22%] right-[10%] scale-[0.85]" src="\assets\hero\hero-circle-lg.svg" alt="" />
+      <div className="gradient-gray absolute top-[20%] left-[20%] h-1/2 w-1/4 scale-150  dsk:hidden"></div>
+      <div className="gradient-gold absolute top-[00%] left-[55%] h-1/2 w-1/4 scale-150  dsk:hidden"></div>
+
+      <section className="hero dsk:flex dsk:p-32 relative overflow-hidden pb-56 z-10 xl:pb-82 3xl:pb-96"
+               style={{ paddingTop: `${navbarHeight + paddingValue}px` }}>
         <div className="flex flex-col w-full dsk:w-2/3 dsk:mr-24">
-          <h1 className="text-page-header font-semibold leading-[85px]">
+          <h1 className="text-page-header font-semibold leading-[85px] px-12 dsk:px-0">
             Driving innovation and progress in the mining industry
           </h1>
-          <p className="text-section-subheader pt-8 mr-8">
+          <p className="text-section-subheader pt-8 mr-8 -mb-[100px] dsk:pb-0 px-12 dsk:px-0">
             Committed to providing sustainable solutions for the future by harnessing the power of green energy metals
           </p>
         </div>
@@ -46,13 +74,18 @@ const Home = () => {
         <div className="gradient-gray absolute top-[30%] left-[50%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
         <div className="gradient-gold absolute top-[10%] left-[65%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
         
-        <div className="hero-images relative w-1/2 hidden dsk:block">
+        <div className="dsk:flex justify-center w-full hidden">
+          <div className="hero-images relative w-1/2 pb-48 dsk:py-0">
+            <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
+            <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
+            <img className="absolute top-8 left-48 scale-[1.15]" src="\assets\hero\hero-circle-lg.svg" alt="" />
+            <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[380px] h-[380px]" src="\assets\hero\hero-rocks.png" alt="" />
+          </div>
 
-          <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
-          <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
-          <img className="absolute top-8 left-48 scale-[1.15]" src="\assets\hero\hero-circle-lg.svg" alt="" />
-          <img className="absolute -top-[30px] left-[50px] w-[451px] h-[380px]" src="\assets\hero\hero-rocks.png" alt="" />
+          
         </div>
+
+      
       </section>
 
       {/* about company section */}
@@ -91,7 +124,7 @@ const Home = () => {
         <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-12 dsk:mt-24 mx-12 dsk:mx-32">
           Explore Our Projects
         </h2>
-        <p className="mx-12 dsk:mx-32">Discover our latest mining ventures and unearth our potentials</p>
+        <p className="mx-12 pb-12 dsk:pb-0 dsk:mx-32">Discover our latest mining ventures and unearth our potentials</p>
         <div className="dsk:flex flex-row gap-x-8 mt-0 dsk:my-16 mx-0 dsk:mx-32">
           <img src="/assets/index/explore-section-bg.png" className="explore-section-bg dsk:w-1/2 dsk:rounded-2xl object-cover object-center bg-no-repeat"></img>
           <div className="flex flex-col dsk:w-1/2 max-w-[1150px] bg-light-blue text-black py-20 px-16 dsk:rounded-2xl">
@@ -117,37 +150,37 @@ const Home = () => {
         <div className="revelstoke-map flex-1 h-full relative">
           <img src="/assets/index/map.jpg" alt="" className="w-full h-full object-cover dsk:rounded-tl-2xl dsk:rounded-bl-2xl" />
           <Tooltip content="Black Bear" style={{ top: '76.9%', left: '51.2%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Lardeau-Goldsmith" style={{ top: '59.8%', left: '49.9%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Wide West" style={{ top: '44%', left: '57%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Goodenough" style={{ top: '69.1%', left: '71.7%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Kitsap" style={{ top: '40%', left: '22.9%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Banner" style={{ top: '21.5%', left: '14.3%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Daffodil" style={{ top: '12.2%', left: '10.2%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Royal" style={{ top: '36%', left: '19.25%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Morning Star" style={{ top: '15%', left: '23.35%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Lexington" style={{ top: '31.6%', left: '19.6%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Alma" style={{ top: '54%', left: '33.2%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
+            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
 
         </div>

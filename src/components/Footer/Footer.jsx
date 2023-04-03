@@ -47,6 +47,10 @@ const Footer = () => {
         <div className="col-span-1"></div>
       </div>
     </div>
+
+    
+    <div className={`dsk:hidden gradient-gray absolute ${isSpecialPage ? 'top-[20%]' : 'top-0'}  h-4/5 w-1/4 scale-100`}></div>
+    <div className={`dsk:hidden gradient-gold absolute ${isSpecialPage ? 'top-[45%]' : 'top-[25%]'} left-2/4 h-4/5 w-1/2 scale-100`}></div>
     
     <div className="footer-images hidden dsk:block">
       <div className={`gradient-gray absolute ${isSpecialPage ? 'top-[20%]' : 'top-0'} left-1/2 h-4/5 w-1/4 scale-150`}></div>
