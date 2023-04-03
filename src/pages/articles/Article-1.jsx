@@ -22,11 +22,11 @@ const Article_1 = () => {
       <ArticleHeader navbarHeight={navbarHeight} article={article} />
 
       {/* content section */}
-      <section id="article-content" className="article-content px-32 bg-white text-black min-h-[600px]">
-        <h2 className="text-section-header-lg font-semibold">
+      <section id="article-content" className="article-content px-12 dsk:px-32 bg-white text-black min-h-[600px]">
+        <h2 className="text-section-header-lg font-semibold pt-12">
           Coming Soon
         </h2>
-        <p>
+        <p className="py-12">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent suscipit sollicitudin consequat. Fusce arcu erat, sollicitudin placerat malesuada facilisis, tempor sed sapien. Nullam turpis odio, efficitur sit amet efficitur eu, pharetra in dolor. Duis pellentesque tincidunt urna nec dapibus. Nunc commodo condimentum augue ac luctus. Fusce elementum et metus accumsan bibendum. Proin at tortor lacus. Sed felis orci, laoreet a semper ut, pulvinar eu tellus. Donec vehicula, ante quis suscipit vehicula, elit lorem auctor neque, in facilisis tellus eros sed risus. Donec molestie egestas odio. Praesent consequat massa a mi venenatis consectetur. Integer sodales, justo rutrum suscipit rutrum, nibh ligula viverra eros, viverra tempus lorem arcu quis tellus.
 
         Pellentesque id ex fringilla, euismod lectus quis, mattis nisi. Mauris ac ultricies ante. Vestibulum convallis, erat in varius tempor, erat felis luctus turpis, sed mollis nisi massa at elit. Integer sodales diam quis ante placerat, non dignissim arcu cursus. Aenean rhoncus eros mi, et sagittis enim dictum eu. Sed quis sagittis justo. Sed volutpat nunc eget erat vehicula, sed molestie urna suscipit. Quisque vestibulum dapibus magna non cursus. Mauris a viverra erat, non aliquam nisl. Proin condimentum laoreet blandit. Quisque condimentum mauris in commodo bibendum. Nam sed sodales enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Maecenas placerat metus a libero cursus, eu feugiat orci fringilla. Proin dignissim arcu non mi egestas viverra. In sit amet luctus felis, non dapibus neque.

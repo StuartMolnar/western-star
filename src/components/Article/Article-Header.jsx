@@ -17,14 +17,14 @@ const Article_1 = ({ navbarHeight, article}) => {
   return (
     <>
       {/* header section */}
-      <section className="article-header-bg flex-row px-32 py-20 2xl:py-32"
+      <section className="article-header-bg flex-row px-12 dsk:px-32 py-20 2xl:py-32"
               style={{ ...headerStyle, marginTop: `${navbarHeight}px` }}>
                 
         <div className="text-gold font-semibold text-content-20">{article.date}</div>
         <h1 className="text-page-header font-semibold 2xl:w-1/2 pt-6">
           {article.title}
         </h1>
-        <div className="read-more-btn pt-16" onClick={() => scrollToElement('article-content')}>Read More ▸</div>
+        <div className="hidden dsk:read-more-btn pt-16" onClick={() => scrollToElement('article-content')}>Read More ▸</div>
       </section>
     </>
   );
