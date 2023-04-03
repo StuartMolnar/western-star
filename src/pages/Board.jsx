@@ -36,7 +36,7 @@ const Board = () => {
         </section>
 
         {/* member cards section */}
-        <section id="boardMembers" className="board-section-bg text-white">
+        <section id="boardMembers" className="board-section-bg text-white py-12 dsk:py-0">
           <div className="board-members dsk:p-20 flex justify-center">
             <div className="grid dsk:grid-cols-2 grid-rows-2 gap-4 p-4 justify-center">
               {boardMembers.map((member, index) => (

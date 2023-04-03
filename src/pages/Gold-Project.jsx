@@ -13,24 +13,29 @@ const GoldProject = () => {
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
     {/* header section */}
-    <section className="projects-header-bg flex-row px-32 2xl:py-32"
+    <section className="projects-header-bg flex-row px-12 dsk:px-32 2xl:py-32"
             style={{ marginTop: `${navbarHeight}px` }}>
-      <h1 className="text-page-header font-semibold w-full pt-40">
+      <h1 className="text-page-header font-semibold w-full pt-40 dsk:pb-0 pb-40">
         The Western Star Project
       </h1>
-      <p className="pt-20 xl:w-[45%] w-2/3">
+      <p className="pt-20 xl:w-[45%] w-2/3 hidden dsk:block">
         The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
       </p>
-      <a onClick={() => scrollToElement('overview')} className="read-more-btn pt-16 pb-32">Read More ▸</a>
+      <a onClick={() => scrollToElement('overview')} className="hidden dsk:read-more-btn pt-16 pb-32">Read More ▸</a>
     </section>
 
+    
+    <p className="pt-20 px-12 dsk:hidden">
+        The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
+      </p>
+
     {/* overview section */}
-    <section id="overview" className="flex-row mx-32">
+    <section id="overview" className="flex-row mx-12 dsk:mx-32">
         <h2 className="text-section-header-lg font-semibold pt-24">
             Overview
         </h2>
-        <div className="flex w-full gap-8 pt-12">
-            <div className="flex-row w-1/3 bg-white rounded-2xl p-12">
+        <div className="flex-row dsk:flex w-full gap-8 space-y-8 pt-12">
+            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
                     Location
                 </h3>
@@ -39,7 +44,7 @@ const GoldProject = () => {
                     <li>Access to the Property area is via helicopter from Revelstoke or Nakusp</li>
                 </ul>
             </div>
-            <div className="flex-row w-1/3 bg-white rounded-2xl p-12">
+            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
                     Regional Geology
                 </h3>
@@ -51,7 +56,7 @@ const GoldProject = () => {
                 </ul>
 
             </div>
-            <div className="flex-row w-1/3 bg-white rounded-2xl p-12">
+            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
                     History & Mineralization
                 </h3>
@@ -66,98 +71,103 @@ const GoldProject = () => {
     </section>
 
     {/* info section */}
-    <section className="info-section flex py-32 text-black min-h-[800px]">
-    <div className="w-[65%] bg-light-blue flex items-center justify-center">
-        <p className="p-32">
+    <img src="/assets/gold-project/info-section-right.JPG" className="info-section-img pt-20 object-cover object-center dsk:hidden"></img>
+    <section className="info-section flex dsk:py-32 text-black dsk:min-h-[800px]">
+        
+    <div className="dsk:w-[65%] bg-light-blue flex items-center justify-center">
+        <p className="p-12 py-20 dsk:p-32">
             Recently discovered mineralization consists of <span className="font-semibold">galena-sphalerite-chalcopyrite</span> in concordant to irregular quartz-chlorite veins in shears at the limestone phyllite contact and in fractured and/or brecciated ankeritic limestone.  Select rock samples returned up to <span className="font-semibold">8.22 g/t gold, 246.76 g/t silver, 3.68% copper</span>, and <span className="font-semibold">50.1% lead</span>.
         </p>
     </div>
-    <div className="info-section-img w-[35%]"></div>
+    <img src="/assets/gold-project/info-section-right.JPG" className="info-section-img dsk:w-[35%] object-cover object-center hidden dsk:block"></img>
     {/* <img src="src\assets\gold-project\info-section-right.JPG" alt="" className="w-full max-w-[800px] object-cover object-center" /> */}
 </section>
 
 
     {/* exploration section */}
-    <section className="exploration-section flex-row mx-32">
+    <section className="exploration-section dsk:flex-row mx-12 dsk:mx-32">
         <h2 className="text-section-header-lg font-semibold">
             Exploration
         </h2>
-        <div className="pt-16">
-            <div className="grid grid-cols-11 text-gold font-semibold">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">Sample ID</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Description</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">Au g/t</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">Ag g/t</div>
-            </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">CH-LC-01</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Representative grab sample of 0.5 to 1.5-meter wide quartz-sericite-chloritevein containing traces of malachite staining (bedding plane fault).</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">2.04</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
-            </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">40954</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Sulphide lens 2 inches wide near northeast contact.</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">8.22</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">264.76</div>
+        <div className="overflow-x-auto">
+            <div className="pt-16 w-full min-w-[1100px] dsk:min-w-0">
+                <div className="grid grid-cols-11 text-gold font-semibold">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">Sample ID</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Description</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">Au g/t</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">Ag g/t</div>
                 </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">GR-LX87-02</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite min within siderite-ankerite.</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">1.78</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">3.0</div>
-            </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">DN-011</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">ConGrab sample 1-2 m wide quartz vein. Note: 0.07% copper.</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">1.81</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">0.17</div>
-            </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">34993</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample from dump at portal of Scout Adit, massive white quartz with coarsegrained galena, pyrite.</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">2.61</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">3.2</div>
-            </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">20021</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite min within siderite-ankerite alteration zone.</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
-            </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">16953</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample of quartz-siderite fracture filling with galena, sphalerite, tetrahedrite.</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">5.95</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">170.3</div>
-            </div>
-            <div className="grid grid-cols-11">
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">40951</div>
-                <div className="col-span-8 border border-black p-2 flex items-center px-4">Channel sample across 2.0-meter-wide pyrite-siderite zone.</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">2.21</div>
-                <div className="col-span-1 border border-black p-2 flex items-center px-4">0.07</div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">CH-LC-01</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Representative grab sample of 0.5 to 1.5-meter wide quartz-sericite-chloritevein containing traces of malachite staining (bedding plane fault).</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">2.04</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
+                </div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">40954</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Sulphide lens 2 inches wide near northeast contact.</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">8.22</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">264.76</div>
+                </div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">GR-LX87-02</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite min within siderite-ankerite.</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">1.78</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">3.0</div>
+                </div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">DN-011</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">ConGrab sample 1-2 m wide quartz vein. Note: 0.07% copper.</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">1.81</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">0.17</div>
+                </div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">34993</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample from dump at portal of Scout Adit, massive white quartz with coarsegrained galena, pyrite.</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">2.61</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">3.2</div>
+                </div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">20021</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite min within siderite-ankerite alteration zone.</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
+                </div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">16953</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample of quartz-siderite fracture filling with galena, sphalerite, tetrahedrite.</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">5.95</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">170.3</div>
+                </div>
+                <div className="grid grid-cols-11">
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">40951</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Channel sample across 2.0-meter-wide pyrite-siderite zone.</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">2.21</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">0.07</div>
+                </div>
             </div>
         </div>
+        
         
 
     </section>
 
     {/* map section */}
-    <section className="map-section p-32 flex justify-center">
-        <img src="\assets\gold-project\map.png" className="w-full max-w-[1750px] object-cover" alt="" />
+    <section className="map-section pt-20 dsk:p-32 flex justify-center">
+        <img src="\assets\gold-project\map.png" className="w-full max-w-[1750px] object-cover scale-[1.03] dsk:scale-100" alt="" />
     </section>
 
     {/* mineralization section */}
-    <section className="mineralization-section p-32 bg-dark-blue flex gap-24">
-        <div className="floating-rock-image min-w-[250px] flex-row items-center justify-center">
+    <section className="mineralization-section p-12 pt-32 dsk:p-32 bg-dark-blue flex-row dsk:flex gap-24">
+        <div className="floating-rock-image min-w-[250px] flex items-center justify-center">
             <div>
-
-            <img src="\assets\gold-project\rock.png" className="animate-rotation" alt=""/>
-            <p className="text-center pt-6">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
+                <img src="\assets\gold-project\rock.png" className="animate-rotation max-w-[300px] dsk:max-w-full" alt=""/>
+                <p className="text-center pt-20">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
             </div>
         </div>
+
         <div className="flex-row">
-            <h2 className="text-section-header-md font-semibold pb-12">
+            <h2 className="text-section-header-md font-semibold pt-32 dsk:pt-0 pb-12">
                 Mineralization
             </h2>
             <p className="py-4">
@@ -182,19 +192,23 @@ const GoldProject = () => {
 
 
     {/* sample images section */}
-    <section className="m-32 flex-col -mb-32">
-        <div className="flex gap-8 justify-center items-center w-full xl:h-1100[px] h-[800px]">
-            <img src="\assets\gold-project\images-section-left.jpg" className="rounded-3xl w-[45%] max-w-[900px] h-full object-cover object-top" />
-            <img src="\assets\gold-project\images-section-right.jpg" className="rounded-3xl w-[55%] max-w-[1100px] h-full object-cover object-center" />
-        </div>
-        
-        <div className="flex gap-8 justify-center items-center w-full pt-8">
-            <p className="w-[45%] max-w-[900px] pl-3">
-                219 g/t Ag, 50.1% Pb                
-            </p>
-            <p className="w-[55%] max-w-[1100px] pl-4">
+    <section className="dsk:m-32 -mb-60 dsk:-mb-32">
+        <div className="flex-row dsk:flex gap-8 justify-center items-center w-full xl:h-1100[px] dsk:h-[800px]">
+            <div className="flex-row dsk:h-full dsk:w-[45%] dsk:max-w-[900px] ">
+                
+            <img src="\assets\gold-project\images-section-left.jpg" className="dsk:rounded-3xl dsk:scale-100 h-[90%] object-cover object-top w-full" />
+            <p className="dsk:p-3 p-12 text-center">
+                219 g/t Ag, 50.1% Pb 
+            </p> 
+            </div>    
+            <div className="flex-row dsk:h-full dsk:w-[55%] dsk:max-w-[1100px] ">
+
+            <img src="\assets\gold-project\images-section-right.jpg" className="dsk:rounded-3xl object-cover object-center w-full h-[90%]" />
+            <p className="dsk:p-3 p-12 text-center">
                 317 ppb Au, 586 g/t Ag, 6.29% Ag, 2.79% Cu
             </p>
+            
+            </div>   
         </div>
     </section>
 
