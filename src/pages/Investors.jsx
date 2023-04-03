@@ -27,8 +27,8 @@ const Investors = () => {
         <h2 className="text-section-header-lg font-semibold">
           Share Structure
         </h2>
-        <div className="w-full flex-row dsk:flex gap-x-6 space-y-6 mx-auto justify-center text-black pt-16">
-          <div className="flex-row share-card dsk:w-1/3 bg-white rounded-2xl p-8 text-center">
+        <div className="w-full flex-row dsk:flex gap-x-6 space-y-6 dsk:space-y-0 text-black pt-16">
+          <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-8 text-center h-full">
             <h2 className="text-section-header-lg text-gold font-semibold">
               11,396,000
             </h2>
@@ -36,7 +36,7 @@ const Investors = () => {
               Issued & Outstanding
             </p>
           </div>
-          <div className="flex-row share-card dsk:w-1/3 bg-white rounded-2xl p-8 text-center">
+          <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-8 text-center h-full">
             <h2 className="text-section-header-lg text-gold font-semibold">
               6,796,000
             </h2>
@@ -44,7 +44,7 @@ const Investors = () => {
               Warrants Outstanding
             </p>
           </div>
-          <div className="flex-row share-card dsk:w-1/3 bg-white rounded-2xl p-8 text-center">
+          <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-8 text-center h-full">
             <h2 className="text-section-header-lg text-gold font-semibold">
               18,192,000
             </h2>

@@ -34,7 +34,7 @@ const GoldProject = () => {
         <h2 className="text-section-header-lg font-semibold pt-24">
             Overview
         </h2>
-        <div className="flex-row dsk:flex w-full gap-8 space-y-8 pt-12">
+        <div className="flex-row dsk:flex w-full gap-8 dsk:space-y-0 space-y-8 pt-12">
             <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
                     Location
@@ -85,7 +85,7 @@ const GoldProject = () => {
 
 
     {/* exploration section */}
-    <section className="exploration-section dsk:flex-row mx-12 dsk:mx-32">
+    <section className="exploration-section dsk:flex-row pt-24 dsk:pt-0 mx-12 dsk:mx-32">
         <h2 className="text-section-header-lg font-semibold">
             Exploration
         </h2>
@@ -159,10 +159,10 @@ const GoldProject = () => {
 
     {/* mineralization section */}
     <section className="mineralization-section p-12 pt-32 dsk:p-32 bg-dark-blue flex-row dsk:flex gap-24">
-        <div className="floating-rock-image min-w-[250px] flex items-center justify-center">
+        <div className="floating-rock-image min-w-[250px] flex items-center justify-center scale-50">
             <div>
                 <img src="\assets\gold-project\rock.png" className="animate-rotation max-w-[300px] dsk:max-w-full" alt=""/>
-                <p className="text-center pt-20">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
+                <p className="text-center pt-20 scale-[2]">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
             </div>
         </div>
 
