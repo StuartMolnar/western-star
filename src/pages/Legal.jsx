@@ -12,18 +12,18 @@ const Legal = () => {
       <Layout setNavbarHeight={setNavbarHeight}>
 
     {/* header section */}
-    <section className="legal-section-bg px-32 py-32 2xl:py-48"
+    <section className="legal-section-bg px-12 dsk:px-32 py-24 dsk:py-32 2xl:py-48"
             style={{ marginTop: `${navbarHeight}px` }}>
         <h1 className="text-page-header font-semibold">
             Legal & Privacy
         </h1>
-        <a onClick={() => scrollToElement('legal-section')} className="read-more-btn pt-16">Read More ▸</a>
+        <a onClick={() => scrollToElement('legal-section')} className="hidden dsk:read-more-btn pt-16">Read More ▸</a>
         
     </section>
 
     {/* legal section */}
-    <section className="legal-section px-32 py-24 bg-white text-black">
-        <div className="flex-col space-y-12">
+    <section className="legal-section px-12 dsk:px-32 py-16 dsk:py-24 bg-white text-black">
+        <div className="flex-col space-y-8 dsk:space-y-12">
             <h2 className="text-card-header font-semibold">
                 Forward-Looking Statements
             </h2>
