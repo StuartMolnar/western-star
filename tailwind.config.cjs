@@ -41,7 +41,7 @@ module.exports = {
         'base': '14px',
         'page-header': '30px',
         'content-20': '16px',
-        'section-header-md': '35px',
+        'section-header-md': '24px',
         'section-header-lg': '24px',
         'section-subheader': '18px',
         'container-header': '18px',

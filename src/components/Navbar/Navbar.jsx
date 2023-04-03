@@ -10,6 +10,12 @@ function Navbar({ setNavbarHeight }) {
   const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
+  const [menuToggleChecked, setMenuToggleChecked] = useState(false);
+  const menuToggleRef = useRef(null);
+  const menuRef = useRef(null);
+  
+
+
   
   const scrollToElement = useScrollContext();
 
@@ -45,6 +51,8 @@ function Navbar({ setNavbarHeight }) {
   // Add your dropdown items for each menu
   const aboutItems = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
   const projectsItems = [{ to: '/ws-project', label: 'Western Star Project' },];
+  const aboutItemsMobile = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
+  const projectsItemsMobile = [{ to: '/ws-project', label: 'Western Star Project' },];
 
   const location = useLocation();
 
@@ -52,12 +60,12 @@ function Navbar({ setNavbarHeight }) {
   const projectsToggler = useRef(null);
 
 
-  const isAboutLink = () => {
-    return aboutItems.some(item => location.pathname === item.to);
+  const isAboutLink = (nav) => {
+    return nav.some(item => location.pathname === item.to);
   };
 
-  const isProjectsLink = () => {
-    return projectsItems.some(item => location.pathname === item.to);
+  const isProjectsLink = (nav) => {
+    return nav.some(item => location.pathname === item.to);
   };
 
   const handleClickOutside = (event) => {
@@ -79,6 +87,16 @@ function Navbar({ setNavbarHeight }) {
 
     if (clickedOutside) {
         setDropdown({ about: false, projects: false, investors: false });
+    }
+
+    // Check if the click is outside of the menuToggle or menu element
+    if (
+      menuToggleRef.current &&
+      !menuToggleRef.current.contains(event.target) &&
+      menuRef.current &&
+      !menuRef.current.contains(event.target)
+    ) {
+      setMenuToggleChecked(false);
     }
   };
 
@@ -121,12 +139,16 @@ function Navbar({ setNavbarHeight }) {
     
       setDropdown({ about: false, projects: false, investors: false });
     
+      // Close the menu on scroll
+      setMenuToggleChecked(false);
+    
       setPrevScrollPos(currentScrollPos);
     
       if (currentScrollPos === 0) {
         setVisible(true);
       }
     };
+    
     
 
     window.addEventListener('scroll', handleScroll);
@@ -138,65 +160,113 @@ function Navbar({ setNavbarHeight }) {
   
   return (
 
-    // NOTE: when designing mobile, make new tailwind breakpoint for 1200px not sm
-
     <div id="navbar" className={`Navbar w-full z-50`}>
 
-      <div ref={navbarRef} className= {`fixed w-full flex p-12 px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
+      {/* ------------------ DESKTOP NAVBAR ------------------ */}
+
+      <div ref={navbarRef} className= {`fixed justify-between w-full flex p-12 px-12 dsk:px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
         <Link to="/" className="nav-logo flex h-7 items-center space-x-4">
           <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
           <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
         </Link>
-        <div className="nav-links flex flex-grow justify-center items-center 2xl:gap-20 xl:gap-12 lg:gap-3 text-base font-normal">
+        <div className="nav-links dsk:flex flex-grow justify-center items-center 2xl:gap-20 xl:gap-12 lg:gap-3 text-base font-normal hidden ">
 
 
         <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('about')} ref={aboutToggler}>    
 
-            <div className={`flex pr-2 hover:text-gold ${isAboutLink() ? 'underline text-gold font-semibold' : ''}`}>
-              About
-            </div>
-            <div className={`flex hover:text-gold ${isAboutLink() ? 'text-gold font-semibold' : ''}`}>
-              ▾
-            </div>
-            <DropdownMenu name="about" items={aboutItems} />
+          <div className={`flex pr-2 hover:text-gold ${isAboutLink(aboutItems) ? 'underline text-gold font-semibold' : ''}`}>
+            About
           </div>
-
-          <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('projects')} ref={projectsToggler}>
-            <div className={`flex pr-2 hover:text-gold ${isProjectsLink() ? 'underline text-gold font-semibold' : ''}`}>
-              Projects
-            </div>
-            <div className={`flex hover:text-gold ${isProjectsLink() ? 'text-gold font-semibold' : ''}`}>
-              ▾
-            </div>
-            <DropdownMenu name="projects" items={projectsItems} />
+          <div className={`flex hover:text-gold ${isAboutLink(aboutItems) ? 'text-gold font-semibold' : ''}`}>
+            ▾
           </div>
+          <DropdownMenu name="about" items={aboutItems} />
+        </div>
 
-          <NavLink to="/investors" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none hover:text-gold')}>
-            Investors
-          </NavLink>
+        <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('projects')} ref={projectsToggler}>
+          <div className={`flex pr-2 hover:text-gold ${isProjectsLink(projectsItems) ? 'underline text-gold font-semibold' : ''}`}>
+            Projects
+          </div>
+          <div className={`flex hover:text-gold ${isProjectsLink(projectsItems) ? 'text-gold font-semibold' : ''}`}>
+            ▾
+          </div>
+          <DropdownMenu name="projects" items={projectsItems} />
+        </div>
 
-          <NavLink to="/news" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none  hover:text-gold')}>
-            News
-          </NavLink>
+        <NavLink to="/investors" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none hover:text-gold')}>
+          Investors
+        </NavLink>
 
-          <NavLink to="/legal" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none  hover:text-gold')}>
-            Legal
-          </NavLink>
+        <NavLink to="/news" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none  hover:text-gold')}>
+          News
+        </NavLink>
+
+        <NavLink to="/legal" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold' : 'select-none  hover:text-gold')}>
+          Legal
+        </NavLink>
         </div>
 
         <div className="nav-contact">
-          <a onClick={() => scrollToElement('footer-container')} className="button-primary">Contact Us</a>
+          <a onClick={() => scrollToElement('footer-container')} className="hidden dsk:button-primary">Contact Us</a>
         </div>
+
+        
+        {/* ------------------ MOBILE NAVBAR ------------------ */}
+        
+
+        <div id="menuToggle" className="nav-contact dsk:hidden" ref={menuToggleRef}>
+        <input type="checkbox" checked={menuToggleChecked} onChange={(e) => setMenuToggleChecked(e.target.checked)} />
+
+          
+          
+          <span className="bg-gold"></span>
+          <span className="bg-gold"></span>
+          <span className="bg-gold"></span>
+        
+          <ul id="menu" className="fixed bg-dark-blue text-white w-[300px] h-screen" ref={menuRef}>
+            <div className="flex-row space-y-4">
+                <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('about')} ref={aboutToggler}>    
+
+                <div className={`flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'underline text-gold font-semibold' : ''}`}>
+                  About
+                </div>
+                <div className={`flex hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+                  ▾
+                </div>
+                <DropdownMenu name="about" items={aboutItemsMobile} />
+              </div>
+                <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('projects')} ref={projectsToggler}>
+                <div className={`flex pr-2 hover:text-gold ${isProjectsLink(projectsItemsMobile) ? 'underline text-gold font-semibold' : ''}`}>
+                  Projects
+                </div>
+                <div className={`flex hover:text-gold ${isProjectsLink(projectsItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+                  ▾
+                </div>
+                <DropdownMenu name="projects" items={projectsItemsMobile} />
+              </div>
+                <NavLink to="/investors" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold inline-block w-full' : 'select-none hover:text-gold inline-block w-full')}>
+                Investors
+              </NavLink>
+                <NavLink to="/news" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold inline-block w-full' : 'select-none  hover:text-gold inline-block w-full')}>
+                News
+              </NavLink>
+                <NavLink to="/legal" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold inline-block w-full' : 'select-none  hover:text-gold inline-block w-full')}>
+                Legal
+              </NavLink>
+
+        
+
+            </div>
+          </ul>
+        </div>
+        
       </div>
+
+      {/* ------------------ TOP BUTTON ------------------ */}
       
       <a onClick={() => scrollToElement('navbar')} id="scrollButton" className={`fixed bottom-6 right-6 rounded-lg bg-gold p-4 ${scrollButtonVisible ? 'animate-slide-up' : 'animate-slide-down'}`}>
         <img src="/assets/logo/arrow-upward.svg" className="h-5 w-5" alt="" />
       </a>
-
-
-
-
-
 
 
     </div>
