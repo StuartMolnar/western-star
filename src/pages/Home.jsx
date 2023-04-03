@@ -32,9 +32,9 @@ const Home = () => {
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
       {/* Hero section */}
-      <section className="hero flex p-32 relative overflow-hidden pb-56 z-10 xl:pb-82 3xl:pb-96"
+      <section className="hero dsk:flex dsk:p-32 p-12 relative overflow-hidden pb-56 z-10 xl:pb-82 3xl:pb-96"
                style={{ paddingTop: `${navbarHeight + 108}px` }}>
-        <div className="flex flex-col w-2/3 mr-24">
+        <div className="flex flex-col w-full dsk:w-2/3 dsk:mr-24">
           <h1 className="text-page-header font-semibold leading-[85px]">
             Driving innovation and progress in the mining industry
           </h1>
@@ -43,10 +43,10 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="gradient-gray absolute top-[30%] left-[50%] h-1/2 w-1/4 scale-150"></div>
-        <div className="gradient-gold absolute top-[10%] left-[65%] h-1/2 w-1/4 scale-150"></div>
+        <div className="gradient-gray absolute top-[30%] left-[50%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
+        <div className="gradient-gold absolute top-[10%] left-[65%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
         
-        <div className="hero-images relative w-1/2">
+        <div className="hero-images relative w-1/2 hidden dsk:block">
 
           <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
           <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
@@ -56,23 +56,23 @@ const Home = () => {
       </section>
 
       {/* about company section */}
-      <section className="latest-news bg-white flex flex-grow justify-between items-center text-base font-normal rounded-2xl mx-32 p-8 -mt-4 relative z-20" ref={latestNewsRef}>
+      <section className="latest-news bg-white flex-row dsk:flex flex-grow justify-between items-center text-base font-normal rounded-2xl dsk:mx-32 mx-12 p-8 -mt-4 relative z-20" ref={latestNewsRef}>
         <div>
-          <h3 className="text-container-header text-black font-semibold">
+          <h3 className="text-container-header text-black font-semibold pb-2">
             Latest News
           </h3>
           <p className="text-dark-blue">
             {getLastArticleTitle()}
           </p>
         </div>          
-        <div className="button-container ml-12">
+        <div className="button-container dsk:ml-12 mt-6 dsk:mt-0">
           <Link to={`${getLastArticleUrl()}`} className="button-accent align-self-end cursor-pointer">Read Full Article</Link>
         </div>
       </section>
 
-      <section className="about-section-bg flex-row text-black relative pt-48 pb-96 xl:pb-[500px]">
-        <div className="flex mx-32 gap-x-24">
-          <div className="flex-row w-1/2">
+      <section className="about-section-bg flex-row text-black relative pt-48 pb-[800px] dsk:pb-96 xl:pb-[500px]">
+        <div className="flex-row dsk:flex mx-12 dsk:mx-32 gap-x-24">
+          <div className="flex-row dsk:w-1/2">
             <h2 className="text-section-header-lg font-semibold">
               About Western Star
             </h2>
@@ -80,21 +80,21 @@ const Home = () => {
             <Link to="/overview" className="button-primary mt-6 cursor-pointer">Learn More</Link>
           </div>
 
-          <p className="w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
+          <p className="dsk:w-1/2 mt-6 2xl:px-24">Western Star is an emerging, recently-listed junior mining company that has secured <span className="font-semibold">100%</span> ownership of the high-grade Western Star Project. This venture is situated in the Revelstoke Mining District of British Columbia, Canada, an area known for its abundant mineral resources and a history of successful mining operations.</p>
 
         </div>
       </section>
 
       {/* explore projects section */}
 
-      <section className="explore-projects flex flex-col items-center justify-center mx-32 xl:mb-24">
-        <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-24">
+      <section className="explore-projects flex flex-col items-center justify-center xl:mb-24">
+        <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-12 dsk:mt-24 mx-12 dsk:mx-32">
           Explore Our Projects
         </h2>
-        <p>Discover our latest mining ventures and unearth our potentials</p>
-        <div className="flex flex-row gap-x-8 my-16">
-          <div className="explore-section-bg w-1/2 rounded-2xl"></div>
-          <div className="flex flex-col w-1/2 max-w-[1150px] bg-light-blue text-black py-20 px-16 rounded-2xl">
+        <p className="mx-12 dsk:mx-32">Discover our latest mining ventures and unearth our potentials</p>
+        <div className="dsk:flex flex-row gap-x-8 mt-0 dsk:my-16 mx-0 dsk:mx-32">
+          <img src="/assets/index/explore-section-bg.png" className="explore-section-bg dsk:w-1/2 dsk:rounded-2xl object-cover object-center bg-no-repeat"></img>
+          <div className="flex flex-col dsk:w-1/2 max-w-[1150px] bg-light-blue text-black py-20 px-16 dsk:rounded-2xl">
             <h3 className="text-section-header-md font-semibold">
               The Western Star Project
             </h3>
@@ -110,12 +110,12 @@ const Home = () => {
       </section>
 
       {/* revelstoke map section */}
-      <section className="map-section flex items-center ml-32 overflow-clip h-auto mb-24 xl:mb-32">
-        <h2 className="text-section-header-lg font-semibold py-24 w-2/5 pr-24">
-          Our 2,797ha property is located 50km southeast of <span className="text-gold">Revelstoke</span>, BC - consisting of <span className="text-gold">11</span> documented mineral showings.
+      <section className="map-section flex-row dsk:flex items-center dsk:ml-32 overflow-clip h-auto dsk:mb-24 xl:mb-32">
+        <h2 className="text-section-header-lg font-semibold px-12 dsk:px-0 py-24 dsk:w-2/5 dsk:pr-24">
+          Our 2,797 ha property consists of <span className="text-gold">11</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
-          <img src="/assets/index/map.jpg" alt="" className="w-full h-full object-cover rounded-tl-2xl rounded-bl-2xl" />
+          <img src="/assets/index/map.jpg" alt="" className="w-full h-full object-cover dsk:rounded-tl-2xl dsk:rounded-bl-2xl" />
           <Tooltip content="Black Bear" style={{ top: '76.9%', left: '51.2%' }}>
             <div className="point w-3 h-3 bg-red-400 rounded-full"></div>
           </Tooltip>
@@ -155,12 +155,12 @@ const Home = () => {
       </section>
 
       {/* news section */}
-      <section className="news-section-bg px-32 py-40">
-        <div className="flex items-center pb-16 gap-x-24">
+      <section className="news-section-bg dsk:px-32 py-40">
+        <div className="flex-row dsk:flex items-center pb-16 gap-x-24 mx-12 dsk:mx-0 space-y-8 dsk:space-y-0">
           <h2 className="text-section-header-lg font-semibold">Our Latest News</h2>
           <Link to="/news" className="button-primary cursor-pointer">View All News</Link>
         </div>
-        <div className="flex flex-col bg-black max-w-[400px] rounded-3xl p-12">
+        <div className="flex flex-col bg-black dsk:max-w-[400px] mx-12 dsk:mx-0 rounded-3xl p-12">
           <h3 className="text-section-subheader font-semibold">
             Western Star plans large program on its 100% Western Star CRD/Sedex Project
           </h3>

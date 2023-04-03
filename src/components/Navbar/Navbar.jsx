@@ -99,19 +99,6 @@ function Navbar({ setNavbarHeight }) {
     };
   }, [setNavbarHeight, dropdown]);
 
-  
-  useEffect(() => {
-    const handleResize = () => {
-      setViewportHeight(window.innerHeight);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
 
   useEffect(() => {
     const handleScroll = () => {

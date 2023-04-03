@@ -78,7 +78,7 @@ const App = () => {
       {/* {isPreloading && <Preloader />}
         <div className={contentClass}> */}
           <ScrollContext.Provider value={scrollToElement}>
-            <ScrollToTop />
+            {/* <ScrollToTop /> */}
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/overview" element={<Overview />} />

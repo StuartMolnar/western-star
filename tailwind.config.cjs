@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'dsk': '1200px',
+      },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
       },
