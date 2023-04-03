@@ -100,9 +100,6 @@
   font-size: 22px;
 }
 
-/*
- * And let's slide it in from the left
- */
  #menuToggle input:checked ~ ul
 {
   transform: none;

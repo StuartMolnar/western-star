@@ -66,7 +66,7 @@ const Home = () => {
           <h1 className="text-page-header font-semibold leading-[85px] px-12 dsk:px-0">
             Driving innovation and progress in the mining industry
           </h1>
-          <p className="text-section-subheader pt-8 mr-8 -mb-[100px] dsk:pb-0 px-12 dsk:px-0">
+          <p className="text-section-subheader pt-8 mr-8 dsk:pb-0 px-12 dsk:px-0">
             Committed to providing sustainable solutions for the future by harnessing the power of green energy metals
           </p>
         </div>
@@ -74,22 +74,21 @@ const Home = () => {
         <div className="gradient-gray absolute top-[30%] left-[50%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
         <div className="gradient-gold absolute top-[10%] left-[65%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
         
-        <div className="dsk:flex justify-center w-full hidden">
-          <div className="hero-images relative w-1/2 pb-48 dsk:py-0">
-            <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
-            <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
-            <img className="absolute top-8 left-48 scale-[1.15]" src="\assets\hero\hero-circle-lg.svg" alt="" />
-            <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[380px] h-[380px]" src="\assets\hero\hero-rocks.png" alt="" />
-          </div>
+        
+        <div className="hero-images relative w-1/2 hidden dsk:flex pb-56 z-10 xl:pb-82 3xl:pb-96">
+          <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
+          <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
+          <img className="absolute top-8 left-48 scale-[1.15]" src="\assets\hero\hero-circle-lg.svg" alt="" />
+          <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[380px] h-[380px]" src="\assets\hero\hero-rocks.png" alt="" />
+        </div>
 
           
-        </div>
 
       
       </section>
 
       {/* about company section */}
-      <section className="latest-news bg-white flex-row dsk:flex flex-grow justify-between items-center text-base font-normal rounded-2xl dsk:mx-32 mx-12 p-8 -mt-4 relative z-20" ref={latestNewsRef}>
+      <section className="latest-news bg-white flex-row dsk:flex flex-grow justify-between items-center text-base font-normal rounded-2xl dsk:mx-32 mx-12 p-8 relative z-20" ref={latestNewsRef}>
         <div>
           <h3 className="text-container-header text-black font-semibold pb-2">
             Latest News
