@@ -58,7 +58,7 @@ const Overview = () => {
     {/* header section */}
     <section className="overview-header-bg flex-row p-12 dsk:px-32 2xl:py-32"
              style={{ marginTop: `${navbarHeight}px` }}>
-      <h1 className="text-page-header font-semibold w-full pt-40 pb-40 dsk:pb-0">
+      <h1 className="text-page-header font-semibold w-full dsk:pt-40 dsk:pb-0 py-24">
         About Western Star
       </h1>
       <p className="pt-20 xl:w-[45%] w-2/3 hidden dsk:block">

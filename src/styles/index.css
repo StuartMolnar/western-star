@@ -6,6 +6,10 @@
 
 @layer utilities {
 
+  html {
+    @apply overflow-x-hidden;
+  }
+
   body {
     @apply bg-black;
     @apply font-poppins;
