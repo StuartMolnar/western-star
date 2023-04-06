@@ -164,10 +164,10 @@ function Navbar({ setNavbarHeight }) {
 
       {/* ------------------ DESKTOP NAVBAR ------------------ */}
 
-      <div ref={navbarRef} className= {`fixed justify-between w-full flex p-12 px-12 dsk:px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
+      <div ref={navbarRef} className= {`fixed justify-between w-full flex p-12 px-5 dsk:px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
         <Link to="/" className="nav-logo flex h-7 items-center -space-x-8 dsk:space-x-4">
-          <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
-          <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px] scale-50 dsk:scale-100" />
+          <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px] scale-75 dsk:scale-100" />
+          <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px] scale-75 dsk:scale-100" />
         </Link>
         <div className="nav-links dsk:flex flex-grow justify-center items-center 2xl:gap-20 xl:gap-12 lg:gap-3 text-base font-normal hidden ">
 

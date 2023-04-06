@@ -54,19 +54,16 @@ const Home = () => {
       {/* Hero section */}
       
       
-      <img className="dsk:hidden opacity-50 absolute scale-75 top-[58%] left-[0%]" src="\assets\hero\hero-circle-lg.svg" alt="" />
-      <img className="dsk:hidden opacity-50 absolute top-[15%] left-[15%] scale-[0.25]" src="\assets\hero\hero-circle-lg.svg" alt="" />
-      <img className="dsk:hidden opacity-[0.35] absolute top-[22%] right-[10%] scale-[0.85]" src="\assets\hero\hero-circle-lg.svg" alt="" />
       <div className="gradient-gray absolute top-[20%] left-[20%] h-1/2 w-1/4 scale-150  dsk:hidden"></div>
       <div className="gradient-gold absolute top-[00%] left-[55%] h-1/2 w-1/4 scale-150  dsk:hidden"></div>
 
-      <section className="hero dsk:flex dsk:p-32 relative overflow-hidden pb-56 z-10 xl:pb-82 3xl:pb-96"
+      <section className="hero dsk:flex dsk:p-32 relative overflow-hidden dsk:pb-56 z-10 xl:pb-82 3xl:pb-96"
                style={{ paddingTop: `${navbarHeight + paddingValue}px` }}>
         <div className="flex flex-col w-full dsk:w-2/3 dsk:mr-24">
-          <h1 className="text-page-header font-semibold leading-[85px] px-12 dsk:px-0">
+          <h1 className="text-page-header font-semibold leading-[85px] px-5 dsk:px-0">
             Driving innovation and progress in the mining industry
           </h1>
-          <p className="text-section-subheader pt-8 mr-8 dsk:pb-0 px-12 dsk:px-0">
+          <p className="text-section-subheader pt-8 mr-8 dsk:pb-0 px-5 dsk:px-0">
             Committed to providing sustainable solutions for the future by harnessing the power of green energy metals
           </p>
         </div>
@@ -75,20 +72,23 @@ const Home = () => {
         <div className="gradient-gold absolute top-[10%] left-[65%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
         
         
-        <div className="hero-images relative w-1/2 hidden dsk:flex pb-56 z-10 xl:pb-82 3xl:pb-96">
+        <div className="hero-images relative w-1/2 hidden dsk:flex dsk:pb-56 z-10 xl:pb-82 3xl:pb-96">
           <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
           <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
           <img className="absolute top-8 left-48 scale-[1.15]" src="\assets\hero\hero-circle-lg.svg" alt="" />
           <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[380px] h-[380px]" src="\assets\hero\hero-rocks.png" alt="" />
         </div>
 
-          
+        <div className="w-full flex items-center justify-center dsk:hidden">
+          <img className="min-w-[451px] w-[451px] min-h-[380px] h-[380px] scale-[0.65]" src="\assets\hero\hero-rocks.png"/>
+        </div>
+        
 
       
       </section>
 
       {/* about company section */}
-      <section className="latest-news bg-white flex-row dsk:flex flex-grow justify-between items-center text-base font-normal rounded-2xl dsk:mx-32 mx-12 p-8 relative z-20" ref={latestNewsRef}>
+      <section className="latest-news bg-white flex-row dsk:flex flex-grow justify-between items-center text-base font-normal rounded-2xl dsk:mx-32 mx-5 p-8 relative z-20" ref={latestNewsRef}>
         <div>
           <h3 className="text-container-header text-black font-semibold pb-2">
             Latest News
@@ -102,8 +102,8 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="about-section-bg flex-row text-black relative pt-48 pb-[800px] dsk:pb-96 xl:pb-[500px]">
-        <div className="flex-row dsk:flex mx-12 dsk:mx-32 gap-x-24">
+      <section className="about-section-bg flex-row text-black relative pt-48 pb-[500px] dsk:pb-96 xl:pb-[500px] bg-top dsk:bg-center">
+        <div className="flex-row dsk:flex mx-5 dsk:mx-32 gap-x-24">
           <div className="flex-row dsk:w-1/2">
             <h2 className="text-section-header-lg font-semibold">
               About Western Star
@@ -120,13 +120,13 @@ const Home = () => {
       {/* explore projects section */}
 
       <section className="explore-projects flex flex-col items-center justify-center xl:mb-24">
-        <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-12 dsk:mt-24 mx-12 dsk:mx-32">
+        <h2 className="text-section-header-lg font-semibold text-center mb-6 mt-12 dsk:mt-24 mx-5 dsk:mx-32">
           Explore Our Projects
         </h2>
-        <p className="mx-12 pb-12 dsk:pb-0 dsk:mx-32">Discover our latest mining ventures and unearth our potentials</p>
+        <p className="mx-5 pb-12 dsk:pb-0 dsk:mx-32 text-center">Discover our latest mining ventures and unearth our potentials</p>
         <div className="dsk:flex flex-row gap-x-8 mt-0 dsk:my-16 mx-0 dsk:mx-32">
           <img src="/assets/index/explore-section-bg.png" className="explore-section-bg dsk:w-1/2 dsk:rounded-2xl object-cover object-center bg-no-repeat"></img>
-          <div className="flex flex-col dsk:w-1/2 max-w-[1150px] bg-light-blue text-black py-20 px-16 dsk:rounded-2xl">
+          <div className="flex flex-col dsk:w-1/2 max-w-[1150px] bg-light-blue text-black py-12 dsk:py-20 px-8 dsk:px-16 dsk:rounded-2xl">
             <h3 className="text-section-header-md font-semibold">
               The Western Star Project
             </h3>
@@ -143,7 +143,7 @@ const Home = () => {
 
       {/* revelstoke map section */}
       <section className="map-section flex-row dsk:flex items-center dsk:ml-32 overflow-clip h-auto dsk:mb-24 xl:mb-32">
-        <h2 className="text-section-header-lg font-semibold px-12 dsk:px-0 py-24 dsk:w-2/5 dsk:pr-24">
+        <h2 className="text-section-header-lg font-semibold px-5 dsk:px-0 py-24 dsk:w-2/5 dsk:pr-24">
           Our 2,797 ha property consists of <span className="text-gold">11</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
@@ -187,12 +187,12 @@ const Home = () => {
       </section>
 
       {/* news section */}
-      <section className="news-section-bg dsk:px-32 py-40">
-        <div className="flex-row dsk:flex items-center pb-16 gap-x-24 mx-12 dsk:mx-0 space-y-8 dsk:space-y-0">
+      <section className="news-section-bg dsk:px-32 py-16 dsk:py-40">
+        <div className="flex-row dsk:flex items-center pb-16 gap-x-24 mx-5 dsk:mx-0 space-y-8 dsk:space-y-0">
           <h2 className="text-section-header-lg font-semibold">Our Latest News</h2>
           <Link to="/news" className="button-primary cursor-pointer">View All News</Link>
         </div>
-        <div className="flex flex-col bg-black dsk:max-w-[400px] mx-12 dsk:mx-0 rounded-3xl p-12">
+        <div className="flex flex-col bg-black dsk:max-w-[400px] mx-5 dsk:mx-0 rounded-3xl p-8 dsk:p-12">
           <h3 className="text-section-subheader font-semibold">
             Western Star plans large program on its 100% Western Star CRD/Sedex Project
           </h3>

@@ -49,7 +49,7 @@ module.exports = {
         'card-subheader': '14px',
         'button': '16px',
         'footer': '14px',
-        'copyright': '14px',
+        'copyright': '12px',
 
         'dsk': {
           'base': '18px',
