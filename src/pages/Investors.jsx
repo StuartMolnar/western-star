@@ -14,7 +14,7 @@ const Investors = () => {
     <Layout setNavbarHeight={setNavbarHeight}>
 
       {/* header section */}
-      <section className="investors-header-bg px-12 dsk:px-32 py-24 dsk:py-32 2xl:py-48"
+      <section className="investors-header-bg px-5 dsk:px-32 py-24 dsk:py-32 2xl:py-48"
         style={{ marginTop: `${navbarHeight}px` }}>
         <h1 className="text-page-header font-semibold">
           Investors
@@ -23,7 +23,7 @@ const Investors = () => {
       </section>
 
       {/* share structure section */}
-      <section id="shares" className="share-structure mx-12 dsk:mx-auto max-w-[1200px] pt-24">
+      <section id="shares" className="share-structure mx-5 dsk:mx-auto max-w-[1200px] pt-16 dsk:pt-24">
         <h2 className="text-section-header-lg font-semibold">
           Share Structure
         </h2>
@@ -54,8 +54,9 @@ const Investors = () => {
           </div>
         </div>
       </section>
-      <div className="flex justify-center pt-28 pb-20">
-        <img src="\assets\investors\investors-stock-info.png" className="" alt="" />
+      <div className="flex justify-center pt-12 dsk:pt-28 pb-12 dsk:pb-20">
+        <img src="\assets\investors\investors-stock-info.png" className="hidden dsk:block" alt="" />
+        <img src="\assets\investors\investors-stock-info-mobile.png" className="dsk:hidden" alt="" />
       </div>
 
 
@@ -71,7 +72,7 @@ const Investors = () => {
           </a>
 
         </div>
-        <iframe src={'/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none 2xl:h-[700px] h-[350px] dsk:h-[500px] max-w-[1000px] w-full mt-16 mb-24"></iframe>
+        <iframe src={'/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none 2xl:h-[700px] h-[350px] dsk:h-[500px] max-w-[1000px] w-full mt-16 mb-6 dsk:mb-24"></iframe>
       </section>
 
 
