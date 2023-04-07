@@ -235,7 +235,7 @@ function Navbar({ setNavbarHeight }) {
             <div className="flex-row space-y-4">
               {/* Accordion 1 */}
               <details open={accordionOpen[1]} onToggle={toggleAccordion(1)}>
-                <summary className={`cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+                <summary className={`list-none cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
                   <p className={`${isAboutLink(aboutItemsMobile) ? 'underline' : ''}`}>About</p>
                   <span className="no-underline float-right mr-8">
                     {accordionOpen[1] ? '▴' : '▾'}
@@ -253,7 +253,7 @@ function Navbar({ setNavbarHeight }) {
 
               {/* Accordion 2 */}
               <details open={accordionOpen[2]} onToggle={toggleAccordion(2)}>
-                <summary className={`cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(projectsItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+                <summary className={`list-none cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(projectsItemsMobile) ? 'text-gold font-semibold' : ''}`}>
                   <p className={`${isAboutLink(projectsItemsMobile) ? 'underline' : ''}`}>Projects</p>
                   <span className="no-underline float-right mr-8">
                     {accordionOpen[2] ? '▴' : '▾'}
