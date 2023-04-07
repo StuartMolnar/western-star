@@ -9,16 +9,16 @@ const Footer = () => {
   const isSpecialPage = location.pathname === '/overview' || location.pathname === '/ws-project';
 
   return (
-    <footer id="footer-container" className={`footer-container px-12 dsk:px-32 text-copyright relative overflow-hidden ${isSpecialPage ? 'pt-72' : ''}`}>
+    <footer id="footer-container" className={`footer-container px-5 dsk:px-32 text-copyright relative overflow-hidden ${isSpecialPage ? 'pt-72' : ''}`}>
 
-    <Link to="/" className="nav-logo h-7 items-center w-[265px] space-x-4 flex dsk:hidden mb-8 mt-24">
-      <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px]" />
-      <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px]" />
+    <Link to="/" className="nav-logo h-7 items-center w-[265px] -space-x-6 dsk:space-x-4 flex dsk:hidden mb-8 mt-16 dsk:mt-24">
+      <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px] scale-75 dsk:scale-100" />
+      <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px] scale-75 dsk:scale-100" />
     </Link>
-
-    <div className="footer-content w-full mb-8 dsk:mt-32 mt-12">
+    
+    <div className="footer-content w-full mb-8 dsk:mt-32 mt-8">
       <div className="grid grid-cols-2 h-full">
-        <div className="dsk:grid dsk:grid-cols-2 grid-rows-2 h-full col-span-2 dsk:col-span-1 justify-center dsk:space-y-0 space-y-8">
+        <div className="dsk:grid dsk:grid-cols-2 grid-rows-2 h-full col-span-2 dsk:col-span-1 justify-center">
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\mail-icon.svg" alt="email_icon" className="mr-4" /><p className="font-medium">Email</p></span>
             <p><a href="mailto:info@riominerals.com">info@riominerals.com</a></p>

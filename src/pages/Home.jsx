@@ -60,7 +60,7 @@ const Home = () => {
       <section className="hero dsk:flex dsk:p-32 relative overflow-hidden dsk:pb-56 z-10 xl:pb-82 3xl:pb-96"
                style={{ paddingTop: `${navbarHeight + paddingValue}px` }}>
         <div className="flex flex-col w-full dsk:w-2/3 dsk:mr-24">
-          <h1 className="text-page-header font-semibold leading-[85px] px-5 dsk:px-0">
+          <h1 className="text-page-header font-semibold dsk:leading-[85px] px-5 dsk:px-0">
             Driving innovation and progress in the mining industry
           </h1>
           <p className="text-section-subheader pt-8 mr-8 dsk:pb-0 px-5 dsk:px-0">
