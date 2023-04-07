@@ -17,7 +17,7 @@ const Article_1 = ({ navbarHeight, article}) => {
   return (
     <>
       {/* header section */}
-      <section className="article-header-bg flex-row px-12 dsk:px-32 py-20 2xl:py-32"
+      <section className="article-header-bg flex-row px-5 dsk:px-32 py-20 2xl:py-32"
               style={{ ...headerStyle, marginTop: `${navbarHeight}px` }}>
                 
         <div className="text-gold font-semibold text-content-20">{article.date}</div>

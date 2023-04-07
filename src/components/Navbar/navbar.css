@@ -104,3 +104,17 @@
 {
   transform: none;
 }
+
+
+
+.accordion-content {
+  transition: max-height 300ms ease-in-out, opacity 300ms ease-in-out;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.accordion-content.open {
+  max-height: 500px; /* Adjust this value based on your content's actual height */
+  opacity: 1;
+}

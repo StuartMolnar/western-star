@@ -29,7 +29,7 @@ const News = () => {
     <Layout setNavbarHeight={setNavbarHeight}>
         
         {/* header section */}
-        <section className="news-header-bg px-12 dsk:px-32 py-24 dsk:py-32 2xl:py-48"
+        <section className="news-header-bg px-5 dsk:px-32 py-24 dsk:py-32 2xl:py-48"
                 style={{ marginTop: `${navbarHeight}px` }}>
           <h1 className="text-page-header font-semibold">
             News
@@ -43,7 +43,7 @@ const News = () => {
 
       
       {/* years section */}
-      <section className="years-section text-black text-card-header font-semibold p-12 dsk:px-40 pt-20 max-w-[1550px] mx-auto">
+      <section className="years-section text-black text-card-header font-semibold p-5 dsk:px-40 pt-20 max-w-[1550px] mx-auto">
           <div className="years-container items-start w-full">
               <p className="text-container-header font-semibold">
                   Filter news articles by year
@@ -65,18 +65,18 @@ const News = () => {
 
         <section className="text-white flex flex-col items-center">
 
-          <div className="news-articles px-6 dsk:px-20 pb-20 pt-12 flex ">
-            <div className="grid dsk:grid-cols-2 grid-rows-2 gap-4 p-4">
+          <div className="news-articles px-5 dsk:px-20 pb-20 pt-12 flex ">
+            <div className="grid dsk:grid-cols-2 grid-rows-2 gap-4 dsk:p-4">
               {filteredArticles.map((article, index) => (
                 <div key={index} className="article-card bg-black p-4 rounded-2xl opacity-90 shadow max-w-[600px]">
-                  <div className="card-content p-8 flex flex-col h-full dsk:justify-between opacity-150">
+                  <div className="card-content p-3 dsk:p-8 flex flex-col h-full dsk:justify-between opacity-150">
                     <div>
                       <h3 className="font-semibold">{article.date}</h3>
                       <p className="text-card-header font-semibold text-gold mt-6">{article.title}</p>
                       <p className="font-light mt-12">{article.content}</p>
                     </div>
                     <div>
-                      <hr className="my-12" />
+                      <hr className="my-6 dsk:my-12" />
                         <Link to={`${article.url}`} className="read-more-btn">
                           Read More ▸
                         </Link>

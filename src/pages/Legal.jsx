@@ -12,7 +12,7 @@ const Legal = () => {
       <Layout setNavbarHeight={setNavbarHeight}>
 
     {/* header section */}
-    <section className="legal-section-bg px-12 dsk:px-32 py-24 dsk:py-32 2xl:py-48"
+    <section className="legal-section-bg px-5 dsk:px-32 py-24 dsk:py-32 2xl:py-48"
             style={{ marginTop: `${navbarHeight}px` }}>
         <h1 className="text-page-header font-semibold">
             Legal & Privacy
@@ -22,7 +22,7 @@ const Legal = () => {
     </section>
 
     {/* legal section */}
-    <section className="legal-section px-12 dsk:px-32 py-16 dsk:py-24 bg-white text-black">
+    <section className="legal-section px-5 dsk:px-32 py-16 dsk:py-24 bg-white text-black">
         <div className="flex-col space-y-8 dsk:space-y-12">
             <h2 className="text-card-header font-semibold">
                 Forward-Looking Statements

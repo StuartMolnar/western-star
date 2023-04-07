@@ -7,6 +7,7 @@ import News from './pages/News';
 import Article_1 from './pages/articles/Article-1';
 import GoldProject from './pages/Gold-Project';
 import Legal from './pages/Legal';
+import Test from './pages/Test';
 import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom"
 import Preloader from './components/Preloader/Preloader';
 
@@ -88,6 +89,7 @@ const App = () => {
               <Route path="/news" element={<News />} />
               <Route path="/legal" element={<Legal />} />
               <Route path="/western-star-plans-large-program" element={<Article_1 />} />
+              <Route path="/test" element={<Test />} />
             </Routes>
           </ScrollContext.Provider>
         {/* </div> */}

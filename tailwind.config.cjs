@@ -76,6 +76,8 @@ module.exports = {
         'rotation': 'rotation 60s linear infinite',
         'slide-up': 'slide-up 0.5s ease forwards',
         'slide-down': 'slide-down 0.5s ease forwards',
+        'accordion-open': 'accordionOpen 300ms ease-out forwards',
+        'accordion-close': 'accordionClose 300ms ease-in forwards',
       },
       keyframes: {
         'rotation': {
@@ -89,6 +91,14 @@ module.exports = {
         'slide-down': {
           '0%': { transform: 'translateY(0)'},
           '100%': { transform: 'translateY(150%)'},
+        },
+        accordionOpen: {
+          '0%': { height: '0', opacity: 0 },
+          '100%': { height: 'auto', opacity: 1 },
+        },
+        accordionClose: {
+          '0%': { height: 'auto', opacity: 1 },
+          '100%': { height: '0', opacity: 0 },
         },
       },
       

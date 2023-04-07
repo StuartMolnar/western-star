@@ -3,7 +3,6 @@
 .about-section-bg {
     background: url('/assets/index/about-section-bg.png');
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
 }
 

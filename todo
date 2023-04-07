@@ -1,14 +1,15 @@
-x fix navbar sizing
 
-x navbar mobile text size increase
+todo:
 
-navbar change the dropdown selection into an accordion
-
-
-x reduce line spacing on mobile index hero
-
+add navbar accordion animation
 
 crop index mountain
+
+investors page fix pdf view on mobile
+
+
+done:
+
 
 x explore our projects text center align
 
@@ -33,8 +34,13 @@ x make rock bigger
 
 x project page reduce padding between bottom photo and footer
 
-news reduce padding inside article boxes
+x news reduce padding inside article boxes
+
+x fix navbar sizing
+
+x navbar mobile text size increase
+
+x navbar change the dropdown selection into an accordion
 
 
-
-investors page fix pdf view on mobile
+x reduce line spacing on mobile index hero
