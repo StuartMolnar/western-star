@@ -13,7 +13,7 @@ const GoldProject = () => {
   return (
     <Layout setNavbarHeight={setNavbarHeight}>
     {/* header section */}
-    <section className="projects-header-bg flex-row px-12 dsk:px-32 2xl:py-32"
+    <section className="projects-header-bg flex-row px-5 dsk:px-32 2xl:py-32"
             style={{ marginTop: `${navbarHeight}px` }}>
       <h1 className="text-page-header font-semibold w-full dsk:pt-40 dsk:pb-0 py-24">
         The Western Star Project
@@ -25,17 +25,17 @@ const GoldProject = () => {
     </section>
 
     
-    <p className="pt-20 px-12 dsk:hidden">
+    <p className="py-12 px-5 dsk:hidden">
         The Western Star Project consists of intensely deformed, stratiform type deposits consisting of siderite and mineralized quartz formations with pyrite, galena, and sphalerite that are typically localized along steeply dipping, limestone chlorite schist contacts.
       </p>
 
     {/* overview section */}
-    <section id="overview" className="flex-row mx-12 dsk:mx-32">
-        <h2 className="text-section-header-lg font-semibold pt-24">
+    <section id="overview" className="flex-row mx-5 dsk:mx-32">
+        <h2 className="text-section-header-lg font-semibold dsk:pt-24">
             Overview
         </h2>
         <div className="flex-row dsk:flex w-full gap-8 dsk:space-y-0 space-y-8 pt-12">
-            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-12">
+            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-8 dsk:p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
                     Location
                 </h3>
@@ -44,7 +44,7 @@ const GoldProject = () => {
                     <li>Access to the Property area is via helicopter from Revelstoke or Nakusp</li>
                 </ul>
             </div>
-            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-12">
+            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-8 dsk:p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
                     Regional Geology
                 </h3>
@@ -56,7 +56,7 @@ const GoldProject = () => {
                 </ul>
 
             </div>
-            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-12">
+            <div className="flex-row dsk:w-1/3 bg-white rounded-2xl p-8 dsk:p-12">
                 <h3 className="text-section-subheader font-semibold text-gold">
                     History & Mineralization
                 </h3>
@@ -71,11 +71,11 @@ const GoldProject = () => {
     </section>
 
     {/* info section */}
-    <img src="/assets/gold-project/info-section-right.JPG" className="info-section-img pt-20 object-cover object-center dsk:hidden"></img>
+    <img src="/assets/gold-project/info-section-right.JPG" className="info-section-img pt-12 object-cover object-center dsk:hidden"></img>
     <section className="info-section flex dsk:py-32 text-black dsk:min-h-[800px]">
         
     <div className="dsk:w-[65%] bg-light-blue flex items-center justify-center">
-        <p className="p-12 py-20 dsk:p-32">
+        <p className="p-8 py-12 dsk:p-32">
             Recently discovered mineralization consists of <span className="font-semibold">galena-sphalerite-chalcopyrite</span> in concordant to irregular quartz-chlorite veins in shears at the limestone phyllite contact and in fractured and/or brecciated ankeritic limestone.  Select rock samples returned up to <span className="font-semibold">8.22 g/t gold, 246.76 g/t silver, 3.68% copper</span>, and <span className="font-semibold">50.1% lead</span>.
         </p>
     </div>
@@ -85,12 +85,12 @@ const GoldProject = () => {
 
 
     {/* exploration section */}
-    <section className="exploration-section dsk:flex-row pt-24 dsk:pt-0 mx-12 dsk:mx-32">
-        <h2 className="text-section-header-lg font-semibold">
+    <section className="exploration-section dsk:flex-row pt-12 dsk:pt-0 dsk:mx-32">
+        <h2 className="text-section-header-lg font-semibold mx-5 dsk:mx-0">
             Exploration
         </h2>
-        <div className="overflow-x-auto">
-            <div className="pt-16 w-full min-w-[1100px] dsk:min-w-0">
+        <div className="overflow-x-auto mx-2 dsk:mx-0">
+            <div className="pt-12 dsk:pt-16 w-full min-w-[1100px] dsk:min-w-0">
                 <div className="grid grid-cols-11 text-gold font-semibold">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">Sample ID</div>
                     <div className="col-span-8 border border-black p-2 flex items-center px-4">Description</div>
@@ -153,27 +153,27 @@ const GoldProject = () => {
     </section>
 
     {/* map section */}
-    <section className="map-section pt-20 dsk:p-32 flex justify-center">
+    <section className="map-section pt-12 dsk:pt-20 dsk:p-32 flex justify-center">
         <img src="\assets\gold-project\map.png" className="w-full max-w-[1750px] object-cover scale-[1.03] dsk:scale-100" alt="" />
     </section>
 
     {/* mineralization section */}
-    <section className="mineralization-section p-12 pt-32 dsk:p-32 bg-dark-blue flex-row dsk:flex gap-24">
-        <div className="floating-rock-image min-w-[250px] flex items-center justify-center scale-50">
+    <section className="mineralization-section p-5 pt-12 dsk:pt-32 dsk:p-32 bg-dark-blue flex-row dsk:flex gap-24">
+        <div className="floating-rock-image min-w-[250px] flex items-center justify-center scale-75">
             <div>
                 <img src="\assets\gold-project\rock.png" className="animate-rotation max-w-[300px] dsk:max-w-full" alt=""/>
-                <p className="text-center pt-20 scale-[2]">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
+                <p className="text-center pt-20 dsk:scale-[2]">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
             </div>
         </div>
 
         <div className="flex-row">
-            <h2 className="text-section-header-md font-semibold pt-32 dsk:pt-0 pb-12">
+            <h2 className="text-section-header-md font-semibold pt-8 dsk:pt-0 pb-6 dsk:pb-12">
                 Mineralization
             </h2>
-            <p className="py-4">
+            <p className="py-2 dsk:py-4">
                 Recent exploration indicates that the mineralization is a control of syngenetic distal volcanic Carbonate Replacement Deposit (CDR) mineralization likely to be a combination of structure, lithology, and stratigraphy. There are three main CRD deposit types: Leadville-type mineralization (LTM), sedimentary exhalative (SEDEX) and Mississippi Valley-type (MVT).
             </p>
-            <p className="py-4">
+            <p className="py-2 dsk:py-4">
                 The sporadic nature of the known mineralization along the favourable contact zones indicates a complex set of parameters governing mineralization.
             </p>
             <ul className="py-4 pl-12 list-disc list-inside space-y-2">
@@ -192,7 +192,7 @@ const GoldProject = () => {
 
 
     {/* sample images section */}
-    <section className="dsk:m-32 -mb-60 dsk:-mb-32">
+    <section className="dsk:m-32 -mb-72 dsk:-mb-32">
         <div className="flex-row dsk:flex gap-8 justify-center items-center w-full xl:h-1100[px] dsk:h-[800px]">
             <div className="flex-row dsk:h-full dsk:w-[45%] dsk:max-w-[900px] ">
                 

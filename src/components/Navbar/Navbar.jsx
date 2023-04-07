@@ -223,7 +223,7 @@ function Navbar({ setNavbarHeight }) {
           <span className="bg-gold"></span>
           <span className="bg-gold"></span>
         
-          <ul id="menu" className="fixed bg-dark-blue text-white w-[300px] h-screen" ref={menuRef}>
+          <ul id="menu" className="fixed bg-dark-blue text-white text-card-header w-[300px] h-screen" ref={menuRef}>
             <div className="flex-row space-y-4">
                 <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('about')} ref={aboutToggler}>    
 
@@ -264,8 +264,8 @@ function Navbar({ setNavbarHeight }) {
 
       {/* ------------------ TOP BUTTON ------------------ */}
       
-      <a onClick={() => scrollToElement('navbar')} id="scrollButton" className={`fixed bottom-6 right-6 rounded-lg bg-gold p-4 ${scrollButtonVisible ? 'animate-slide-up' : 'animate-slide-down'}`}>
-        <img src="/assets/logo/arrow-upward.svg" className="h-5 w-5" alt="" />
+      <a onClick={() => scrollToElement('navbar')} id="scrollButton" className={`fixed bottom-4 dsk:bottom-6 right-4 dsk:right-6 rounded-lg bg-gold p-2 dsk:p-4 ${scrollButtonVisible ? 'animate-slide-up' : 'animate-slide-down'}`}>
+        <img src="/assets/logo/arrow-upward.svg" className="h-5 w-5 scale-75 dsk:scale-100" alt="" />
       </a>
 
 
