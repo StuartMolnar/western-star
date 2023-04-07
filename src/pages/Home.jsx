@@ -102,7 +102,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="about-section-bg flex-row text-black relative pt-48 pb-[500px] dsk:pb-96 xl:pb-[500px] bg-top dsk:bg-center">
+      <section className="about-section-bg flex-row text-black relative pt-48 h-[1000px] dsk:h-[700px] dsk:pb-96 xl:pb-[500px] bg-top dsk:bg-center">
         <div className="flex-row dsk:flex mx-5 dsk:mx-32 gap-x-24">
           <div className="flex-row dsk:w-1/2">
             <h2 className="text-section-header-lg font-semibold">
