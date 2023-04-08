@@ -102,3 +102,10 @@
 {
   transform: none;
 }
+
+
+/* ------------ */
+
+details summary::-webkit-details-marker {
+  display: none;
+}
