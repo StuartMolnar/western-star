@@ -96,4 +96,21 @@
     @apply rounded-full;
   }
 
+  /* --- backgrounds --- */
+
+  .about-section-bg {
+    background: url('/assets/index/about-section-bg.png');
+    @apply bg-center;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
+  .about-section-bg-mobile {
+    background: url('/assets/index/about-section-bg-mobile.png');
+    @apply bg-top;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
 }
+

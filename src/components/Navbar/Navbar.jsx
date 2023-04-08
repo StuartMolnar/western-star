@@ -173,7 +173,7 @@ function Navbar({ setNavbarHeight }) {
       {/* ------------------ DESKTOP NAVBAR ------------------ */}
 
       <div ref={navbarRef} className= {`fixed justify-between w-full flex p-12 px-5 dsk:px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
-        <Link to="/" className="nav-logo flex h-7 items-center -space-x-6 dsk:space-x-4">
+        <Link to="/" className="nav-logo flex h-7 items-center -space-x-6 dsk:space-x-4 ">
           <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px] scale-75 dsk:scale-100" />
           <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px] scale-75 dsk:scale-100" />
         </Link>
@@ -235,13 +235,14 @@ function Navbar({ setNavbarHeight }) {
             <div className="flex-row space-y-4">
               {/* Accordion 1 */}
               <details open={accordionOpen[1]} onToggle={toggleAccordion(1)}>
-                <summary className={`list-none cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
-                  <p className={`${isAboutLink(aboutItemsMobile) ? 'underline' : ''}`}>About</p>
-                  <span className="no-underline float-right">
-                    {accordionOpen[1] ? '▴' : '▾'}
-                  </span>
+                <summary className={`list-none cursor-pointer  flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+                  <div className="flex items-center">
+                    <p>
+                      About {accordionOpen[1] ? '▴' : '▾'}
+                    </p>
+                  </div>
                 </summary>
-                <div className="pt-4 space-y-4 pl-3">
+                <div className="pt-4 space-y-4 pl-3 scale-90">
                   <NavLink to="/overview" className={({ isActive }) => (isActive ? 'select-none font-semibold inline-block w-full' : 'select-none hover:text-gold inline-block w-full')}>
                     Overview
                   </NavLink>
@@ -254,12 +255,13 @@ function Navbar({ setNavbarHeight }) {
               {/* Accordion 2 */}
               <details open={accordionOpen[2]} onToggle={toggleAccordion(2)}>
                 <summary className={`list-none cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(projectsItemsMobile) ? 'text-gold font-semibold' : ''}`}>
-                  <p className={`${isAboutLink(projectsItemsMobile) ? 'underline' : ''}`}>Projects</p>
-                  <span className="no-underline float-right">
-                    {accordionOpen[2] ? '▴' : '▾'}
-                  </span>
+                  <div className="flex items-center">
+                    <p className={`${isAboutLink(projectsItemsMobile) ? 'underline' : ''}`}>
+                      Projects {accordionOpen[2] ? '▴' : '▾'}
+                    </p>
+                  </div>
                 </summary>
-                <div className="pt-4 space-y-4 pl-3">
+                <div className="pt-4 space-y-4 pl-3 scale-90">
                   <NavLink to="/ws-project" className={({ isActive }) => (isActive ? 'select-none font-semibold inline-block w-full' : 'select-none hover:text-gold inline-block w-full')}>
                     The Western Star Project
                   </NavLink>

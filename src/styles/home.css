@@ -1,11 +1,5 @@
 /* --- custom backgrounds --- */
 
-.about-section-bg {
-    background: url('/assets/index/about-section-bg.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
 .news-section-bg {
     background: linear-gradient(0deg, rgba(136, 136, 136, 0.2), rgba(136, 136, 136, 0.2)), url('/assets/index/news-section-bg.jpg');
     background-size: cover;

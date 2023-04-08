@@ -1,12 +1,10 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Layout from './Layout';
 import '../styles/investors.css';
 import { useScrollContext } from '../App'; 
 
 
-
 const Investors = () => {
-
   const [navbarHeight, setNavbarHeight] = useState(0);
   const scrollToElement = useScrollContext();
 
@@ -72,7 +70,17 @@ const Investors = () => {
           </a>
 
         </div>
-        <iframe src={'/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none 2xl:h-[700px] h-[350px] dsk:h-[500px] max-w-[1000px] w-full mt-16 mb-6 dsk:mb-24"></iframe>
+
+        {/* PDF Viewer 
+            for mobile just use screenshot of first page which downloads the pdf on click */}
+        <iframe
+          title="PDF Viewer"
+          src={`${"/assets/ws-deck.pdf"}#toolbar=0`}
+          width="100%"
+          height="600px"
+          frameBorder="0"
+          style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
+        ></iframe>
       </section>
 
 

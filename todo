@@ -1,12 +1,11 @@
 
 todo:
 
-add navbar accordion animation
 
-crop index mountain
 
 investors page fix pdf view on mobile
 
+navbar safari mobile device fix large arrows on accordion open
 
 done:
 
@@ -44,3 +43,6 @@ x navbar change the dropdown selection into an accordion
 
 
 x reduce line spacing on mobile index hero
+
+
+x crop index mountain

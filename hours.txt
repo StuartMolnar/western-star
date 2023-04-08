@@ -18,6 +18,7 @@
 04-03: 1 hour
 04-05: 1 hour
 04-06: 6 hours
+04-07: 4 hours
 
 general ideas:
 Implement lazy-loading for images and other media to improve the initial load time of your webpages.

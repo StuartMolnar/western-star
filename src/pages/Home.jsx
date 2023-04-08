@@ -31,7 +31,7 @@ const Home = () => {
 
   useEffect(() => {
     const latestNewsHeight = latestNewsRef.current.offsetHeight / 2;
-    const aboutSection = document.querySelector(".about-section-bg");
+    const aboutSection = document.getElementById('about-section');
     aboutSection.style.marginTop = `-${latestNewsHeight}px`;
   }, [latestNewsRef]);
 
@@ -73,14 +73,11 @@ const Home = () => {
         
         
         <div className="hero-images relative w-1/2 hidden dsk:flex dsk:pb-56 z-10 xl:pb-82 3xl:pb-96">
-          <img className="absolute top-0 left-[400px]" src="\assets\hero\hero-circle-sm.svg" alt="" />
-          <img className="absolute top-[250px] left-16" src="\assets\hero\hero-circle-md.svg" alt="" />
-          <img className="absolute top-8 left-48 scale-[1.15]" src="\assets\hero\hero-circle-lg.svg" alt="" />
-          <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[380px] h-[380px]" src="\assets\hero\hero-rocks.png" alt="" />
+          <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[380px] h-[380px] scale-125" src="\assets\hero\hero-rocks.png" alt="" />
         </div>
 
         <div className="w-full flex items-center justify-center dsk:hidden">
-          <img className="min-w-[451px] w-[451px] min-h-[380px] h-[380px] scale-[0.65]" src="\assets\hero\hero-rocks.png"/>
+          <img className="min-w-[451px] w-[451px] min-h-[380px] h-[380px] scale-75" src="\assets\hero\hero-rocks.png"/>
         </div>
         
 
@@ -102,7 +99,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="about-section-bg flex-row text-black relative pt-48 h-[1000px] dsk:h-[700px] dsk:pb-96 xl:pb-[500px] bg-top dsk:bg-center">
+      <section id="about-section" className="about-section-bg-mobile dsk:about-section-bg flex-row text-black relative pt-40 dsk:pt-48 h-[700px] dsk:h-[700px] dsk:pb-96 xl:pb-[500px] bg-top dsk:bg-center">
         <div className="flex-row dsk:flex mx-5 dsk:mx-32 gap-x-24">
           <div className="flex-row dsk:w-1/2">
             <h2 className="text-section-header-lg font-semibold">
@@ -149,37 +146,37 @@ const Home = () => {
         <div className="revelstoke-map flex-1 h-full relative">
           <img src="/assets/index/map.jpg" alt="" className="w-full h-full object-cover dsk:rounded-tl-2xl dsk:rounded-bl-2xl" />
           <Tooltip content="Black Bear" style={{ top: '76.9%', left: '51.2%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Lardeau-Goldsmith" style={{ top: '59.8%', left: '49.9%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Wide West" style={{ top: '44%', left: '57%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Goodenough" style={{ top: '69.1%', left: '71.7%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Kitsap" style={{ top: '40%', left: '22.9%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Banner" style={{ top: '21.5%', left: '14.3%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Daffodil" style={{ top: '12.2%', left: '10.2%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Royal" style={{ top: '36%', left: '19.25%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Morning Star" style={{ top: '15%', left: '23.35%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Lexington" style={{ top: '31.6%', left: '19.6%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
           <Tooltip content="Alma" style={{ top: '54%', left: '33.2%' }}>
-            <div className="point w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
+            <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
 
         </div>
