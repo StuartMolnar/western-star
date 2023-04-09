@@ -59,8 +59,8 @@ const Investors = () => {
 
 
         
-      {/* corporate presentation section */}
-      <section className="pdf-frame flex flex-col justify-center items-center mx-8 dsk:mx-16">
+       {/* corporate presentation section */}
+       <section className="pdf-frame flex flex-col justify-center items-center mx-8 dsk:mx-16">
         <div className="flex-row dsk:flex max-w-[1200px] w-full justify-between">
           <h2 className="text-section-header-lg font-semibold">
             Corporate Presentation
@@ -70,17 +70,10 @@ const Investors = () => {
           </a>
 
         </div>
-
-        {/* PDF Viewer 
-            for mobile just use screenshot of first page which downloads the pdf on click */}
-        <iframe
-          title="PDF Viewer"
-          src={`${"/assets/ws-deck.pdf"}#toolbar=0`}
-          width="100%"
-          height="600px"
-          frameBorder="0"
-          style={{ border: '1px solid rgba(0, 0, 0, 0.1)' }}
-        ></iframe>
+        <iframe src={'/assets/ws-deck.pdf'} title="PDF Viewer" className="border-none h-[600px] max-w-[1000px] w-full mt-16 mb-24 hidden dsk:block"></iframe>
+        <a href="/assets/ws-deck.pdf" className="flex items-center pt-8 dsk:pt-0" download>
+          <img src="/assets/ws-deck.jpg" alt="" />
+        </a>
       </section>
 
 
