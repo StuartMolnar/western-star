@@ -235,13 +235,15 @@ function Navbar({ setNavbarHeight }) {
             <div className="flex-row space-y-4">
               {/* Accordion 1 */}
               <details open={accordionOpen[1]} onToggle={toggleAccordion(1)}>
-                <summary className={`list-none cursor-pointer  flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
-                  <div className="flex items-center">
-                    <p>
-                      About {accordionOpen[1] ? '▴' : '▾'}
-                    </p>
-                  </div>
-                </summary>
+              <summary className={`list-none cursor-pointer  flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+                <div className="flex items-center">
+                  <div className="inline-flex items-center">
+                    <p>About</p>
+                    {accordionOpen[1] ? <span className="mt-3.5 ml-2 arrow-up"></span> : <span className="mt-3.5 ml-2 arrow-down"></span>}
+                  </div> 
+                </div>
+              </summary>
+
                 <div className="pt-4 space-y-4 pl-3 scale-90">
                   <NavLink to="/overview" className={({ isActive }) => (isActive ? 'select-none font-semibold inline-block w-full' : 'select-none hover:text-gold inline-block w-full')}>
                     Overview
@@ -255,11 +257,12 @@ function Navbar({ setNavbarHeight }) {
               {/* Accordion 2 */}
               <details open={accordionOpen[2]} onToggle={toggleAccordion(2)}>
                 <summary className={`list-none cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(projectsItemsMobile) ? 'text-gold font-semibold' : ''}`}>
-                  <div className="flex items-center">
-                    <p className={`${isAboutLink(projectsItemsMobile) ? 'underline' : ''}`}>
-                      Projects {accordionOpen[2] ? '▴' : '▾'}
-                    </p>
-                  </div>
+                <div className="flex items-center">
+                  <div className="inline-flex items-center">
+                    <p>Projects</p>
+                    {accordionOpen[2] ? <span className="mt-3.5 ml-2 arrow-up"></span> : <span className="mt-3.5 ml-2 arrow-down"></span>}
+                  </div> 
+                </div>
                 </summary>
                 <div className="pt-4 space-y-4 pl-3 scale-90">
                   <NavLink to="/ws-project" className={({ isActive }) => (isActive ? 'select-none font-semibold inline-block w-full' : 'select-none hover:text-gold inline-block w-full')}>

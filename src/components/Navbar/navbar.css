@@ -103,8 +103,27 @@
 }
 
 
-/* ------ Media Queries ------ */
+/* ------------ */
 
 details summary::-webkit-details-marker {
   display: none;
+}
+
+
+.arrow-up,
+.arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  scale: 0.4;
+}
+
+.arrow-up {
+  border-bottom: 15px solid currentColor;
+}
+
+.arrow-down {
+  border-top: 15px solid currentColor;
 }
