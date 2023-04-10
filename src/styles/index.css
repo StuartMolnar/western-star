@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 @layer utilities {
-
   html {
     @apply overflow-x-hidden;
   }
@@ -80,9 +79,10 @@
     @apply text-button;
     @apply text-black;
     @apply bg-gold;
+    @apply inline-block;
+
     padding: 8px 28px;
     border-radius: 10px;
-    @apply inline-block;
   }  
   
   .button-primary:hover {
@@ -95,9 +95,10 @@
     @apply text-button;
     @apply text-white;
     @apply bg-black;
+    @apply inline-block;
+
     padding: 8px 28px;
     border-radius: 10px;
-    @apply inline-block;
   }
 
   .button-secondary:hover {
@@ -110,9 +111,10 @@
     @apply text-button;
     @apply text-white;
     @apply bg-black;
+    @apply inline-block;
+
     padding: 8px 28px;
     border-radius: 10px;
-    @apply inline-block;
   }
 
   .button-accent:hover {
@@ -136,21 +138,26 @@
   /* --- gradients --- */
 
   .gradient-gray {
-    background: rgba(173, 184, 194, 0.15);
+    background: rgba(173 184 194 / 15%);
     filter: blur(150px);
+    
     @apply rounded-full;
   }
-
+  
   .gradient-gold {
-    background: rgba(213, 166, 96, 0.15);
+    background: rgba(213 166 96 / 15%);
     filter: blur(150px);
+
     @apply rounded-full;
   }
+  
+  
 
   /* --- backgrounds --- */
 
   .about-section-bg {
     background: url('/assets/index/about-section-bg.png');
+
     @apply bg-center;
     @apply bg-cover;
     @apply bg-no-repeat;
@@ -158,6 +165,7 @@
 
   .about-section-bg-mobile {
     background: url('/assets/index/about-section-bg-mobile.png');
+    
     @apply bg-top;
     @apply bg-cover;
     @apply bg-no-repeat;

@@ -1,7 +1,7 @@
 /* --- custom backgrounds --- */
 
 .news-section-bg {
-    background: linear-gradient(0deg, rgba(136, 136, 136, 0.2), rgba(136, 136, 136, 0.2)), url('/assets/index/news-section-bg.jpg');
+    background: linear-gradient(0deg, rgb(136 136 136 / 20%), rgb(136 136 136 / 20%)), url('/assets/index/news-section-bg.jpg');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;

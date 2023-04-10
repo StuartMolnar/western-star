@@ -179,8 +179,8 @@ function Navbar({ setNavbarHeight }) {
 
       <div ref={navbarRef} className= {`fixed justify-between w-full flex p-12 px-5 dsk:px-32 opacity-100 ${visible ? 'translate-y-0' : '-translate-y-full'} ${(prevScrollPos > 10) ? 'bg-black opacity-90' : ''} transition-transform duration-500 ease-in-out`}>
         <Link to="/" className="nav-logo flex h-7 -space-x-6 dsk:space-x-4 justify-center">
-          <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px] scale-75 dsk:scale-100 h-[35px] mt-1.5" />
-          <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px] scale-75 dsk:scale-100 mt-2.5" />
+          <img src="/assets/logo/ws-icon.svg" alt="icon" className="w-[55px] scale-75 dsk:scale-100 h-[35px] dsk:mt-1.5" />
+          <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px] scale-75 dsk:scale-100 mt-1 dsk:mt-2.5" />
         </Link>
         <div className="nav-links dsk:flex flex-grow justify-center items-center 2xl:gap-20 xl:gap-12 lg:gap-3 text-base font-normal hidden ">
 
@@ -227,7 +227,7 @@ function Navbar({ setNavbarHeight }) {
         {/* ------------------ MOBILE NAVBAR ------------------ */}
         
 
-        <div id="menuToggle" className="nav-contact dsk:hidden" ref={menuToggleRef}>
+        <div id="menu-toggle" className="nav-contact dsk:hidden" ref={menuToggleRef}>
         <input type="checkbox" checked={menuToggleChecked} onChange={(e) => setMenuToggleChecked(e.target.checked)} />
 
           
