@@ -71,16 +71,10 @@ const Home = () => {
         <div className="gradient-gold absolute top-[10%] left-[65%] h-1/2 w-1/4 scale-150 hidden dsk:block"></div>
         
         
-        <div className="hero-images relative w-1/2 hidden dsk:flex dsk:pb-56 z-10 xl:pb-82 3xl:pb-96">
-          <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[361px] h-[361px] scale-125" src="\assets\hero\hero-rocks.webp" alt="" />
+        <div className="hero-images flex items-center justify-center dsk:relative w-full dsk:w-1/2 dsk:pb-56 z-10 xl:pb-82 3xl:pb-96">
+          <img className="dsk:absolute dsk:-top-[30px] dsk:left-[50px] min-w-[451px] w-[451px] min-h-[361px] h-[361px] scale-75 dsk:scale-125" src="\assets\hero\hero-rocks.webp" alt="" />
         </div>
-
-        <div className="w-full flex items-center justify-center dsk:hidden">
-          <img className="min-w-[451px] w-[451px] min-h-[361px] h-[361px] scale-75" src="\assets\hero\hero-rocks.webp"/>
-        </div>
-        
-
-      
+              
       </section>
 
       {/* about company section */}

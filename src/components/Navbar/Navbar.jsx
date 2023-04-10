@@ -13,8 +13,30 @@ function Navbar({ setNavbarHeight }) {
   const [menuToggleChecked, setMenuToggleChecked] = useState(false);
   const menuToggleRef = useRef(null);
   const menuRef = useRef(null);
+  const location = useLocation();
+  const aboutToggler = useRef(null);
+  const projectsToggler = useRef(null);
+  const scrollToElement = useScrollContext();
+  const [scrollButtonVisible, setScrollButtonVisible] = useState(false);  
+  
+  // Add your dropdown items for each menu
+  const aboutItems = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
+  const projectsItems = [{ to: '/ws-project', label: 'Western Star Project' },];
+  const aboutItemsMobile = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
+  const projectsItemsMobile = [{ to: '/ws-project', label: 'Western Star Project' },];
 
-  const [accordionOpen, setAccordionOpen] = useState({ 1: false, 2: false });
+  const isLink = (nav, ...additionalPaths) => {
+    return (
+      nav.some(item => location.pathname === item.to) ||
+      additionalPaths.some(path => location.pathname === path)
+    );
+  };
+
+  const [accordionOpen, setAccordionOpen] = useState({
+    1: isLink(aboutItemsMobile),
+    2: isLink(projectsItemsMobile),
+  });
+  
 
   const toggleAccordion = (accordionNumber) => (event) => {
     setAccordionOpen((prevState) => ({
@@ -23,10 +45,6 @@ function Navbar({ setNavbarHeight }) {
     }));
   };
 
-  
-  const scrollToElement = useScrollContext();
-
-  const [scrollButtonVisible, setScrollButtonVisible] = useState(false);  
 
   const toggleDropdown = (name) => {
     // Reset all dropdown states
@@ -60,26 +78,7 @@ function Navbar({ setNavbarHeight }) {
     );
   });
 
-  
-  // Add your dropdown items for each menu
-  const aboutItems = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
-  const projectsItems = [{ to: '/ws-project', label: 'Western Star Project' },];
-  const aboutItemsMobile = [{ to: '/overview', label: 'Overview' }, { to: '/board', label: 'Board' }];
-  const projectsItemsMobile = [{ to: '/ws-project', label: 'Western Star Project' },];
 
-  const location = useLocation();
-
-  const aboutToggler = useRef(null);
-  const projectsToggler = useRef(null);
-
-
-  const isAboutLink = (nav) => {
-    return nav.some(item => location.pathname === item.to);
-  };
-
-  const isProjectsLink = (nav) => {
-    return nav.some(item => location.pathname === item.to);
-  };
 
   const handleClickOutside = (event) => {
     const dropdownElements = document.querySelectorAll(".dropdown-menu");
@@ -113,6 +112,15 @@ function Navbar({ setNavbarHeight }) {
     }
   };
 
+  useEffect(() => {
+    const aboutIsActive = isLink(aboutItemsMobile);
+    const projectsIsActive = isLink(projectsItemsMobile);
+  
+    setAccordionOpen({
+      1: aboutIsActive,
+      2: projectsIsActive
+    });
+  }, [location]);
 
 
   const navbarRef = useRef(null);
@@ -187,20 +195,20 @@ function Navbar({ setNavbarHeight }) {
 
         <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('about')} ref={aboutToggler}>    
 
-          <div className={`flex pr-2 hover:text-gold ${isAboutLink(aboutItems) ? 'underline text-gold font-semibold' : ''}`}>
+          <div className={`flex pr-2 hover:text-gold ${isLink(aboutItems) ? 'underline text-gold font-semibold' : ''}`}>
             About
           </div>
-          <div className={`flex hover:text-gold ${isAboutLink(aboutItems) ? 'text-gold font-semibold' : ''}`}>
+          <div className={`flex hover:text-gold ${isLink(aboutItems) ? 'text-gold font-semibold' : ''}`}>
             ▾
           </div>
           <DropdownMenu name="about" items={aboutItems} />
         </div>
 
         <div className="flex cursor-pointer select-none hover:text-gold" onClick={() => toggleDropdown('projects')} ref={projectsToggler}>
-          <div className={`flex pr-2 hover:text-gold ${isProjectsLink(projectsItems) ? 'underline text-gold font-semibold' : ''}`}>
+          <div className={`flex pr-2 hover:text-gold ${isLink(projectsItems) ? 'underline text-gold font-semibold' : ''}`}>
             Projects
           </div>
-          <div className={`flex hover:text-gold ${isProjectsLink(projectsItems) ? 'text-gold font-semibold' : ''}`}>
+          <div className={`flex hover:text-gold ${isLink(projectsItems) ? 'text-gold font-semibold' : ''}`}>
             ▾
           </div>
           <DropdownMenu name="projects" items={projectsItems} />
@@ -240,7 +248,7 @@ function Navbar({ setNavbarHeight }) {
             <div className="flex-row space-y-4">
               {/* Accordion 1 */}
               <details open={accordionOpen[1]} onToggle={toggleAccordion(1)}>
-              <summary className={`list-none cursor-pointer  flex pr-2 hover:text-gold ${isAboutLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+              <summary className={`list-none cursor-pointer  flex pr-2 hover:text-gold ${isLink(aboutItemsMobile) ? 'text-gold font-semibold' : ''}`}>
                 <div className="flex items-center">
                   <div className="inline-flex items-center">
                     <p>About</p>
@@ -261,7 +269,7 @@ function Navbar({ setNavbarHeight }) {
 
               {/* Accordion 2 */}
               <details open={accordionOpen[2]} onToggle={toggleAccordion(2)}>
-                <summary className={`list-none cursor-pointer flex pr-2 hover:text-gold ${isAboutLink(projectsItemsMobile) ? 'text-gold font-semibold' : ''}`}>
+                <summary className={`list-none cursor-pointer flex pr-2 hover:text-gold ${isLink(projectsItemsMobile) ? 'text-gold font-semibold' : ''}`}>
                 <div className="flex items-center">
                   <div className="inline-flex items-center">
                     <p>Projects</p>
@@ -275,13 +283,13 @@ function Navbar({ setNavbarHeight }) {
                   </NavLink>
                 </div>
               </details>
-              <NavLink to="/investors" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold inline-block w-full' : 'select-none hover:text-gold inline-block w-full')}>
+              <NavLink to="/investors" className={({ isActive }) => (isActive ? 'select-none text-gold font-semibold inline-block w-full' : 'select-none hover:text-gold inline-block w-full')}>
                 Investors
               </NavLink>
-              <NavLink to="/news" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold inline-block w-full' : 'select-none  hover:text-gold inline-block w-full')}>
+              <NavLink to="/news" className={({ isActive }) => (isActive ? 'select-none text-gold font-semibold inline-block w-full' : 'select-none  hover:text-gold inline-block w-full')}>
                 News
               </NavLink>
-              <NavLink to="/legal" className={({ isActive }) => (isActive ? 'select-none underline text-gold font-semibold inline-block w-full' : 'select-none  hover:text-gold inline-block w-full')}>
+              <NavLink to="/legal" className={({ isActive }) => (isActive ? 'select-none text-gold font-semibold inline-block w-full' : 'select-none  hover:text-gold inline-block w-full')}>
                 Legal
               </NavLink>
 

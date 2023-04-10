@@ -98,7 +98,7 @@ const GoldProject = () => {
                 </div>
                 <div className="grid grid-cols-11">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">CH-LC-01</div>
-                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Representative grab sample of 0.5 to 1.5-meter wide quartz-sericite-chloritevein containing traces of malachite staining (bedding plane fault).</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Representative grab sample of 0.5 to 1.5-meter wide quartz-sericite-chlorite vein containing traces of malachite staining (bedding plane fault).</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">2.04</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
                 </div>
@@ -110,25 +110,25 @@ const GoldProject = () => {
                 </div>
                 <div className="grid grid-cols-11">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">GR-LX87-02</div>
-                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite min within siderite-ankerite.</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite mineralization within siderite-ankerite.</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">1.78</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">3.0</div>
                 </div>
                 <div className="grid grid-cols-11">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">DN-011</div>
-                    <div className="col-span-8 border border-black p-2 flex items-center px-4">ConGrab sample 1-2 m wide quartz vein. Note: 0.07% copper.</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample 1-2 m wide quartz vein. Note: 0.07% copper.</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">1.81</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">0.17</div>
                 </div>
                 <div className="grid grid-cols-11">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">34993</div>
-                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample from dump at portal of Scout Adit, massive white quartz with coarsegrained galena, pyrite.</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Grab sample from dump at portal of Scout Adit, massive white quartz with coarse grained galena-pyrite.</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">2.61</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">3.2</div>
                 </div>
                 <div className="grid grid-cols-11">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">20021</div>
-                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite min within siderite-ankerite alteration zone.</div>
+                    <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite mineralization within siderite-ankerite alteration zone.</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
                 </div>

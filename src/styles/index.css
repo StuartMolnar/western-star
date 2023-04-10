@@ -194,7 +194,7 @@
   .board-section-bg {
     background: url('/assets/board/board-section-bg.webp');
     
-    @apply bg-center;
+    @apply bg-top;
     @apply bg-cover;
     @apply bg-no-repeat;
   }
