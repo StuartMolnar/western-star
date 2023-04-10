@@ -72,11 +72,11 @@ const Home = () => {
         
         
         <div className="hero-images relative w-1/2 hidden dsk:flex dsk:pb-56 z-10 xl:pb-82 3xl:pb-96">
-          <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[380px] h-[380px] scale-125" src="\assets\hero\hero-rocks.webp" alt="" />
+          <img className="absolute -top-[30px] left-[50px] min-w-[451px] w-[451px] min-h-[361px] h-[361px] scale-125" src="\assets\hero\hero-rocks.webp" alt="" />
         </div>
 
         <div className="w-full flex items-center justify-center dsk:hidden">
-          <img className="min-w-[451px] w-[451px] min-h-[380px] h-[380px] scale-75" src="\assets\hero\hero-rocks.webp"/>
+          <img className="min-w-[451px] w-[451px] min-h-[361px] h-[361px] scale-75" src="\assets\hero\hero-rocks.webp"/>
         </div>
         
 
@@ -143,7 +143,7 @@ const Home = () => {
           Our 2,797 ha property consists of <span className="text-gold">11</span> documented mineral showings.
         </h2>
         <div className="revelstoke-map flex-1 h-full relative">
-          <img src="/assets/index/map.webp" alt="" className="w-full h-full object-cover dsk:rounded-tl-2xl dsk:rounded-bl-2xl" />
+          <img defer src="/assets/index/map.webp" alt="" className="w-full h-full object-cover dsk:rounded-tl-2xl dsk:rounded-bl-2xl" />
           <Tooltip content="Black Bear" style={{ top: '76.9%', left: '51.2%' }}>
             <div className="point hidden dsk:block w-3 h-3 bg-red-400 rounded-full hover:scale-110"></div>
           </Tooltip>
