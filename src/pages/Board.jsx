@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import Layout from './Layout';
 import Modal from '../components/Modal/Board-Modal'; 
-import '../styles/board.css';
 import boardMembers from '../data/board-members.json';
 import { useScrollContext } from '../App'; 
 

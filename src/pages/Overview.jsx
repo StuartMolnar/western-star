@@ -73,7 +73,7 @@ const Overview = () => {
 
     {/* our goal section */}
     <section id="goals" className="flex-row dsk:pt-24">
-      <img src="\assets\overview\goal-section-left.png" className="object-cover object-top dsk:hidden" />
+      <img src="\assets\overview\goal-section-left.webp" className="object-cover object-top dsk:hidden" />
       <h2 className="text-section-header-lg font-semibold mx-5 dsk:mx-32 pt-12 dsk:pt-0">
         Our Goal
       </h2>
@@ -81,7 +81,7 @@ const Overview = () => {
         Western Star is a junior Canadian exploration company which holds a 100% interest in the Western Star Property located near Revelstoke, British Columbia. Our management has a strong track record in the discovery and development of successful exploration projects. The objective is to increase shareholder value through the development of exploration properties, using cost-effective exploration practices, the acquisition of high value exploration properties and seeking partnerships by either joint venture or sale with industry leaders.
       </p>
       <div className="flex gap-8 justify-center items-center w-full xl:h-900[px] h-[600px] mt-16 dsk:mt-32">
-        <img src="\assets\overview\goal-section-left.png" className="rounded-2xl max-w-[1100px] w-[55%] h-full object-cover object-top hidden dsk:block" />
+        <img src="\assets\overview\goal-section-left.webp" className="rounded-2xl max-w-[1100px] w-[55%] h-full object-cover object-top hidden dsk:block" />
         <img src="\assets\overview\goal-section-right.jpg" className="dsk:rounded-2xl w-full dsk:max-w-[900px] dsk:w-[45%] h-full  object-cover object-center" />
       </div>
 
@@ -98,7 +98,7 @@ const Overview = () => {
       </p>
       <div className="flex pt-12" style={{alignItems: 'flex-start'}}>
         <div className="flex-col justify-center items-start w-full lg:w-auto hidden dsk:flex">
-          <img src="\assets\overview\revelstoke-map.png" className="rounded-3xl min-w-[500px] max-w-[1000px] w-full" alt=""/>
+          <img src="\assets\overview\revelstoke-map.webp" className="rounded-3xl min-w-[500px] max-w-[1000px] w-full" alt=""/>
         </div>
         <div className="accordion-container z-10 space-y-8 w-full dsk:ml-16">
           {accordionData.map((accordion, index) => (
@@ -127,7 +127,7 @@ const Overview = () => {
       
       
     </section>
-    <img src="\assets\overview\revelstoke-map.png" className="w-full mt-12 dsk:hidden -mb-72 " alt=""/>
+    <img src="\assets\overview\revelstoke-map.webp" className="w-full mt-12 dsk:hidden -mb-72 " alt=""/>
     </Layout>
   );
 };

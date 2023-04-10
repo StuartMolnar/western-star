@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Layout from './Layout';
-import '../styles/gold-project.css';
 import { useScrollContext } from '../App'; 
 
 
@@ -71,7 +70,7 @@ const GoldProject = () => {
     </section>
 
     {/* info section */}
-    <img src="/assets/gold-project/info-section-right.JPG" className="info-section-img pt-12 object-cover object-center dsk:hidden"></img>
+    <img src="/assets/gold-project/info-section-right.webp" className="info-section-img pt-12 object-cover object-center dsk:hidden"></img>
     <section className="info-section flex dsk:py-32 text-black dsk:min-h-[800px]">
         
     <div className="dsk:w-[65%] bg-light-blue flex items-center justify-center">
@@ -79,8 +78,8 @@ const GoldProject = () => {
             Recently discovered mineralization consists of <span className="font-semibold">galena-sphalerite-chalcopyrite</span> in concordant to irregular quartz-chlorite veins in shears at the limestone phyllite contact and in fractured and/or brecciated ankeritic limestone.  Select rock samples returned up to <span className="font-semibold">8.22 g/t gold, 246.76 g/t silver, 3.68% copper</span>, and <span className="font-semibold">50.1% lead</span>.
         </p>
     </div>
-    <img src="/assets/gold-project/info-section-right.JPG" className="info-section-img dsk:w-[35%] object-cover object-center hidden dsk:block"></img>
-    {/* <img src="src\assets\gold-project\info-section-right.JPG" alt="" className="w-full max-w-[800px] object-cover object-center" /> */}
+    <img src="/assets/gold-project/info-section-right.webp" className="info-section-img dsk:w-[35%] object-cover object-center hidden dsk:block"></img>
+    {/* <img src="src\assets\gold-project\info-section-right.webp" alt="" className="w-full max-w-[800px] object-cover object-center" /> */}
 </section>
 
 
@@ -154,14 +153,14 @@ const GoldProject = () => {
 
     {/* map section */}
     <section className="map-section pt-12 dsk:pt-20 dsk:p-32 flex justify-center">
-        <img src="\assets\gold-project\map.png" className="w-full max-w-[1750px] object-cover scale-[1.03] dsk:scale-100" alt="" />
+        <img src="\assets\gold-project\map.webp" className="w-full max-w-[1750px] object-cover scale-[1.03] dsk:scale-100" alt="" />
     </section>
 
     {/* mineralization section */}
     <section className="mineralization-section p-5 pt-12 dsk:pt-32 dsk:p-32 bg-dark-blue flex-row dsk:flex gap-24">
         <div className="floating-rock-image min-w-[250px] flex items-center justify-center scale-75">
             <div>
-                <img src="\assets\gold-project\rock.png" className="animate-rotation max-w-[300px] dsk:max-w-full" alt=""/>
+                <img src="\assets\gold-project\rock.webp" className="animate-rotation max-w-[300px] dsk:max-w-full" alt=""/>
                 <p className="text-center pt-20 dsk:scale-[2]">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
             </div>
         </div>
@@ -196,14 +195,14 @@ const GoldProject = () => {
         <div className="flex-row dsk:flex gap-8 justify-center items-center w-full xl:h-1100[px] dsk:h-[800px]">
             <div className="flex-row dsk:h-full dsk:w-[45%] dsk:max-w-[900px] ">
                 
-            <img src="\assets\gold-project\images-section-left.jpg" className="dsk:rounded-3xl dsk:scale-100 h-[90%] object-cover object-top w-full" />
+            <img src="\assets\gold-project\images-section-left.webp" className="dsk:rounded-3xl dsk:scale-100 h-[90%] object-cover object-top w-full" />
             <p className="dsk:p-3 p-12 text-center">
                 219 g/t Ag, 50.1% Pb 
             </p> 
             </div>    
             <div className="flex-row dsk:h-full dsk:w-[55%] dsk:max-w-[1100px] ">
 
-            <img src="\assets\gold-project\images-section-right.jpg" className="dsk:rounded-3xl object-cover object-center w-full h-[90%]" />
+            <img src="\assets\gold-project\images-section-right.webp" className="dsk:rounded-3xl object-cover object-center w-full h-[90%]" />
             <p className="dsk:p-3 p-12 text-center">
                 317 ppb Au, 586 g/t Ag, 6.29% Ag, 2.79% Cu
             </p>

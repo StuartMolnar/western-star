@@ -7,19 +7,8 @@ import News from './pages/News';
 import Article_1 from './pages/articles/Article-1';
 import GoldProject from './pages/Gold-Project';
 import Legal from './pages/Legal';
-import Test from './pages/Test';
 import { Routes, Route, BrowserRouter, useLocation } from "react-router-dom"
-import Preloader from './components/Preloader/Preloader';
 
-// List all the images you want to preload
-const imagesToPreload = [
-  '/assets/index/about-section-bg.png',
-  '/assets/overview/header-section-bg.jpg',
-  '/assets/news/news-header-bg.png',
-  '/assets/gold-project/header-section-bg.png',
-  '/assets/board/header-section-bg.png',
-  // Add more image URLs here
-];
 
 const ScrollContext = createContext(null);
 
@@ -37,35 +26,6 @@ const ScrollToTop = () => {
 
 const App = () => {
 
-  const [isPreloading, setIsPreloading] = useState(true);
-
-  useEffect(() => {
-    // Preload all images and hide the preloader when done
-    const loadImages = async () => {
-      await Promise.all(
-        imagesToPreload.map((image) => {
-          return new Promise((resolve, reject) => {
-            const img = new Image();
-            img.src = image;
-            img.onload = () => {
-              console.log(`Loaded image: ${img.src}`);
-              resolve();
-            };
-            img.onerror = () => {
-              console.error(`Failed to load image: ${img.src}`);
-              reject();
-            };
-          });
-        })
-      );
-      setIsPreloading(false);
-    };
-  
-    loadImages();
-  }, []);
-
-  //const contentClass = isPreloading ? 'hidden' : '';
-  
 
   const scrollToElement = (elementId) => {
     const targetElement = document.getElementById(elementId);
@@ -76,8 +36,6 @@ const App = () => {
   
   return (
     <BrowserRouter>
-      {/* {isPreloading && <Preloader />}
-        <div className={contentClass}> */}
           <ScrollContext.Provider value={scrollToElement}>
             <ScrollToTop />
             <Routes>
@@ -89,10 +47,8 @@ const App = () => {
               <Route path="/news" element={<News />} />
               <Route path="/legal" element={<Legal />} />
               <Route path="/western-star-plans-large-program" element={<Article_1 />} />
-              <Route path="/test" element={<Test />} />
             </Routes>
           </ScrollContext.Provider>
-        {/* </div> */}
     </BrowserRouter>
   );
 };

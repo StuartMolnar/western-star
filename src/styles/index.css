@@ -155,8 +155,10 @@
 
   /* --- backgrounds --- */
 
+  /* --- home --- */
+
   .about-section-bg {
-    background: url('/assets/index/about-section-bg.png');
+    background: url('/assets/index/about-section-bg.webp');
 
     @apply bg-center;
     @apply bg-cover;
@@ -164,12 +166,98 @@
   }
 
   .about-section-bg-mobile {
-    background: url('/assets/index/about-section-bg-mobile.png');
+    background: url('/assets/index/about-section-bg-mobile.webp');
     
     @apply bg-top;
     @apply bg-cover;
     @apply bg-no-repeat;
   }
+
+  .news-section-bg {
+    background: linear-gradient(0deg, rgb(136 136 136 / 20%), rgb(136 136 136 / 20%)), url('/assets/index/news-section-bg.webp');
+    
+    @apply bg-top;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+}
+
+  /* --- board --- */
+
+  .board-header-bg {
+    background: linear-gradient(99.98deg, rgb(0 0 0 / 68%) 8.86%, rgb(0 0 0 / 15.4%) 74.38%, rgb(0 0 0 / 0%) 100%), url('/assets/board/header-section-bg.webp');
+    
+    @apply bg-top;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
+  .board-section-bg {
+    background: url('/assets/board/board-section-bg.webp');
+    
+    @apply bg-center;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
+
+  /* --- investors --- */
+  
+  .investors-header-bg {
+    background: linear-gradient(99.98deg, rgb(0 0 0 / 68% ) 8.86%, rgb(0 0 0 / 15.4% ) 74.38%, rgb(0 0 0 / 0% ) 100%), url('/assets/investors/investors-header-bg.webp');
+    
+    @apply bg-center;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
+  /* --- projects --- */
+
+  .projects-header-bg {
+      background: linear-gradient(99.98deg, rgb(0 0 0 / 68%) 8.86%, rgb(0 0 0 / 15.4%) 74.38%, rgb(0 0 0 / 0%) 100%), url('/assets/gold-project/header-section-bg.webp');
+    
+      @apply bg-center;
+      @apply bg-cover;
+      @apply bg-no-repeat;
+  }
+
+  /* --- news --- */
+
+  .news-header-bg {    
+    background: linear-gradient(99.98deg, rgb(0 0 0 / 68% ) 8.86%, rgb(0 0 0 / 15.4% ) 74.38%, rgb(0 0 0 / 0% ) 100%), url('/assets/news/news-header-bg.webp');
+    
+    @apply bg-center;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
+  .news-articles-bg {
+    background: url('/assets/news/news-section-bg.png');
+    
+    @apply bg-top;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
+  /* --- legal --- */
+
+  .legal-section-bg {
+    background: linear-gradient(99.98deg, rgb(0 0 0 / 68% ) 8.86%, rgb(0 0 0 / 15.4% ) 74.38%, rgb(0 0 0 / 0% ) 100%), url('/assets/legal/legal-section-bg.webp');
+    
+    @apply bg-center;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+}
+
+  /* --- overview --- */
+
+  .overview-header-bg {
+    background: linear-gradient(99.98deg, rgb(0 0 0 / 68%) 8.86%, rgb(0 0 0 / 15.4% ) 74.38%, rgb(0 0 0 / 0% ) 100%), url('/assets/overview/header-section-bg.webp');    
+    
+    @apply bg-center;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+  }
+
 
 }
 

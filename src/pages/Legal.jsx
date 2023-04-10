@@ -1,6 +1,5 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import Layout from './Layout';
-import '../styles/legal.css';
 import { useScrollContext } from '../App'; 
 
 const Legal = () => {
