@@ -31,7 +31,7 @@ const Board = () => {
           <h1 className="text-page-header font-semibold">
             Meet our board
           </h1>
-          <a onClick={() => scrollToElement('boardMembers')} className="dsk:read-more-btn hidden">Read More ▸</a>
+          <a onClick={() => scrollToElement('boardMembers')} className="dsk:read-more-btn hidden pt-16">Read More ▸</a>
           
         </section>
 

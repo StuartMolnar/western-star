@@ -43,7 +43,7 @@ const News = () => {
 
       
       {/* years section */}
-      <section className="years-section text-black text-card-header font-semibold p-5 dsk:px-40 pt-20 max-w-[1550px] mx-auto">
+      <section className="years-section text-black text-card-header font-semibold p-5 dsk:px-20 pt-20  3xl:mx-[15%]">
           <div className="years-container items-start w-full">
               <p className="text-container-header font-semibold">
                   Filter news articles by year
@@ -65,10 +65,10 @@ const News = () => {
 
         <section className="text-white flex flex-col items-center">
 
-          <div className="news-articles px-5 dsk:px-20 pb-20 pt-12 flex ">
-            <div className="grid dsk:grid-cols-2 grid-rows-2 gap-4 dsk:p-4">
+          <div className="news-articles px-5 dsk:px-20 pb-20 pt-12 flex w-full">
+            <div className="grid dsk:grid-cols-2 grid-rows-2 gap-4 w-full 3xl:mx-[15%]">
               {filteredArticles.map((article, index) => (
-                <div key={index} className="article-card bg-black p-4 rounded-2xl opacity-90 shadow max-w-[600px]">
+                <div key={index} className="article-card bg-black p-4 rounded-2xl opacity-90 shadow w-full">
                   <div className="card-content p-3 dsk:p-8 flex flex-col h-full dsk:justify-between opacity-150">
                     <div>
                       <h3 className="font-semibold">{article.date}</h3>

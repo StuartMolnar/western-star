@@ -192,7 +192,7 @@ const GoldProject = () => {
 
 
     {/* sample images section */}
-    <section className="dsk:m-32 -mb-72 dsk:-mb-32">
+    <section className="dsk:mx-32 dsk:mt-32 -mb-72">
         <div className="flex-row dsk:flex gap-8 justify-center items-center w-full xl:h-1100[px] dsk:h-[800px]">
             <div className="flex-row dsk:h-full dsk:w-[45%] dsk:max-w-[900px] ">
                 

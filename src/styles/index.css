@@ -23,6 +23,57 @@
     @apply cursor-pointer;
   }
 
+  /* --- font sizes --- */
+  @screen dsk{
+    .text-base {
+      @apply text-base-dsk;
+    }
+
+    .text-page-header {
+      @apply text-page-header-dsk;
+    }
+
+    .text-content-20 {
+      @apply text-content-20-dsk;
+    }
+
+    .text-section-header-md {
+      @apply text-section-header-md-dsk;
+    }
+
+    .text-section-header-lg {
+      @apply text-section-header-lg-dsk;
+    }
+
+    .text-section-subheader {
+      @apply text-section-subheader-dsk;
+    }
+
+    .text-container-header {
+      @apply text-container-header-dsk;
+    }
+
+    .text-card-header {
+      @apply text-card-header-dsk;
+    }
+
+    .text-card-subheader {
+      @apply text-card-subheader-dsk;
+    }
+
+    .text-button {
+      @apply text-button-dsk;
+    }
+
+    .text-footer {
+      @apply text-footer-dsk;
+    }
+
+    .text-copyright {
+      @apply text-copyright-dsk;
+    }
+  }
+
   /* --- buttons --- */
 
   .button-primary {

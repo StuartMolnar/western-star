@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       screens: {
         'dsk': '1200px',
+        '3xl': '2000px',
       },
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
@@ -38,8 +39,8 @@ module.exports = {
         'gold': '#D5A660',
       },
       fontSize: {
-        'base': '14px',
-        'page-header': '30px',
+        'base': ['14px', {'dsk': '18px'}],
+        'page-header': ['30px', {'dsk': '65px'}],
         'content-20': '16px',
         'section-header-md': '24px',
         'section-header-lg': '24px',
@@ -51,20 +52,19 @@ module.exports = {
         'footer': '14px',
         'copyright': '12px',
 
-        'dsk': {
-          'base': '18px',
-          'page-header': '65px',
-          'content-20': '20px',
-          'section-header-md': '35px',
-          'section-header-lg': '40px',
-          'section-subheader': '20px',
-          'container-header': '20px',
-          'card-header': '30px',
-          'card-subheader': '18px',
-          'button': '18px',
-          'footer': '16px',
-          'copyright': '14px',
-        }
+        'base-dsk': '18px',
+        'page-header-dsk': '65px',
+        'content-20-dsk': '20px',
+        'section-header-md-dsk': '35px',
+        'section-header-lg-dsk': '40px',
+        'section-subheader-dsk': '20px',
+        'container-header-dsk': '20px',
+        'card-header-dsk': '30px',
+        'card-subheader-dsk': '18px',
+        'button-dsk': '18px',
+        'footer-dsk': '16px',
+        'copyright-dsk': '14px',
+      
       },
       boxShadow: {
         'white': '0 4px 6px rgba(255, 255, 255, 0.05), 0 1px 3px rgba(255, 255, 255, 0.1)',
