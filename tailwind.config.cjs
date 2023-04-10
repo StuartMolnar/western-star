@@ -39,8 +39,8 @@ module.exports = {
         'gold': '#D5A660',
       },
       fontSize: {
-        'base': ['14px', {'dsk': '18px'}],
-        'page-header': ['30px', {'dsk': '65px'}],
+        'base': '14px',
+        'page-header': '30px',
         'content-20': '16px',
         'section-header-md': '24px',
         'section-header-lg': '24px',
