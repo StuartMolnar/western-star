@@ -82,7 +82,7 @@ const Overview = () => {
       </p>
       <div className="flex gap-8 justify-center items-center w-full xl:h-900[px] h-[600px] mt-16 dsk:mt-32">
         <img src="\assets\overview\goal-section-left.webp" className="rounded-2xl max-w-[1100px] w-[55%] h-full object-cover object-top hidden dsk:block" />
-        <img src="\assets\overview\goal-section-right.jpg" className="dsk:rounded-2xl w-full dsk:max-w-[900px] dsk:w-[45%] h-full  object-cover object-center" />
+        <img src="\assets\overview\goal-section-right.webp" className="dsk:rounded-2xl w-full dsk:max-w-[900px] dsk:w-[45%] h-full  object-cover object-center" />
       </div>
 
     </section>

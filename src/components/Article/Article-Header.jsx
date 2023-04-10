@@ -4,7 +4,7 @@ import { useScrollContext } from '../../App';
 const Article_1 = ({ navbarHeight, article}) => {
     
   const scrollToElement = useScrollContext();
-  const imgUrl = `/assets/articles/article-${article.id}/article-header-bg.jpg`;
+  const imgUrl = `/assets/articles/article-${article.id}/article-header-bg.webp`;
   
   
   const headerStyle = {

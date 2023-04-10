@@ -20,8 +20,6 @@ const News = () => {
     setSelectedYear(year);
   };
 
-  console.log('reversedArticles', reversedArticles);
-
   const filteredArticles = (selectedYear == 'all') ? reversedArticles : reversedArticles.filter((article) => article.date?.includes(selectedYear.year));
 
 
