@@ -1,0 +1,9 @@
+// Spinner.jsx
+import React from 'react';
+import './spinner.css';
+
+const Spinner = () => {
+  return <div className="spinner" />;
+};
+
+export default Spinner;

@@ -231,7 +231,7 @@
   }
 
   .news-articles-bg {
-    background: url('/assets/news/news-section-bg.png');
+    background: url('/assets/news/news-section-bg.webp');
     
     @apply bg-top;
     @apply bg-cover;

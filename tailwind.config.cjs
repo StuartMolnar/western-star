@@ -92,14 +92,16 @@ module.exports = {
           '0%': { transform: 'translateY(0)'},
           '100%': { transform: 'translateY(150%)'},
         },
-        accordionOpen: {
+        'accordionOpen': {
           '0%': { height: '0', opacity: 0 },
           '100%': { height: 'auto', opacity: 1 },
         },
-        accordionClose: {
+        'accordionClose': {
           '0%': { height: 'auto', opacity: 1 },
           '100%': { height: '0', opacity: 0 },
         },
+        
+
       },
       
     },

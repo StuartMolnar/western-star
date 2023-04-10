@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import '../styles/Layout.css';
@@ -9,7 +9,9 @@ const Layout = ({ children, setNavbarHeight }) => {
     <div className="layout-container">
       <Navbar setNavbarHeight={setNavbarHeight} />
       <div className="layout-content">{children}</div>
-      <Footer />
+      <Suspense >
+        <Footer />
+      </Suspense>
     </div>
   );
 };
