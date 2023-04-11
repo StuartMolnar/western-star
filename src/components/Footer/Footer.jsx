@@ -16,13 +16,16 @@ const Footer = () => {
       <img src="/assets/logo/ws-logo.svg" alt="logo" className="w-[210px] h-[24px] scale-75 dsk:scale-100" />
     </Link>
     
-    <div className="footer-content w-full mb-8 dsk:mt-32 mt-8">
+    <div className="footer-content w-full mb-8 dsk:mt-32 mt-8 z-10">
       <div className="grid grid-cols-2 h-full">
         <div className="dsk:grid dsk:grid-cols-2 grid-rows-2 h-full col-span-2 dsk:col-span-1 justify-center">
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\mail-icon.svg" alt="email_icon" className="mr-4" /><p className="font-medium">Email</p></span>
-            <p><a href="mailto:blake@acvc.vc">blake@acvc.vc</a></p>
-          </div>
+            <div className="flex-col space-y-1">
+              <p><a href="mailto:info@westernstarresources.ca">info@westernstarresources.ca</a></p>
+              <p><a href="mailto:investors@westernstarresources.ca">investors@westernstarresources.ca</a></p>
+              <p><a href="mailto:vpx@westernstarresources.ca">vpx@westernstarresources.ca</a></p></div>
+            </div>
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Business Address</p></span>
             <p><a href="https://goo.gl/maps/6nH9b1mp92wckqCy9">
@@ -33,7 +36,10 @@ const Footer = () => {
           </div>
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\phone-icon.svg" alt="phone_icon" className="mr-4" /><p className="font-medium">Phone Number</p></span>
-            <p><a href="tel:+12368784938">+1 (236)-878-4938</a></p>          
+            <div className="flex-col space-y-1">
+              <p><a href="tel:+12368784938">+1 (236)-878-4938</a></p>       
+              <p><a href="tel:+16046712245">+1 (604)-671-2245</a></p>       
+            </div>   
           </div>
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Registered Office Address</p></span>
@@ -49,8 +55,8 @@ const Footer = () => {
     </div>
 
     
-    <div className={`dsk:hidden gradient-gray absolute ${isSpecialPage ? 'top-[20%]' : 'top-0'}  h-4/5 w-1/4 scale-100`}></div>
-    <div className={`dsk:hidden gradient-gold absolute ${isSpecialPage ? 'top-[45%]' : 'top-[25%]'} left-2/4 h-4/5 w-1/2 scale-100`}></div>
+    <div className={`dsk:hidden gradient-gray absolute -z-10 ${isSpecialPage ? 'top-[20%]' : 'top-0'}  h-4/5 w-1/4 scale-100`}></div>
+    <div className={`dsk:hidden gradient-gold absolute -z-10 ${isSpecialPage ? 'top-[45%]' : 'top-[25%]'} left-2/4 h-4/5 w-1/2 scale-100`}></div>
     
     <div className="footer-images hidden dsk:block">
       <div className={`gradient-gray absolute ${isSpecialPage ? 'top-[20%]' : 'top-0'} left-1/2 h-4/5 w-1/4 scale-150`}></div>

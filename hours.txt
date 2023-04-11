@@ -10,6 +10,7 @@
 03-25: 3.5 hours
 03-26: 0 hours
 03-27: 4 hours
+03-28: 0 hours
 03-29: 1 hour
 03-30: 2 hours
 03-31: 2 hours
@@ -21,6 +22,7 @@
 04-07: 4 hours
 04-08: 1 hour
 04-09: 6 hours
+04-10: 1.25 hours
 
 general ideas:
 Implement lazy-loading for images and other media to improve the initial load time of your webpages.
