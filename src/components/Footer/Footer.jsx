@@ -22,6 +22,7 @@ const Footer = () => {
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\mail-icon.svg" alt="email_icon" className="mr-4" /><p className="font-medium">Email</p></span>
             <div className="flex-col space-y-1">
+              <p><a href="mailto:blake@avcv.vc">blake@avcv.vc</a></p>
               <p><a href="mailto:info@westernstarresources.ca">info@westernstarresources.ca</a></p>
               <p><a href="mailto:investors@westernstarresources.ca">investors@westernstarresources.ca</a></p>
               <p><a href="mailto:vpx@westernstarresources.ca">vpx@westernstarresources.ca</a></p></div>
