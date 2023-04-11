@@ -129,8 +129,8 @@ const GoldProject = () => {
                 <div className="grid grid-cols-11">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">20021</div>
                     <div className="col-span-8 border border-black p-2 flex items-center px-4">Pyrite-sphalerite mineralization within siderite-ankerite alteration zone.</div>
-                    <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
-                    <div className="col-span-1 border border-black p-2 flex items-center px-4">-</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">1.78</div>
+                    <div className="col-span-1 border border-black p-2 flex items-center px-4">90.3</div>
                 </div>
                 <div className="grid grid-cols-11">
                     <div className="col-span-1 border border-black p-2 flex items-center px-4">16953</div>
