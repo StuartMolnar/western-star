@@ -161,7 +161,7 @@ const GoldProject = () => {
         <div className="floating-rock-image min-w-[250px] flex items-center justify-center scale-75">
             <div>
                 <img src="\assets\gold-project\rock.webp" className="animate-rotation max-w-[300px] dsk:max-w-full" alt=""/>
-                <p className="text-center pt-20 dsk:scale-[2]">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
+                <p className="text-center pt-20">343 ppb Au, 181 g/t Ag, 38.4% Pb</p>
             </div>
         </div>
 
@@ -204,7 +204,7 @@ const GoldProject = () => {
 
             <img src="\assets\gold-project\images-section-right.webp" className="dsk:rounded-3xl object-cover object-center w-full h-[90%]" />
             <p className="dsk:p-3 p-12 text-center">
-                317 ppb Au, 586 g/t Ag, 6.29% Ag, 2.79% Cu
+                317 ppb Au, 586 g/t Ag, 6.29% Zn, 2.79% Cu
             </p>
             
             </div>   
