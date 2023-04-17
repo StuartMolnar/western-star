@@ -1,19 +1,41 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { useScrollContext } from '../../App'; 
+import useDocumentTitle from './useDocumentTitle';
 
 import './navbar.css'
+
+function getTitleForPath(path) {
+  const titleMap = {
+    "/": "Western Star Resources",
+    "/overview": "Overview - Western Star Resources",
+    "/board": "Board - Western Star Resources",
+    "/ws-project": "Gold Project - Western Star Resources",
+    "/investors": "Investors - Western Star Resources",
+    "/news": "News - Western Star Resources",
+    "/legal": "Legal - Western Star Resources",
+    "/western-star-plans-large-program": "Western Star Plans Large Program - Western Star Resources",
+  };
+
+  return titleMap[path] || "Western Star Resources";
+}
+
+
 
 let totalDifference = 0;
 
 function Navbar({ setNavbarHeight }) {
+
+  const location = useLocation();
+  const currentTitle = getTitleForPath(location.pathname);
+  useDocumentTitle(`${currentTitle}`);
+
   const [dropdown, setDropdown] = useState({ about: false, projects: false, investors: false });
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
   const [menuToggleChecked, setMenuToggleChecked] = useState(false);
   const menuToggleRef = useRef(null);
   const menuRef = useRef(null);
-  const location = useLocation();
   const aboutToggler = useRef(null);
   const projectsToggler = useRef(null);
   const scrollToElement = useScrollContext();
