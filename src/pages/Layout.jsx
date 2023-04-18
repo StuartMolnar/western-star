@@ -1,10 +1,10 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import Navbar from '../components/Navbar/Navbar';
 import Footer from '../components/Footer/Footer';
 import { useLocation } from 'react-router-dom';
 import '../styles/Layout.css';
 import useDocumentTitle from './hooks/useDocumentTitle';
-import { Helmet } from 'react-helmet';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 function getTitleForPath(path) {
   const titleMap = {
@@ -36,28 +36,31 @@ function getDescriptionForPath(path) {
 }
 
 const Layout = ({ children, setNavbarHeight }) => {
-
   const location = useLocation();
   const currentTitle = getTitleForPath(location.pathname);
   useDocumentTitle(`${currentTitle}`);
 
-  const getCanonicalUrl = () => {
-    const basePath = 'https://www.westernstarresources.com';
+  const basePath = 'https://www.westernstarresources.com';
+
+  const [canonicalUrl, setCanonicalUrl] = useState(`${basePath}${location.pathname}`);
+  useEffect(() => {
     const path = location.pathname === '/' ? '' : location.pathname;
+    setCanonicalUrl(`${basePath}${path}`);
+  }, [location.pathname]);
 
-    return `${basePath}${path}`;
-  };
+  const [description, setDescription] = useState(getDescriptionForPath(location.pathname));
+  useEffect(() => {
+    setDescription(getDescriptionForPath(location.pathname));
+  }, [location.pathname]);
 
-  const getDescription = () => {
-    return getDescriptionForPath(location.pathname);
-  }
-  
   return (
     <div className="layout-container">
-      <Helmet>
-        <link rel="canonical" href={getCanonicalUrl()} />
-        <meta name="description" content={getDescription()} />
-      </Helmet>
+      <HelmetProvider>
+        <Helmet>
+          <link rel="canonical" href={canonicalUrl} />
+          <meta name="description" content={description} />
+        </Helmet>
+      </HelmetProvider>
       <Navbar setNavbarHeight={setNavbarHeight} />
       <div className="layout-content">{children}</div>
       <Suspense>
@@ -66,6 +69,5 @@ const Layout = ({ children, setNavbarHeight }) => {
     </div>
   );
 };
-
 
 export default Layout;
