@@ -35,9 +35,9 @@
     <changefreq>never</changefreq>
     <priority>0.5</priority>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://westernstarresources.com/western-star-plans-large-program</loc>
     <changefreq>never</changefreq>
     <priority>0.7</priority>
-  </url>
+  </url> -->
 </urlset>
