@@ -22,11 +22,10 @@ const Footer = () => {
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\mail-icon.svg" alt="email_icon" className="mr-4" /><p className="font-medium">Email</p></span>
             <div className="flex-col space-y-1">
-              <p><a href="mailto:blake@avcv.vc">blake@avcv.vc</a></p>
+              <p><a href="mailto:blake@avcv.vc">blake@westernstarresources.com</a></p>
               <p><a href="mailto:info@westernstarresources.ca">info@westernstarresources.ca</a></p>
-              <p><a href="mailto:investors@westernstarresources.ca">investors@westernstarresources.ca</a></p>
-              <p><a href="mailto:vpx@westernstarresources.ca">vpx@westernstarresources.ca</a></p></div>
             </div>
+          </div>
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\location-icon.svg" alt="location_icon" className="mr-4" /><p className="font-medium">Business Address</p></span>
             <p><a href="https://goo.gl/maps/6nH9b1mp92wckqCy9">
@@ -38,8 +37,7 @@ const Footer = () => {
           <div className="flex-row items-center p-4 space-y-4">
             <span className="flex"><img src="\assets\footer\phone-icon.svg" alt="phone_icon" className="mr-4" /><p className="font-medium">Phone Number</p></span>
             <div className="flex-col space-y-1">
-              <p><a href="tel:+12368784938">+1 (236)-878-4938</a></p>       
-              <p><a href="tel:+16046712245">+1 (604)-671-2245</a></p>       
+              <p><a href="tel:+12368784938">+1 (236)-878-4938</a></p>         
             </div>   
           </div>
           <div className="flex-row items-center p-4 space-y-4">
