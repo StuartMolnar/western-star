@@ -46,6 +46,11 @@ const Home = () => {
     const lastArticle = articlesData[articlesData.length - 1];
     return lastArticle.url;
   };
+
+  const getLastArticleDate = () => {
+    const lastArticle = articlesData[articlesData.length - 1];
+    return lastArticle.date;
+  };
   
 
   return (
@@ -184,13 +189,13 @@ const Home = () => {
         </div>
         <div className="flex flex-col bg-black dsk:max-w-[400px] mx-5 dsk:mx-0 rounded-3xl p-8 dsk:p-12">
           <h3 className="text-section-subheader font-semibold">
-            Western Star plans large program on its 100% Western Star CRD/Sedex Project
+            {getLastArticleTitle()}
           </h3>
           <p className="text-card-subheader mt-6">
-            April 1, 2023
+            {getLastArticleDate()}
           </p>
           <hr className="my-8" />
-          <Link to="/western-star-plans-large-program" className="read-more-btn">Read More ▸</Link>
+          <Link to={`${getLastArticleUrl()}`} className="read-more-btn">Read More ▸</Link>
         </div>
       </section>
 
